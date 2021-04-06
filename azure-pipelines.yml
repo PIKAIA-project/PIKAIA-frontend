@@ -33,22 +33,3 @@ steps:
     npm audit fix
     npm run build
   displayName: 'npm install and build'
-
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
-
-- task: AzureRmWebAppDeployment@4
-  inputs:
-    ConnectionType: 'AzureRM'
-    azureSubscription: 'Azure for Students ($(subscriptionId))'
-    appType: 'webApp'
-    WebAppName: 'webappname'
-    deployToSlotOrASE: true
-    ResourceGroupName: 'resourceGroupName'
-    SlotName: 'production'
-    packageForLinux: '$(Build.ArtifactStagingDirectory)/*.zip'
-
-- task: PublishBuildArtifacts@1
