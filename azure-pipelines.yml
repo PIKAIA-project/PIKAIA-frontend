@@ -28,7 +28,8 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
-- script: |
+- script: 
+    npm uninstall
     npm install
     npm audit fix
     npm run build
