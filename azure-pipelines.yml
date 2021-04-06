@@ -30,7 +30,6 @@ steps:
 
 - script: 
     npm install -g npm
-    npm install
     npm cache clean
     rm -rf node_modules
     npm install
