@@ -31,8 +31,7 @@ steps:
 - script: 
     rm -rf node_modules
     rm -rf package-lock.json
-    npm install react-scripts
-    npm install react-scripts
+    npm install
     npm run build
   displayName: 'npm install and build'
 
