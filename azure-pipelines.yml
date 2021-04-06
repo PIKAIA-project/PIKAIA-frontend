@@ -13,15 +13,9 @@ variables:
   # Agent VM image name
   vmImageName: 'ubuntu 18.04'
 
-  # Environment name
-  environmentName: 'pikaia'
-
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
 
-  # Python version: 3.8
-  pythonVersion: '3.8'
-  
 trigger:
 - main
 
