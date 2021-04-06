@@ -31,7 +31,7 @@ steps:
 - script: 
     npm install
     npm audit fix
-    npm run build
+    npm  run build -prod
   displayName: 'npm install and build'
 
 - task: ArchiveFiles@2
