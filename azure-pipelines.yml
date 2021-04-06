@@ -21,18 +21,22 @@ steps:
     npm run build
   displayName: 'npm install and build'
 
-- task: ArchiveFiles@2
-  displayName: 'Archive files'
+- task: PublishBuildArtifacts@1
   inputs:
-    rootFolderOrFile: '$(projectRoot)'
-    includeRootFolder: false
-    archiveType: zip
-    archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
-    replaceExistingArchive: true
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
 
-- upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
-  displayName: 'Upload package'
-  artifact: drop
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Azure for Students ($(94684686-5b22-4d7a-a397-5be688118af5))'
+    appType: 'webApp'
+    WebAppName: 'webappname'
+    deployToSlotOrASE: true
+    ResourceGroupName: 'resourceGroupName'
+    SlotName: 'production'
+    packageForLinux: '$(Build.ArtifactStagingDirectory)/*.zip
 
 - task: PublishBuildArtifacts@1
 
