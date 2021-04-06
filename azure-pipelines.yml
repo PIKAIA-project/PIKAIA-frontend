@@ -36,7 +36,6 @@ steps:
     deployToSlotOrASE: true
     ResourceGroupName: 'resourceGroupName'
     SlotName: 'production'
-    packageForLinux: '$(Build.ArtifactStagingDirectory)/*.zip
+    packageForLinux: '$(Build.ArtifactStagingDirectory)/*.zip'
 
 - task: PublishBuildArtifacts@1
-
