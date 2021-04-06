@@ -30,9 +30,10 @@ steps:
 
 - script: 
     npm install
-    npm audit fix
-    npm cache clear --force
-    npm  run build -prod
+    npm cache clean
+    rm -rf node_modules
+    npm install
+    npm run build
   displayName: 'npm install and build'
 
 - task: ArchiveFiles@2
