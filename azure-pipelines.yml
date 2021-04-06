@@ -29,7 +29,6 @@ steps:
   displayName: 'Install Node.js'
 
 - script: 
-    npm uninstall
     npm install
     npm audit fix
     npm run build
