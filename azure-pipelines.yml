@@ -41,7 +41,11 @@ steps:
     rootFolderOrFile: '$(projectRoot)'
     includeRootFolder: false
     archiveType: zip
-    archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
+    archiveFile: - task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: 'build'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
     replaceExistingArchive: true
 
 - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
