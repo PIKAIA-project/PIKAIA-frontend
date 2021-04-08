@@ -3,11 +3,24 @@
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
+variables:
+  # Azure Resource Manager connection created during pipeline creation
+  azureServiceConnectionId: '94684686-5b22-4d7a-a397-5be688118af5'
+
+  # Web app name
+  webAppName: 'pikaia'
+
+  # Agent VM image name
+  vmImageName: 'ubuntu 18.04'
+
+  # Project root folder. Point to the folder containing manage.py file.
+  projectRoot: $(System.DefaultWorkingDirectory)
+
 trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: ubuntu-18.04
 
 steps:
 - task: NodeTool@0
@@ -15,15 +28,22 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
-<<<<<<< HEAD
-- script: |
-    npm install
-=======
 - script: 
     rm -rf node_modules
     rm -rf package-lock.json
-    npm install react-scripts
-    npm install react-scripts
->>>>>>> parent of 30ddd5f (Update azure-pipelines.yml for Azure Pipelines)
+    npm install
     npm run build
   displayName: 'npm install and build'
+
+- task: ArchiveFiles@2
+  displayName: 'Archive files'
+  inputs:
+    rootFolderOrFile: '$(projectRoot)'
+    includeRootFolder: false
+    archiveType: zip
+    archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
+    replaceExistingArchive: true
+
+- upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
+  displayName: 'Upload package'
+  artifact: drop
