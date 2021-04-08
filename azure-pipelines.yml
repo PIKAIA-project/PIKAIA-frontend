@@ -8,7 +8,7 @@ variables:
   azureServiceConnectionId: '94684686-5b22-4d7a-a397-5be688118af5'
 
   # Web app name
-  webAppName: 'pikaia'
+  webAppName: 'PROJECT-pikaia'
 
   # Agent VM image name
   vmImageName: 'ubuntu 18.04'
