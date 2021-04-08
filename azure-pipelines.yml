@@ -35,19 +35,8 @@ steps:
     npm run build
   displayName: 'npm install and build'
 
-- task: ArchiveFiles@2
-  displayName: 'Archive files'
-  inputs:
-    rootFolderOrFile: '$(projectRoot)'
-    includeRootFolder: false
-    archiveType: zip
-    archiveFile: - task: PublishBuildArtifacts@1
+- task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: 'build'
     ArtifactName: 'drop'
     publishLocation: 'Container'
-    replaceExistingArchive: true
-
-- upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
-  displayName: 'Upload package'
-  artifact: drop
