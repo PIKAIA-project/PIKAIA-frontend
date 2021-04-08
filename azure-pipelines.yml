@@ -15,7 +15,15 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
+<<<<<<< HEAD
 - script: |
     npm install
+=======
+- script: 
+    rm -rf node_modules
+    rm -rf package-lock.json
+    npm install react-scripts
+    npm install react-scripts
+>>>>>>> parent of 30ddd5f (Update azure-pipelines.yml for Azure Pipelines)
     npm run build
   displayName: 'npm install and build'
