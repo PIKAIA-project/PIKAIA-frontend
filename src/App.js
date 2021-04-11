@@ -12,7 +12,7 @@ function App() {
         {/* <Home /> */}
       </BrowserView>
       <MobileView>
-        <h1> This is rendered displayed on mobile </h1>
+        <h1> This is rendered displayed on mobile view </h1>
       </MobileView>
     </>
   );
