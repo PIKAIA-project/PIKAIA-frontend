@@ -1,21 +1,15 @@
 import React from "react";
-import { BrowserView, MobileView } from "react-device-detect";
-import Login from "./Login";
-import "./App.css";
-import Home from "./Home";
 
-function App() {
+import "./App.css";
+
+import AppContainer from "./Layout/AppContainer/AppContainer";
+import BackgroundOne from "./components/BackgroundOne/BackgroundOne";
+
+export default function App() {
   return (
-    <>
-      <BrowserView>
-        <Login />
-        {/* <Home /> */}
-      </BrowserView>
-      <MobileView>
-        <h1> This is rendered dsadnly on mobile </h1>
-      </MobileView>
-    </>
+    <div className="app">
+      <BackgroundOne />
+      <AppContainer />
+    </div>
   );
 }
-
-export default App;

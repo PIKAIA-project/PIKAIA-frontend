@@ -1,6 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import SettingsContextProvider from './components/PrevTimer/context/SettingsContext';
 
-import App from './App';
-
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <SettingsContextProvider>
+    <App />
+  </SettingsContextProvider>,
+  document.getElementById("root")
+);
