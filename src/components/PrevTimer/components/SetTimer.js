@@ -39,13 +39,7 @@ const SetTimer = () => {
             />
           </div>
         </div>
-        <Button
-          style={{
-            backgroundColor: "white",
-            padding: "5px 12px",
-          }}
-          type="submit"
-        >
+        <Button className="setTimer__button" type="submit">
           Set Timer
         </Button>
       </form>

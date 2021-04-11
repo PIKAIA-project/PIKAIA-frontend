@@ -1,16 +1,38 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import { RenderTime } from "./RenderTime";
 import "./style.css";
 
-const CountdownAnimation = ({
-  key = 1,
-  timer = 20,
-  animate = true,
-  children,
-}) => {
+// https://stackoverflow.com/questions/47686345/playing-sound-in-react-js
+const CountdownAnimation = ({ key = 1, timer = 20, animate = true }) => {
+  const [playing, setPlaying] = useState(false);
+
+  const [audio] = useState(
+    new Audio("https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3")
+  );
+  const toggle = () => setPlaying(!playing);
+
+  useEffect(() => {
+    playing ? audio.play() : audio.pause();
+  }, [audio, playing]);
+
+  useEffect(() => {
+    audio.addEventListener("ended", () => setPlaying(false));
+    return () => {
+      audio.removeEventListener("ended", () => setPlaying(false));
+    };
+  }, [audio]);
+
+  if (key === 1) {
+    audio.play();
+  }
+
+  if (!animate) {
+    audio.pause();
+  }
+
   return (
-    <div className="dashboard__timer__countdown">
+    <div className="dashboard__timer__countdown" onClick={toggle}>
       <CountdownCircleTimer
         key={key}
         isPlaying={animate}
@@ -20,7 +42,9 @@ const CountdownAnimation = ({
         size={175}
         rotation="counterclockwise"
         trailColor="rgba(105, 130, 194, 0.403)"
-        onComplete={() => [true, 1000]}
+        onComplete={() => {
+          audio.pause();
+        }}
       >
         {RenderTime}
       </CountdownCircleTimer>
