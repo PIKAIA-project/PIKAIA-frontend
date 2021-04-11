@@ -5,7 +5,8 @@ import PrevMusic from "./prevMusic/PrevMusic";
 function Home() {
   return (
     <div className="home">
-      <PrevMusic/>
+      {/* <PrevMusic/> */}
+      
     </div>
   );
 }

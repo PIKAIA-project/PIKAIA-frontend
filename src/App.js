@@ -8,8 +8,8 @@ function App() {
   return (
     <>
       <BrowserView>
-        <Login />
-        {/* <Home /> */}
+        {/* <Login /> */}
+        <Home />
       </BrowserView>
       <MobileView>
         <h1> This is rendered displayed on mobile view </h1>
