@@ -11,12 +11,14 @@
   justify-content: space-around;
   align-items: center;
   overflow: hidden;
+  position: relative;
 }
 
 .appContainer__nav {
   width: 95%;
-  height: 4.5rem;
+  height: 7%;
   margin-bottom: 1rem;
+  /* margin-top: 1rem; */
   background-color: rgba(253, 253, 253, 0.11);
   backdrop-filter: blur(30px);
   border-radius: 50px;
@@ -45,4 +47,11 @@
 
 .appContainer__nav .MuiTabs-indicator {
   display: none;
+}
+
+.appContainer__home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }

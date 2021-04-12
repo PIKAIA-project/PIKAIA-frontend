@@ -36,8 +36,7 @@ class AppContainer extends React.Component {
     const { index } = this.state;
     return (
       <div className="appContainer">
-        <Nav />
-        <Quotes />
+        <Nav className="appContainer__topNav" />
         <div className="appContainer__container">
           <SwipeableViews
             className="appContainer__swipableContainer"
@@ -45,7 +44,8 @@ class AppContainer extends React.Component {
             onChangeIndex={this.handleChangeIndex}
             enableMouseEvents
           >
-            <div style={Object.assign({})}>
+            <div className="appContainer__home" style={Object.assign({})}>
+              <Quotes />
               <Home />
             </div>
             <div style={Object.assign({})}>

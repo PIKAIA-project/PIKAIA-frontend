@@ -1,5 +1,6 @@
 .quotes {
-  width: 90vw;
+  width: 87vw;
+  height: 19vh;
   display: flex;
   justify-content: space-around;
   align-items: center;

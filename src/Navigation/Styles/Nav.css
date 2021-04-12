@@ -9,7 +9,38 @@
   align-items: center;
 }
 
-/* .nav .MuiSvgIcon-root {
-  font-size: 32px !important;
-  color: var(--nav-color);
-} */
+.nav .MuiAvatar-circle {
+  margin-top: 4rem;
+  z-index: 999;
+}
+
+.nav__user {
+  z-index: 99;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000000c5;
+  backdrop-filter: blur(30px);
+  transition: transform 200ms ease-in;
+  transform: translateX(0%);
+}
+
+.nav__toggle {
+  z-index: 99;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000000c5;
+  transition: transform 400ms;
+  transform: translateX(100%);
+}
+
+@media only screen and (max-width: 600px) {
+  .nav .MuiAvatar-circle {
+    margin-top: 0;
+  }
+}
