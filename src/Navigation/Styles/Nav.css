@@ -1,0 +1,15 @@
+.nav {
+  width: 95%;
+  height: 4.5rem;
+  margin-top: 1rem;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* .nav .MuiSvgIcon-root {
+  font-size: 32px !important;
+  color: var(--nav-color);
+} */

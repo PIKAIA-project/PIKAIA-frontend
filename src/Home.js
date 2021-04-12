@@ -1,12 +1,10 @@
 import React from "react";
-import "./Home.css";
-import PrevMusic from "./prevMusic/PrevMusic";
+import "./Home.css"
 
 function Home() {
   return (
     <div className="home">
-      {/* <PrevMusic/> */}
-      
+      <h1>Home</h1>
     </div>
   );
 }
