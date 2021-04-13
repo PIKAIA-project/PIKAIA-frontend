@@ -1,4 +1,5 @@
 import React from "react";
+import Bot from "../src/Images/Avatar.jpg";
 import "./Chat.css";
 
 function ChatVeiw() {
@@ -109,7 +110,9 @@ listTwo.push(...listOne)
   return (
     <div className="chat">
       <div className="chat__container">
-        <div className="chat__header">header</div>
+        <div className="chat__header">
+          <h1>Chat</h1>
+        </div>
         <div className="chat__body" onScroll={handleScroll}>
           {listItems}
         </div>
