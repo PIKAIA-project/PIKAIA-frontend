@@ -9,9 +9,9 @@
   align-items: center;
 }
 
-.nav .MuiAvatar-circle {
+.nav .MuiSvgIcon-root {
   z-index: 999;
-  border: 2px solid white;
+  font-size: 30px !important;
 }
 
 .nav__user {

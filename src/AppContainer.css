@@ -39,7 +39,7 @@
 }
 
 .appContainer__container {
-  height: 85vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -49,9 +49,3 @@
   display: none;
 }
 
-.appContainer__home {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}

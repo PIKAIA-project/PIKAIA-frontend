@@ -3,6 +3,8 @@ import { Avatar, IconButton } from "@material-ui/core";
 import React, { useState } from "react";
 import ReactTouchEvents from "react-touch-events";
 import Portrait from "../Images/Avatar.jpg";
+import SettingsIcon from "@material-ui/icons/Settings";
+import CloseIcon from "@material-ui/icons/Close";
 
 function Nav() {
   const [isActive, setActive] = useState("false");
@@ -26,7 +28,7 @@ function Nav() {
         </div>
       </ReactTouchEvents>
       <IconButton onClick={handleToggle}>
-        <Avatar src={Portrait} />
+        {isActive ? <CloseIcon /> : <SettingsIcon />}
       </IconButton>
     </div>
   );

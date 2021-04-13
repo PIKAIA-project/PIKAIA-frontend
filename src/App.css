@@ -20,6 +20,8 @@
   --widgets-color: #260442e1;
   --scroll-bar: #cacaca93;
   --chat-gradient: rgb(5, 1, 41);
+  --chat-user: #a976f2;
+  --chat-bot: #ddd5e041;
 }
 
 .app {

@@ -27,7 +27,7 @@
 
 .quotes__greeting > h1 {
   font-size: 30px;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.8rem;
 }
 .apiQuote {
   font-size: 14px;
@@ -54,12 +54,17 @@
 @media only screen and (max-width: 900px) {
   .quotes {
     width: 60%;
+    height: 18vh;
   }
 }
 
 @media only screen and (max-width: 750px) {
+  .apiQuote {
+    height: 8rem;
+  }
   .quotes {
     width: 60%;
+    height: 17vh;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -67,12 +72,16 @@
     width: 125%;
     height: auto;
   }
+  .apiQuote {
+    height: 8rem;
+  }
   .quotes__time > h1 {
     font-size: 55px;
   }
 
   .quotes {
     width: 83vw;
+    height: 20vh;
   }
   .quotes__greeting > h1 {
     font-size: 24px;

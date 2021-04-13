@@ -1,11 +1,14 @@
 import React from "react";
 import "./Home.css";
+import Quotes from "./prevChat/Componants/Quotes";
 
 function Home() {
   return (
     <div className="home">
       <div className="home__container">
-        <div className="home__top"> </div>
+        <div className="home__top">
+          <Quotes />
+        </div>
         <div className="home__bottom">
           <div className="home__bottomLeft">
             <div className="home__bottomLeftTop"></div>

@@ -1,72 +1,72 @@
 import React from "react";
 import "./AppContainer.css";
-import { Tabs, Tab, makeStyles } from "@material-ui/core";
+import { Tabs, Tab } from "@material-ui/core";
 import { IconButton } from "@material-ui/core";
 import HomeRoundedIcon from "@material-ui/icons/HomeRounded";
 import MusicNoteRoundedIcon from "@material-ui/icons/MusicNoteRounded";
 import ShowChartRoundedIcon from "@material-ui/icons/ShowChartRounded";
-import AssistantRoundedIcon from "@material-ui/icons/AssistantRounded";
 import SwipeableViews from "react-swipeable-views";
 import Quotes from "./prevChat/Componants/Quotes";
 import Nav from "./Navigation/Nav";
 import { Chat } from "@material-ui/icons";
+import SwipeableRoutes from "react-swipeable-routes";
 import ChatVeiw from "./Chat";
 import Home from "./Home";
 import Music from "./Music";
 import Chart from "./Chart";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-class AppContainer extends React.Component {
-  state = {
-    index: 0,
+function AppContainer() {
+  // const theme = useTheme();
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    console.log("new value", newValue);
+    setValue(newValue);
   };
 
-  handleChange = (event, value) => {
-    this.setState({
-      index: value,
-    });
+  const handleChangeIndex = (index) => {
+    setValue(index);
   };
 
-  handleChangeIndex = (index) => {
-    this.setState({
-      index,
-    });
-  };
-
-  render() {
-    const { index } = this.state;
-    return (
-      <div className="appContainer">
-        <Nav className="appContainer__topNav" />
-        <div className="appContainer__container">
-          <SwipeableViews
-            className="appContainer__swipableContainer"
-            index={index}
-            onChangeIndex={this.handleChangeIndex}
-            enableMouseEvents
-          >
-            <div className="appContainer__home" style={Object.assign({})}>
-              <Quotes />
-              <Home />
-            </div>
-            <div style={Object.assign({})}>
-              <ChatVeiw />
-            </div>
-            <div style={Object.assign({})}>
-              <Music />
-            </div>
-            <div style={Object.assign({})}>
-              <Chart />
-            </div>
-          </SwipeableViews>
-        </div>
+  console.log("value", value);
+  return (
+    <div className="appContainer">
+      <Nav className="appContainer__topNav" />
+      <Router>
+        {" "}
+        <SwipeableRoutes
+          index={value}
+          onChangeIndex={handleChangeIndex}
+          className="appContainer__swipableContainer"
+          enableMouseEvents
+        >
+          <Route
+            path={`home`}
+            component={() => <Home value={value} index={0} />}
+          />
+          <Route
+            path={`chat`}
+            component={() => <ChatVeiw value={value} index={0} />}
+          />
+          <Route
+            path={`binaural-beats`}
+            component={() => <Music value={value} index={0} />}
+          />
+          <Route
+            path={`charts`}
+            component={() => <Chart value={value} index={0} />}
+          />
+        </SwipeableRoutes>
         <div className="appContainer__nav">
           <Tabs
-            value={index}
-            fullWidth
-            onChange={this.handleChange}
+            value={value}
+            onChange={handleChange}
             className="appContainer__navTabs"
           >
             <Tab
+              to={`home`}
+              className={value === 0}
               disableRipple
               icon={
                 <IconButton>
@@ -75,6 +75,8 @@ class AppContainer extends React.Component {
               }
             />
             <Tab
+              to={`chat`}
+              className={value === 1}
               disableRipple
               icon={
                 <IconButton>
@@ -83,7 +85,9 @@ class AppContainer extends React.Component {
               }
             />
             <Tab
+              to={`binaural-beats`}
               disableRipple
+              className={value === 2}
               icon={
                 <IconButton>
                   <MusicNoteRoundedIcon />
@@ -91,6 +95,8 @@ class AppContainer extends React.Component {
               }
             />
             <Tab
+              to={`charts`}
+              className={value === 3}
               disableRipple
               icon={
                 <IconButton>
@@ -100,9 +106,9 @@ class AppContainer extends React.Component {
             />
           </Tabs>
         </div>
-      </div>
-    );
-  }
+      </Router>
+    </div>
+  );
 }
 
 export default AppContainer;
