@@ -17,6 +17,7 @@
   --hover-color: rgba(218, 214, 214, 0.349);
   --active-color: rgba(19, 20, 22, 0.315);
   --nav-color: rgb(195, 155, 241) !important;
+  --widgets-color: #260442e1;
 }
 
 .app {
