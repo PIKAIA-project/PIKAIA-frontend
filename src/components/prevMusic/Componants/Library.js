@@ -2,7 +2,13 @@ import React from "react";
 import "../Styles/Library.css";
 import LibrarySong from "./LibrarySong";
 
-const Library = ({ songs, currentSong, setCurrentSong, setIsPlaying ,songState}) => {
+const Library = ({
+  songs,
+  currentSong,
+  setCurrentSong,
+  setIsPlaying,
+  songState,
+}) => {
   const renderSongItems = () => {
     return songs.map((song) => (
       <LibrarySong
@@ -14,7 +20,6 @@ const Library = ({ songs, currentSong, setCurrentSong, setIsPlaying ,songState})
         songState={songState}
       />
     ));
-  
   };
   return (
     <div className="library">

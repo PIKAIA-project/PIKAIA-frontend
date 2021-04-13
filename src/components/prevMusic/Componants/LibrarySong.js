@@ -1,6 +1,6 @@
 import React from "react";
 import "../Styles/LibrarySong.css";
-import MoreVertIcon from "@material-ui/icons/MoreVert";
+import Ratings from "./Ratings";
 import FavoriteOutlinedIcon from "@material-ui/icons/FavoriteOutlined";
 
 const LibrarySong = ({ song, currentSong, setCurrentSong, songState }) => {
@@ -35,11 +35,11 @@ const LibrarySong = ({ song, currentSong, setCurrentSong, songState }) => {
         <h5>{song.artist}</h5>
       </div>
       <div className="librarySong__time">
-        <h5>{getNormalTime(songState.duration)}</h5>
+        <h5>{getNormalTime(song.duration)}</h5>
       </div>
       <div className="librarySong__rating">
         <FavoriteOutlinedIcon className="musicWidget__button" />
-        <MoreVertIcon className="musicWidget__button" />
+        <Ratings props={song.name} />
       </div>
     </div>
   );

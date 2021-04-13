@@ -151,6 +151,10 @@ input[type="range"]::-moz-range-thumb {
   margin-right: 1rem;
 }
 
+.musicWidget__button .MuiSvgIcon-root{
+  color: #fff !important;
+}
+
 @media only screen and (max-width: 768px) {
   .musicWidget {
     flex-direction: column;
