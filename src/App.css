@@ -18,6 +18,8 @@
   --active-color: rgba(19, 20, 22, 0.315);
   --nav-color: rgb(195, 155, 241) !important;
   --widgets-color: #260442e1;
+  --scroll-bar: #cacaca93;
+  --chat-gradient: rgb(5, 1, 41);
 }
 
 .app {

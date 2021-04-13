@@ -1,8 +1,22 @@
+import { Avatar, IconButton } from "@material-ui/core";
 import React from "react";
 import Bot from "../src/Images/Avatar.jpg";
 import "./Chat.css";
+import { makeStyles } from "@material-ui/core/styles";
+import SendIcon from "@material-ui/icons/Send";
+import MicIcon from '@material-ui/icons/Mic';
+
+
+
+const useStyles = makeStyles((theme) => ({
+  sizeAvatar: {
+    height: theme.spacing(3),
+    width: theme.spacing(3),
+  },
+}));
 
 function ChatVeiw() {
+  const classes = useStyles();
   let messages = [];
 
   let oldMessages = [
@@ -49,6 +63,24 @@ function ChatVeiw() {
     { id: "8", sender: "bot", message: "bot - message 8" },
     { id: "9", sender: "user", message: "user - message 9" },
     { id: "10", sender: "bot", message: "bot - message 10" },
+    { id: "1", sender: "user", message: "hello" },
+    { id: "2", sender: "bot", message: "hi there, what's your name?" },
+    { id: "3", sender: "user", message: "My name is Andrew" },
+    {
+      id: "4",
+      sender: "bot",
+      message: "hi Andrew, Would you like to hear a joke?",
+    },
+    { id: "5", sender: "user", message: "Yes please" },
+    {
+      id: "6",
+      sender: "bot",
+      message: "A skeleton walked into a bar and asked for a drink and a mop",
+    },
+    { id: "7", sender: "user", message: "user - message 7" },
+    { id: "8", sender: "bot", message: "bot - message 8" },
+    { id: "9", sender: "user", message: "user - message 9" },
+    { id: "10", sender: "bot", message: "bot - message 10" },
   ];
 
   /*
@@ -66,7 +98,8 @@ listTwo.push(...listOne)
       }`}
       key={message.id}
     >
-      {message.message}
+      <div className="chat__avatar"></div>
+      <p>{message.message}</p>
     </li>
   ));
 
@@ -117,8 +150,22 @@ listTwo.push(...listOne)
           {listItems}
         </div>
         <div className="chat__footer">
-          <input className="chat" type="text" placeholder="Say something..." />
-          <button className="send">send message</button>
+          <input
+            className="chat__value"
+            id="chat-input"
+            type="text"
+            placeholder="Say something..."
+          />
+          <div className="chat__sendIcon">
+            <IconButton>
+              <SendIcon />
+            </IconButton>
+          </div>
+          <div className="chat__voiceIcon">
+            <IconButton>
+              <MicIcon/>
+            </IconButton>
+          </div>
         </div>
       </div>
     </div>
