@@ -1,12 +1,9 @@
 import React from "react";
 import "./AppContainer.css";
-import { Tabs, Tab } from "@material-ui/core";
 import { IconButton } from "@material-ui/core";
 import HomeRoundedIcon from "@material-ui/icons/HomeRounded";
 import MusicNoteRoundedIcon from "@material-ui/icons/MusicNoteRounded";
 import ShowChartRoundedIcon from "@material-ui/icons/ShowChartRounded";
-import SwipeableViews from "react-swipeable-views";
-import Quotes from "./prevChat/Componants/Quotes";
 import Nav from "./Navigation/Nav";
 import { Chat } from "@material-ui/icons";
 import SwipeableRoutes from "react-swipeable-routes";

@@ -1,6 +1,7 @@
 import { Avatar, IconButton } from "@material-ui/core";
 import React from "react";
-import Bot from "../src/Images/Avatar.jpg";
+import User from "../src/Images/Avatar.jpg";
+import Bot from "../src/Images/Bot.png";
 import "./Chat.css";
 import { makeStyles } from "@material-ui/core/styles";
 import SendIcon from "@material-ui/icons/Send";
@@ -96,7 +97,21 @@ listTwo.push(...listOne)
       }`}
       key={message.id}
     >
-      <div className="chat__avatar"></div>
+      <div className="chat__avatar">
+        <>
+          {message.sender === "user" ? (
+            <div className="chat__avatar--user">
+              {" "}
+              <img src={User} />
+            </div>
+          ) : (
+            <div className="chat__avatar--bot">
+              {" "}
+              <img src={Bot} />
+            </div>
+          )}
+        </>
+      </div>
       <p>{message.message}</p>
     </li>
   ));
