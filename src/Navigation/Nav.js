@@ -7,17 +7,16 @@ import SettingsIcon from "@material-ui/icons/Settings";
 import CloseIcon from "@material-ui/icons/Close";
 
 function Nav() {
-  const [isActive, setActive] = useState("false");
+  const [open, setOpen] = useState(false);
 
-  const handleToggle = (e) => {
-    e.preventDefault();
-    setActive(!isActive);
+  const toggleMenu = () => {
+    setOpen(!open);
   };
 
   return (
     <div className="nav">
-      <ReactTouchEvents onSwipe={handleToggle}>
-        <div className={isActive ? "nav__user" : "nav__toggle"}>
+      <ReactTouchEvents onClick={toggleMenu} open={open}>
+        <div className={open ? "nav__user" : "nav__toggle"}>
           <h1>Settings</h1>
           <div className="nav__container">
             {/* <div className="nav__userImg">
@@ -27,8 +26,8 @@ function Nav() {
           </div>
         </div>
       </ReactTouchEvents>
-      <IconButton onClick={handleToggle}>
-        {isActive ? <CloseIcon /> : <SettingsIcon />}
+      <IconButton onClick={toggleMenu} open={open}>
+        {open ? <CloseIcon /> : <SettingsIcon />}
       </IconButton>
     </div>
   );
