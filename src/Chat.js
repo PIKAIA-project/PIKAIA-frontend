@@ -4,9 +4,7 @@ import Bot from "../src/Images/Avatar.jpg";
 import "./Chat.css";
 import { makeStyles } from "@material-ui/core/styles";
 import SendIcon from "@material-ui/icons/Send";
-import MicIcon from '@material-ui/icons/Mic';
-
-
+import MicIcon from "@material-ui/icons/Mic";
 
 const useStyles = makeStyles((theme) => ({
   sizeAvatar: {
@@ -149,23 +147,23 @@ listTwo.push(...listOne)
         <div className="chat__body" onScroll={handleScroll}>
           {listItems}
         </div>
-        <div className="chat__footer">
-          <input
-            className="chat__value"
-            id="chat-input"
-            type="text"
-            placeholder="Say something..."
-          />
-          <div className="chat__sendIcon">
-            <IconButton>
-              <SendIcon />
-            </IconButton>
-          </div>
-          <div className="chat__voiceIcon">
-            <IconButton>
-              <MicIcon/>
-            </IconButton>
-          </div>
+      </div>
+      <div className="chat__footer">
+        <input
+          className="chat__value"
+          id="chat-input"
+          type="text"
+          placeholder="Say something..."
+        />
+        <div className="chat__sendIcon">
+          <IconButton>
+            <SendIcon />
+          </IconButton>
+        </div>
+        <div className="chat__voiceIcon">
+          <IconButton>
+            <MicIcon />
+          </IconButton>
         </div>
       </div>
     </div>

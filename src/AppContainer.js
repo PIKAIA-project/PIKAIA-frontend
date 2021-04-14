@@ -14,7 +14,7 @@ import ChatVeiw from "./Chat";
 import Home from "./Home";
 import Music from "./Music";
 import Chart from "./Chart";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 function AppContainer() {
   // const theme = useTheme();
@@ -29,82 +29,42 @@ function AppContainer() {
     setValue(index);
   };
 
-  console.log("value", value);
   return (
     <div className="appContainer">
       <Nav className="appContainer__topNav" />
       <Router>
         {" "}
         <SwipeableRoutes
-          index={value}
-          onChangeIndex={handleChangeIndex}
+          replace
           className="appContainer__swipableContainer"
           enableMouseEvents
         >
-          <Route
-            path={`home`}
-            component={() => <Home value={value} index={0} />}
-          />
-          <Route
-            path={`chat`}
-            component={() => <ChatVeiw value={value} index={0} />}
-          />
-          <Route
-            path={`binaural-beats`}
-            component={() => <Music value={value} index={0} />}
-          />
-          <Route
-            path={`charts`}
-            component={() => <Chart value={value} index={0} />}
-          />
+          <Route path="/home" component={Home} />
+          <Route path="/chat" component={ChatVeiw} />
+          <Route path="/binaural-beats" component={Music} />
+          <Route path="/charts" component={Chart} />
         </SwipeableRoutes>
         <div className="appContainer__nav">
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            className="appContainer__navTabs"
-          >
-            <Tab
-              to={`home`}
-              className={value === 0}
-              disableRipple
-              icon={
-                <IconButton>
-                  <HomeRoundedIcon />
-                </IconButton>
-              }
-            />
-            <Tab
-              to={`chat`}
-              className={value === 1}
-              disableRipple
-              icon={
-                <IconButton>
-                  <Chat />
-                </IconButton>
-              }
-            />
-            <Tab
-              to={`binaural-beats`}
-              disableRipple
-              className={value === 2}
-              icon={
-                <IconButton>
-                  <MusicNoteRoundedIcon />
-                </IconButton>
-              }
-            />
-            <Tab
-              to={`charts`}
-              className={value === 3}
-              disableRipple
-              icon={
-                <IconButton>
-                  <ShowChartRoundedIcon />
-                </IconButton>
-              }
-            />
-          </Tabs>
+          <Link to="/home">
+            <IconButton>
+              <HomeRoundedIcon />
+            </IconButton>
+          </Link>{" "}
+          <Link to="/chat">
+            <IconButton>
+              <Chat />
+            </IconButton>
+          </Link>{" "}
+          <Link to="/binaural-beats">
+            <IconButton>
+              <MusicNoteRoundedIcon />
+            </IconButton>
+          </Link>{" "}
+          <Link to="/charts">
+            <IconButton>
+              <ShowChartRoundedIcon />
+            </IconButton>
+          </Link>{" "}
         </div>
       </Router>
     </div>

@@ -27,7 +27,7 @@
 
 .quotes__greeting > h1 {
   font-size: 30px;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.5rem;
 }
 .apiQuote {
   font-size: 14px;
@@ -73,7 +73,7 @@
     height: auto;
   }
   .apiQuote {
-    height: 8rem;
+    height: 7rem;
   }
   .quotes__time > h1 {
     font-size: 55px;

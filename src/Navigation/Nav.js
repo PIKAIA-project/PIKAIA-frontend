@@ -18,12 +18,12 @@ function Nav() {
     <div className="nav">
       <ReactTouchEvents onSwipe={handleToggle}>
         <div className={isActive ? "nav__user" : "nav__toggle"}>
-          <h1>Profile</h1>
+          <h1>Settings</h1>
           <div className="nav__container">
-            <div className="nav__userImg">
+            {/* <div className="nav__userImg">
               <img src={Portrait} alt="" />
             </div>
-            <h3>Jhon Doe</h3>
+            <h3>Jhon Doe</h3> */}
           </div>
         </div>
       </ReactTouchEvents>
