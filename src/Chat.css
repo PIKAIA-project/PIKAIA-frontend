@@ -13,11 +13,11 @@
   align-items: center;
   background-image: linear-gradient(
     180deg,
-    var(--chat-gradient),
-    rgba(255, 255, 255, 0)
+    rgba(255, 255, 255, 0),
+    var(--chat-gradient)
   );
-  border-top-right-radius: 30px;
-  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
   height: 100%;
   width: 75%;
 }
@@ -34,7 +34,8 @@
 
 .chat__header {
   height: 2%;
-  margin-top: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   margin-left: 2rem;
 }
 
@@ -131,7 +132,7 @@
 
 /* for chrome scrollbar */
 *::-webkit-scrollbar {
-  width: 5px;
+  width: 4px;
   height: 100%;
 }
 *::-webkit-scrollbar-track {
@@ -142,7 +143,6 @@
   border-radius: 20px;
   border: transparent;
 }
-
 .chat__footer > .chat__value {
   background: #210c4d;
   width: 68%;
