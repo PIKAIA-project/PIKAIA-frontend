@@ -92,7 +92,9 @@ class Dashboard extends React.Component {
               <div style={Object.assign({})}>
                 <Home />
               </div>
-              <div style={Object.assign({})}></div>
+              <div style={Object.assign({})}>
+              <ReportPage />
+              </div>
               <div style={Object.assign({})}>
                 <PrevMusic />
               </div>
