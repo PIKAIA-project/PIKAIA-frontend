@@ -1,7 +1,8 @@
 import { Avatar, IconButton } from "@material-ui/core";
-import React from "react";
 import User from "../src/Images/Avatar.jpg";
 import Bot from "../src/Images/Bot.png";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import "./Chat.css";
 import { makeStyles } from "@material-ui/core/styles";
 import SendIcon from "@material-ui/icons/Send";
@@ -17,78 +18,8 @@ const useStyles = makeStyles((theme) => ({
 function ChatVeiw() {
   const classes = useStyles();
   let messages = [];
-
-  let oldMessages = [
-    { id: "11", sender: "user", message: "user - message 11" },
-    { id: "12", sender: "bot", message: "bot - message 12" },
-    { id: "13", sender: "bot", message: "bot - message 13" },
-    { id: "14", sender: "user", message: "user - message 14" },
-    { id: "15", sender: "bot", message: "bot - message 15" },
-    { id: "16", sender: "user", message: "user - message 16" },
-    { id: "17", sender: "bot", message: "user - message 17" },
-    { id: "18", sender: "user", message: "user - message 18" },
-    { id: "19", sender: "bot", message: "user - message 19" },
-    { id: "20", sender: "user", message: "user - message 20" },
-
-    { id: "21", sender: "bot", message: "user - message 21" },
-    { id: "22", sender: "user", message: "bot - message 22" },
-    { id: "23", sender: "bot", message: "bot - message 23" },
-    { id: "24", sender: "user", message: "user - message 24" },
-    { id: "25", sender: "bot", message: "bot - message 25" },
-    { id: "26", sender: "user", message: "user - message 26" },
-    { id: "27", sender: "bot", message: "user - message 27" },
-    { id: "28", sender: "user", message: "user - message 28" },
-    { id: "29", sender: "bot", message: "user - message 29" },
-    { id: "30", sender: "user", message: "user - message 30" },
-    { id: "31", sender: "user", message: "user - message 30" },
-  ];
-
-  let newMessages = [
-    { id: "1", sender: "user", message: "hello" },
-    { id: "2", sender: "bot", message: "hi there, what's your name?" },
-    { id: "3", sender: "user", message: "My name is Andrew" },
-    {
-      id: "4",
-      sender: "bot",
-      message: "hi Andrew, Would you like to hear a joke?",
-    },
-    { id: "5", sender: "user", message: "Yes please" },
-    {
-      id: "6",
-      sender: "bot",
-      message: "A skeleton walked into a bar and asked for a drink and a mop",
-    },
-    { id: "7", sender: "user", message: "user - message 7" },
-    { id: "8", sender: "bot", message: "bot - message 8" },
-    { id: "9", sender: "user", message: "user - message 9" },
-    { id: "10", sender: "bot", message: "bot - message 10" },
-    { id: "1", sender: "user", message: "hello" },
-    { id: "2", sender: "bot", message: "hi there, what's your name?" },
-    { id: "3", sender: "user", message: "My name is Andrew" },
-    {
-      id: "4",
-      sender: "bot",
-      message: "hi Andrew, Would you like to hear a joke?",
-    },
-    { id: "5", sender: "user", message: "Yes please" },
-    {
-      id: "6",
-      sender: "bot",
-      message: "A skeleton walked into a bar and asked for a drink and a mop",
-    },
-    { id: "7", sender: "user", message: "user - message 7" },
-    { id: "8", sender: "bot", message: "bot - message 8" },
-    { id: "9", sender: "user", message: "user - message 9" },
-    { id: "10", sender: "bot", message: "bot - message 10" },
-  ];
-
-  /*
-listOne = [1,2,3]
-listTwo = [4,5,6]
-listTwo.push(...listOne)
-*/
-
-  messages.push(...newMessages); // pushing new messages
+  let token =
+    "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiJlNTRmNjE2Ny1hMmM2LTRkM2MtYmU5OC1jNmQ4NzU0YjNhNGIiLCJleHAiOjE2MTg0MzQ4ODl9.lNinuiecnz3e6GPNrLyswg4txZaPL8aMtNyf1grDRgc";
 
   const listItems = messages.map((message) => (
     <li
@@ -115,6 +46,83 @@ listTwo.push(...listOne)
       <p>{message.message}</p>
     </li>
   ));
+
+  //
+  const chatGetAPI = async () => {
+    let arrayOfQuotes = [];
+    var key = "1a55d8e0ffa94fc7988a1fc24deb69b0";
+    try {
+      // const data = await axios.get("https://api.quotable.io/random");
+      // arrayOfQuotes = data.data;
+      // console.log(arrayOfQuotes);
+
+      let axiosConfig = {
+        headers: {
+          "x-access-token": token,
+          "Ocp-Apim-Subscription-Key": key, //the token is a variable which holds the token
+        },
+      };
+
+      const data = await axios.get(
+        "https://pikaia-apim.azure-api.net/chat",
+        axiosConfig
+      );
+
+      arrayOfQuotes = data.data;
+      let chats = arrayOfQuotes.conversations;
+      chats.map((chat) => {
+        console.log(chat["user_sentence"]);
+      });
+      // console.log(chats);
+
+      // var chatbot_sentence = arrayOfQuotes
+      //   .map((x) => x.chatbot_sentence)
+      //   .filter((x) => x);
+      // // console.log(arrayOfQuotes);
+      // console.log(chatbot_sentence);
+      // console.log(arrayOfQuotes.conversations[0]);
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      // setQuote(arrayOfQuotes.user_emotion);
+      // setAuthor(arrayOfQuotes.author);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    chatGetAPI();
+  }, []);
+  //
+
+  const sendNewMessage = () => {
+    const userMessage = document.getElementById("chat-input").value;
+
+    var myHeaders = new Headers();
+    myHeaders.append("x-access-token", token);
+    myHeaders.append("Content-Type", "application/json");
+
+    var raw = JSON.stringify({
+      userInput: userMessage,
+    });
+
+    var requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow",
+    };
+
+    fetch("https://pikaia.azurewebsites.net/chat", requestOptions)
+      .then((response) => response.text())
+      .then((result) => {
+        chatGetAPI();
+        userMessage = "";
+      })
+      .catch((error) => console.log("error", error));
+  };
 
   const handleScroll = (e) => {
     const top = e.target.scrollTop === 0;
@@ -171,7 +179,12 @@ listTwo.push(...listOne)
             type="text"
             placeholder="Say something..."
           />
-          <div className="chat__sendIcon">
+          <div
+            onClick={() => {
+              sendNewMessage();
+            }}
+            className="chat__sendIcon"
+          >
             <IconButton>
               <SendIcon />
             </IconButton>
