@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Hi from "./Images/SignUp.png";
+import Sign from "./Images/SignIn.png";
 
 import "./Login.css";
 
@@ -12,8 +14,10 @@ const Login = () => {
   return (
     <>
       <div
-        class="container"
-        className={isActive ? "container" : "container sign-up-mode"}
+        class="login__container"
+        className={
+          isActive ? "login__container" : "login__container sign-up-mode"
+        }
       >
         <div className="forms-container">
           <div className="signin-signup">
@@ -94,7 +98,7 @@ const Login = () => {
                 Sign up
               </button>
             </div>
-            <img src="img/log.svg" class="image" alt="" />
+            <img src={Hi} className="image hello" alt="" />
           </div>
           <div className="panel right-panel">
             <div className="content">
@@ -104,14 +108,14 @@ const Login = () => {
                 laboriosam ad deleniti.
               </p>
               <button
-                class="btn transparent"
+                className="btn transparent"
                 id="sign-in-btn"
                 onClick={handleToggle}
               >
                 Sign in
               </button>
             </div>
-            <img src="img/register.svg" class="image" alt="" />
+            <img src={Sign} class="image hi" alt="" />
           </div>
         </div>
       </div>

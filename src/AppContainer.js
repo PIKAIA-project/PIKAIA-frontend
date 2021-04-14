@@ -40,6 +40,7 @@ function AppContainer() {
           <Route path="/chat" component={ChatVeiw} />
           <Route path="/binaural-beats" component={Music} />
           <Route path="/charts" component={Chart} />
+          
         </SwipeableRoutes>
         <div className="appContainer__nav">
           <Link to="/home">
