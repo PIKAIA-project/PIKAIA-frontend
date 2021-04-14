@@ -2,7 +2,7 @@
   color: #fff;
   width: 100%;
   height: 100vh;
-  background-image: url("./Images/bg.jpg");
+  background-image: url("./Images/Rename.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "SF Pro Text";
@@ -18,7 +18,7 @@
   width: 95%;
   height: 3.5rem;
   margin-bottom: 1rem;
-  background-color: rgba(253, 253, 253, 0.11);
+  background-color: var(--navigation-bottom);
   backdrop-filter: blur(30px);
   border-radius: 50px;
   display: flex;
@@ -47,4 +47,3 @@
 .appContainer__nav .MuiTabs-indicator {
   display: none;
 }
-

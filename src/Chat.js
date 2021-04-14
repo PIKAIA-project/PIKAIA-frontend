@@ -154,31 +154,33 @@ listTwo.push(...listOne)
   // }, []);
 
   return (
-    <div className="chat">
-      <div className="chat__container">
-        <div className="chat__header">
-          <h1>Chat</h1>
+    <div className="align__chat">
+      <div className="chat">
+        <div className="chat__container">
+          <div className="chat__header">
+            <h1>Chat</h1>
+          </div>
+          <div className="chat__body" onScroll={handleScroll}>
+            {listItems}
+          </div>
         </div>
-        <div className="chat__body" onScroll={handleScroll}>
-          {listItems}
-        </div>
-      </div>
-      <div className="chat__footer">
-        <input
-          className="chat__value"
-          id="chat-input"
-          type="text"
-          placeholder="Say something..."
-        />
-        <div className="chat__sendIcon">
-          <IconButton>
-            <SendIcon />
-          </IconButton>
-        </div>
-        <div className="chat__voiceIcon">
-          <IconButton>
-            <MicIcon />
-          </IconButton>
+        <div className="chat__footer">
+          <input
+            className="chat__value"
+            id="chat-input"
+            type="text"
+            placeholder="Say something..."
+          />
+          <div className="chat__sendIcon">
+            <IconButton>
+              <SendIcon />
+            </IconButton>
+          </div>
+          <div className="chat__voiceIcon">
+            <IconButton>
+              <MicIcon />
+            </IconButton>
+          </div>
         </div>
       </div>
     </div>

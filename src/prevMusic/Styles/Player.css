@@ -1,23 +1,17 @@
 .musicWidget {
   color: #ffffff !important;
-  width: 87%;
-  margin-right: 6.5%;
-  margin-left: 6.5%;
-  height: 7rem;
-  border-radius: 20px;
-  background-color: var(--dark-blur);
-  /* backdrop-filter: blur(30px); */
+  width: 90%;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
 .musicWidget__album {
-  width: 6rem;
-  height: 6rem;
+  width: 7rem;
+  height: 7rem;
   overflow: hidden;
   border-radius: 10px;
-  margin-left: 10px;
+  margin-left: 20px;
   margin-right: 20px;
 }
 
@@ -36,18 +30,18 @@
 
 .musicWidget__controls {
   display: flex;
-  height: 0%;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 .disabled {
   color: grey;
 }
 
 .musicWidget__trackContainer {
-  height: 40%;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 .musicWidget__controls > button {
@@ -59,7 +53,7 @@
   transform: scale(1.1);
 }
 
-.musicWidget__controls > button > .MuiSvgIcon-root {
+/* .musicWidget__controls > button > .MuiSvgIcon-root {
   color: white !important;
 }
 
@@ -68,14 +62,9 @@
 }
 .musicWidget__controls > .skip-back > .MuiSvgIcon-root {
   font-size: 30px !important;
-}
-
-.disabled {
-  color: grey;
-}
+} */
 
 .track {
-  width: 70%;
   height: 5px;
   position: relative;
   border-radius: 1rem;
@@ -143,7 +132,7 @@ input[type="range"]::-moz-range-thumb {
   width: 55%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .musicWidget__other > .musicWidget__button {
@@ -152,69 +141,33 @@ input[type="range"]::-moz-range-thumb {
 }
 
 @media only screen and (max-width: 768px) {
-  .musicWidget {
-    flex-direction: column;
-    height: 45%;
-  }
-  .musicWidget__album {
-    width: 90%;
-    height: 70%;
-  }
-  .musicWidget__album > img {
-    opacity: 0.8;
-  }
-  .musicWidget__album {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-  .musicWidget__controls {
-    position: absolute;
-    width: 100%;
-    top: 20%;
-    height: 40%;
-    left: 0%;
-  }
-  .musicWidget__trackContainer {
-    width: 85%;
-    height: 5%;
-    left: 2rem;
-    bottom: 1rem;
-    position: absolute;
-  }
-  .musicWidget__trackContainer > p {
-    font-size: 12px;
-  }
-  .musicWidget__controls > .skip-forward > .MuiSvgIcon-root {
-    font-size: 40px !important;
-  }
-  .musicWidget__controls > .play,
-  .pause > .MuiSvgIcon-root {
-    font-size: 80px !important;
-  }
-  .musicWidget__controls > .skip-back > .MuiSvgIcon-root {
-    font-size: 40px !important;
-  }
-  .musicWidget__other {
-    position: absolute;
-    bottom: 14%;
-    right: 3%;
-  }
   .musicWidget__Info > h3 {
     font-size: 16px;
-    position: absolute;
-    top: -1%;
-    left: 0;
   }
   .musicWidget__Info > p {
     font-size: 14px;
-    position: absolute;
-    top: 45%;
   }
   .musicWidget__Info {
-    width: 80%;
-    position: relative;
+    position: absolute;
+    top: 1.2rem;
+    left: 3.7rem;
   }
-  .track {
-    width: 75%;
+  .musicWidget__album {
+    display: none;
+  }
+  .musicWidget {
+    position: relative;
+    height: 8rem;
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 3rem;
+  }
+  .musicWidget__trackContainer > p {
+    font-size: 10px;
+    font-weight: 500;
+  }
+  .musicWidget__container {
+    width: 80%;
   }
 }
