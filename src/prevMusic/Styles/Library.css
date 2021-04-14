@@ -3,8 +3,6 @@
   height: 80%;
   margin-bottom: 1%;
   border-radius: 20px;
-  /* background-color: var(--dark-blur); */
-  /* backdrop-filter: blur(30px); */
   color: var(--font-white);
   display: flex;
   flex-direction: column;
@@ -16,10 +14,6 @@
   width: 100%;
   margin-top: 2rem;
   text-align: center;
-  /* background-color: white; */
-}
-.library__top > h1 {
-  font-size: 50px;
 }
 
 .library__list {
@@ -35,8 +29,5 @@
 @media only screen and (max-width: 768px) {
   .library {
     height: 50%;
-  }
-  .library__top > h1 {
-    font-size: 20px;
   }
 }

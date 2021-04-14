@@ -78,13 +78,9 @@ const Player = ({
               className="ButtonIcon"
               icon={
                 isPlaying ? (
-                  <PauseCircleOutlineIcon
-                    style={{ color: green[50], fontSize: 60 }}
-                  />
+                  <PauseCircleOutlineIcon />
                 ) : (
-                  <PlayCircleOutlineIcon
-                    style={{ color: green[50], fontSize: 60 }}
-                  />
+                  <PlayCircleOutlineIcon />
                 )
               }
             />{" "}
@@ -108,10 +104,10 @@ const Player = ({
           <p>{getNormalTime(songState.duration)}</p>
         </div>
       </div>
-      <div className="musicWidget__other">
+      {/* <div className="musicWidget__other">
         <FavoriteOutlinedIcon className="musicWidget__button" />
         <MoreVertIcon className="musicWidget__button" />
-      </div>
+      </div> */}
     </div>
   );
 };

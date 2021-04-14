@@ -1,0 +1,94 @@
+.quotes {
+  width: 40%;
+  height: 60%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+  align-items: center;
+  color: var(--font-white);
+}
+
+.quotes__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: left;
+  width: 73%;
+  height: 60%;
+}
+
+.quotes__right {
+  width: 27%;
+}
+
+.quotes__time > h1 {
+  font-size: 110px;
+}
+
+.quotes__greeting > h1 {
+  font-size: 45px;
+  margin-bottom: 0.8rem;
+}
+.apiQuote {
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  height: 5rem;
+}
+
+.apiQuote:hover > .apiQuote__author {
+  visibility: visible;
+  opacity: 1;
+}
+
+.apiQuote__author {
+  margin-top: 0.5rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.2s linear;
+  text-align: center;
+}
+
+@media only screen and (max-width: 900px) {
+  .quotes {
+    width: 60%;
+    height: 18vh;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .apiQuote {
+    height: 8rem;
+  }
+  .quotes {
+    width: 60%;
+    height: 17vh;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .quotes__rightImage {
+    width: 125%;
+    height: auto;
+  }
+  .apiQuote {
+    height: 100%;
+    font-size: 14px;
+  }
+  .quotes__time > h1 {
+    font-size: 55px;
+  }
+
+  .quotes {
+    width: 83vw;
+    height: 20vh;
+  }
+  .quotes__greeting > h1 {
+    font-size: 24px;
+    margin-bottom: 0.4rem;
+  }
+  .quote_p {
+    font-size: 13px;
+  }
+}

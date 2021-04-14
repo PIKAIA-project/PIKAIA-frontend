@@ -1,0 +1,49 @@
+.appContainer {
+  color: #fff;
+  width: 100%;
+  height: 100vh;
+  background-image: url("./Images/Rename.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "SF Pro Text";
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.appContainer__nav {
+  width: 95%;
+  height: 3.5rem;
+  margin-bottom: 1rem;
+  background-color: var(--navigation-bottom);
+  backdrop-filter: blur(30px);
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.appContainer__nav .MuiSvgIcon-root {
+  font-size: 28px !important;
+  color: var(--nav-color);
+}
+
+.appContainer__swipableContainer {
+  width: 100vw;
+  overflow-y: hidden;
+}
+
+.appContainer__container {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.appContainer__nav .MuiTabs-indicator {
+  display: none;
+}
