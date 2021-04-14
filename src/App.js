@@ -3,17 +3,53 @@ import { BrowserView, MobileView } from "react-device-detect";
 import Login from "./Login";
 import "./App.css";
 import Home from "./AppContainer";
-import prevChat from "./prevChat/PrevChat";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  // Link,
+  // useRouteMatch,
+  // useParams,
+} from "react-router-dom";
 
 function App() {
   return (
     <>
       <BrowserView>
-        {/* <Login /> */}
-        <Home />
+        <Router>
+          <div className="appContainer">
+            <Switch>
+              <Route path={["/login", "/signup"]}>
+                <Login />
+              </Route>
+              <Route path="/home">
+                <Home />
+              </Route>
+              {/* <Route path="/admin">
+                <Admin />
+              </Route> */}
+            </Switch>
+          </div>
+        </Router>
       </BrowserView>
       <MobileView>
-        <Home />
+        <BrowserView>
+          <Router>
+            <div className="appContainer">
+              <Switch>
+                <Route path={["/login", "/signup"]}>
+                  {/* <Login /> */}
+                </Route>
+                <Route path="/home">
+                  <Home />
+                </Route>
+                {/* <Route path="/admin">
+                <Admin />
+              </Route> */}
+              </Switch>
+            </div>
+          </Router>
+        </BrowserView>
       </MobileView>
     </>
   );

@@ -16,13 +16,14 @@
   --font-white: rgb(255, 255, 255);
   --hover-color: rgba(218, 214, 214, 0.349);
   --active-color: rgba(19, 20, 22, 0.315);
-  --nav-color: #db9a86 !important;
-  --widgets-color: #6e43359c;
+  --nav-color: #8472e7 !important;
+  --widgets-color: #1408499c;
+  --input-field: #392368cc;
   --scroll-bar: #cacaca93;
   --chat-gradient: rgb(5, 1, 41);
-  --chat-user: #ecb4a3;
+  --chat-user: #ad68ec;
   --chat-bot: #ddd5e041;
-  --navigation-bottom:rgba(5, 1, 41, 0.137);
+  --navigation-bottom: rgba(5, 1, 41, 0.137);
 }
 
 .app {
