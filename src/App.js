@@ -75,11 +75,7 @@ function App() {
                     component={Home}
                     meta={{ auth: true }}
                   />
-                  <GuardedRoute
-                    path={["/about", "/about-us", "/team"]}
-                    exact
-                    component={About}
-                  />
+
                   <GuardedRoute
                     path="*"
                     meta={{ redirect: true }}
