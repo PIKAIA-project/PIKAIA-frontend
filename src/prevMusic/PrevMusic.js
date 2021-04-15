@@ -80,7 +80,7 @@ function PrevMusic() {
   };
   return (
     <div className="dashboard-home__music">
-       <div className="container">
+      <div className="container">
         {" "}
         <Library
           songs={songs}
@@ -112,7 +112,7 @@ function PrevMusic() {
         ></audio>
       </div>
     </div>
-  )
+  );
 }
 
-export default PrevMusic
+export default PrevMusic;
