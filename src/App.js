@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserView, MobileView } from "react-device-detect";
 import Login from "./Login";
+import { getIsLoggedIn } from "./utils";
 import PageNotFound from "./PageNotFound";
 import Loading from "./Loading";
 import "./App.css";
@@ -18,9 +19,9 @@ import {
 import { GuardProvider, GuardedRoute } from "react-router-guards";
 import { BrowserRouter } from "react-router-dom";
 
-const getIsLoggedIn = () => {
-  return false;
-};
+// const getIsLoggedIn = () => {
+//   return false;
+// };
 
 const requireLogin = (to, from, next) => {
   if (to.meta.redirect) {
