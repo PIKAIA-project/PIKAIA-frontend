@@ -55,6 +55,7 @@ const Login = () => {
         let expires = "; expires=" + date.toUTCString();
         document.cookie = "token=" + token + expires + "; path=/";
         setLoggedIn("true");
+        alert("login success");
       })
       .catch((error) => {
         alert(error);

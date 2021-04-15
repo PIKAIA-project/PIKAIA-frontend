@@ -90,6 +90,7 @@ function ChatVeiw() {
     } catch (error) {
       console.log(error);
     }
+    // document.getElementById("chat-input").value = "gorror";
   };
 
   useEffect(() => {
@@ -99,7 +100,6 @@ function ChatVeiw() {
 
   const sendNewMessage = () => {
     let userMessage = document.getElementById("chat-input").value;
-
     var myHeaders = new Headers();
     myHeaders.append("x-access-token", token);
     myHeaders.append("Content-Type", "application/json");
@@ -119,7 +119,6 @@ function ChatVeiw() {
       .then((response) => response.text())
       .then((result) => {
         chatGetAPI();
-        userMessage = "";
       })
       .catch((error) => console.log("error", error));
   };
