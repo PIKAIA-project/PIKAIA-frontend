@@ -89,21 +89,42 @@ function App() {
         </Router>
       </BrowserView>
       <MobileView>
-        <BrowserView>
-          <Router>
-            <div className="appContainer">
-              <Switch>
-                <Route path={["/login", "/signup"]}>{/* <Login /> */}</Route>
-                <Route path="/home">
-                  <Home />
-                </Route>
-                {/* <Route path="/admin">
-                <Admin />
-              </Route> */}
-              </Switch>
-            </div>
-          </Router>
-        </BrowserView>
+        <BrowserRouter>
+          <GuardProvider
+            guards={[requireLogin]}
+            loading={Loading}
+            error={PageNotFound}
+          >
+            <Switch>
+              <GuardedRoute
+                path={["/login", "/signup"]}
+                exact
+                component={Login}
+              />
+              <GuardedRoute
+                path="/"
+                exact
+                component={Home}
+                meta={{ auth: false }}
+              >
+                <Redirect to="/home" />
+              </GuardedRoute>
+              <GuardedRoute
+                path="/home"
+                exact
+                component={Home}
+                meta={{ auth: false }}
+              />
+
+              <GuardedRoute
+                path="*"
+                meta={{ redirect: true }}
+                component={PageNotFound}
+              />
+              {/* <Route path="/admin"> <Admin /> </Route> */}
+            </Switch>
+          </GuardProvider>
+        </BrowserRouter>
       </MobileView>
     </>
   );
