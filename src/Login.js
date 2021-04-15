@@ -85,10 +85,10 @@ const Login = () => {
           isActive ? "login__container" : "login__container sign-up-mode"
         }
       >
-        {
+        {/* {
           loggedIn ? <Redirect to="/home" /> : ""
           //return <Redirect to='/login'  />
-        }
+        } */}
         <div className="forms-container">
           <div className="signin-signup">
             <form action="#" class="sign-in-form">
