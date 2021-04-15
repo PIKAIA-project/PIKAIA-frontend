@@ -11,6 +11,50 @@ const Login = () => {
     setActive(!isActive);
   };
 
+  // sign in logic
+  const createCookie = (tokenVal, expTimeInMins) => {
+    let expires = expTimeInMins * 1000; // mils
+    document.cookie = "token=" + tokenVal + expires + "; path=/";
+  };
+  // login ======================== from here
+  const loginUser = () => {
+    var myHeaders = new Headers();
+    myHeaders.append(
+      "Ocp-Apim-Subscription-Key",
+      "1a55d8e0ffa94fc7988a1fc24deb69b0"
+    );
+    myHeaders.append("Authorization", "Basic U2h1aGFpYjoxMjM0NQ==");
+
+    var requestOptions = {
+      method: "GET",
+      headers: myHeaders,
+      redirect: "follow",
+    };
+
+    fetch("https://pikaia.azurewebsites.net/login", requestOptions)
+      .then((response) => response.text())
+      .then((result) => {
+        alert(result);
+      })
+      .catch((error) => console.log("error", error));
+  };
+
+  // login ======================== to here
+
+  // login logic
+  // 1. send login request
+  // 2. store cookie
+  // 3. redirect to home page
+
+  // sign in logic
+  // 1. create new user - if username is unique
+  // 2. redirect to login page
+
+  // route guards
+  // 1. check for token in local storage
+  // if token not there, meaning login is expired
+  // 2. use token for request...
+
   return (
     <>
       <div
@@ -31,7 +75,14 @@ const Login = () => {
                 <i className="fas fa-lock"></i>
                 <input type="password" placeholder="Password" />
               </div>
-              <input type="submit" value="Login" class="btn solid" />
+              <input
+                onClick={() => {
+                  loginUser();
+                }}
+                type="button"
+                value="Login"
+                class="btn solid"
+              />
               <p className="social-text">Or Sign in with social platforms</p>
               <div className="social-media">
                 <a href="#" class="social-icon">

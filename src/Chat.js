@@ -98,7 +98,7 @@ function ChatVeiw() {
   //
 
   const sendNewMessage = () => {
-    const userMessage = document.getElementById("chat-input").value;
+    let userMessage = document.getElementById("chat-input").value;
 
     var myHeaders = new Headers();
     myHeaders.append("x-access-token", token);
