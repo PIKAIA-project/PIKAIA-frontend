@@ -60,6 +60,14 @@ function App() {
                     component={Login}
                   />
                   <GuardedRoute
+                    path="/"
+                    exact
+                    component={Home}
+                    meta={{ auth: true }}
+                  >
+                    <Redirect to="/home" />
+                  </GuardedRoute>
+                  <GuardedRoute
                     path="/home"
                     exact
                     component={Home}
