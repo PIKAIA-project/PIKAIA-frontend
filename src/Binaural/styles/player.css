@@ -1,0 +1,10 @@
+.player{
+  background-color: brown;
+  position: absolute;
+  top: 100%;
+  left: 10%;
+  width: 80vw;
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 100;
+}

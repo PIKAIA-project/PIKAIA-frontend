@@ -1,9 +1,10 @@
 .quotes {
-  width: 40%;
-  height: 60%;
+  width: 50%;
+  height: 55%;
   display: flex;
   justify-content: space-around;
   margin-top: 2rem;
+  margin-left: 8rem;
   align-items: center;
   color: var(--font-white);
 }
@@ -22,7 +23,7 @@
 }
 
 .quotes__time > h1 {
-  font-size: 110px;
+  font-size: 90px;
 }
 
 .quotes__greeting > h1 {
@@ -83,12 +84,13 @@
   .quotes {
     width: 83vw;
     height: 20vh;
+    margin-left: 0;
   }
   .quotes__greeting > h1 {
     font-size: 24px;
     margin-bottom: 0.4rem;
   }
   .quote_p {
-    font-size: 13px;
+    font-size: 12px;
   }
 }
