@@ -73,6 +73,11 @@ function App() {
                     component={Home}
                     meta={{ auth: true }}
                   />
+                  <GuardedRoute
+                    path="*"
+                    meta={{ redirect: true }}
+                    component={PageNotFound}
+                  />
                   {/* <Route path="/admin"> <Admin /> </Route> */}
                 </Switch>
               </GuardProvider>
