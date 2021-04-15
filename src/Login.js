@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import Hi from "./Images/SignUp.png";
 import Sign from "./Images/SignIn.png";
 import { getCookie } from "./utils";
+import { useHistory } from "react-router-dom";
 
 import "./Login.css";
+import { Redirect } from "react-router";
 
 const Login = () => {
   const [isActive, setActive] = useState("false");
+  const [loggedIn, setLoggedIn] = useState("false");
 
   const handleToggle = () => {
     setActive(!isActive);
@@ -51,9 +54,10 @@ const Login = () => {
         date.setTime(date.getTime() + 3 * 60 * 60 * 1000); // 3 hours
         let expires = "; expires=" + date.toUTCString();
         document.cookie = "token=" + token + expires + "; path=/";
+        setLoggedIn("true");
       })
       .catch((error) => {
-        alert("error when logging in");
+        alert(error);
       });
   };
 
@@ -81,6 +85,10 @@ const Login = () => {
           isActive ? "login__container" : "login__container sign-up-mode"
         }
       >
+        {
+          loggedIn ? <Redirect to="/home" /> : ""
+          //return <Redirect to='/login'  />
+        }
         <div className="forms-container">
           <div className="signin-signup">
             <form action="#" class="sign-in-form">
