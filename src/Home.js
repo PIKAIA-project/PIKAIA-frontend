@@ -7,6 +7,7 @@ import Wave from "./Wave";
 import "./Home.css";
 import { Link } from "react-router-dom";
 import { Menu, MenuItem } from "@material-ui/core";
+import ChatWidget from "./ChatWidget";
 
 function Home() {
   return (
@@ -14,6 +15,7 @@ function Home() {
       <div className="home__container">
         <div className="home__top">
           <Quotes />
+          <ChatWidget />
         </div>
         <div className="home__bottom">
           <div className="home__bottomLeft">

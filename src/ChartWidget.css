@@ -49,21 +49,25 @@
 
 @media only screen and (max-width: 768px) {
   .chartIcon > img {
-    width: 100px;
+    width: 80px;
     height: auto;
   }
   .chartIcon {
     flex-direction: column;
   }
+  .chartInfo {
+    width: 82%;
+    height: 5%;
+  }
   .chartInfo h3 {
-    font-size: 18px;
+    font-size: 15px;
   }
   .chartIcon > p {
     display: none;
   }
   .musicIcon > img {
     margin-left: 12px;
-    width: 100px;
+    width: 80px;
     height: auto;
   }
   .musicIcon {

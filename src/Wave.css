@@ -8,7 +8,7 @@
 }
 
 .wave__info {
-  height: 45%;
+  height: 30%;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -42,7 +42,7 @@
 }
 
 .wave__Heading > h5 {
-  font-size: 24px;
+  font-size: 16px;
 }
 
 .wave__summary {
@@ -118,13 +118,13 @@
 .box .water_wave_back {
   right: 0;
   fill: var(--wave-background);
-  animation: wave-back 1.4s infinite linear;
+  animation: wave-back 2.1s infinite linear;
 }
 .box .water_wave_front {
   left: 0;
   fill: var(--wave-back);
   margin-bottom: -1px;
-  animation: wave-front 0.7s infinite linear;
+  animation: wave-front 1.4s infinite linear;
 }
 @-moz-keyframes wave-front {
   100% {
@@ -176,7 +176,7 @@
     height: 35%;
   }
   .wave__percent > h1 {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 800;
   }
   .wave__percent h1 > sup {
@@ -186,16 +186,16 @@
     font-size: 16px;
   }
   .wave__summary > p {
-    font-size: 13px;
+    font-size: 11px;
   }
 
   .wave__Heading > h3 {
-    font-size: 18px;
+    font-size: 17.5px;
     margin-bottom: 3px;
   }
 
   .wave__Heading > h5 {
-    font-size: 14px;
+    font-size: 13px;
   }
   .wave__summary {
     width: 85%;

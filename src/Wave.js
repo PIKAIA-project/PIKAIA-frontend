@@ -22,7 +22,7 @@ function Wave() {
       <div className="wave__info">
         <div className="wave__infoHeader">
           <div className="wave__Heading">
-            <h3>Weekly Goal</h3>
+            <h3>Daily Goal</h3>
             <h5>Completed</h5>
           </div>
           <div className="wave__percent">
