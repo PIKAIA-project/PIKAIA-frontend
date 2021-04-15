@@ -7,6 +7,7 @@ import "./Chat.css";
 import { makeStyles } from "@material-ui/core/styles";
 import SendIcon from "@material-ui/icons/Send";
 import MicIcon from "@material-ui/icons/Mic";
+import { getToken } from "./utils";
 
 const useStyles = makeStyles((theme) => ({
   sizeAvatar: {
@@ -18,8 +19,7 @@ const useStyles = makeStyles((theme) => ({
 function ChatVeiw() {
   const classes = useStyles();
   let messages = [];
-  let token =
-    "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiJlNTRmNjE2Ny1hMmM2LTRkM2MtYmU5OC1jNmQ4NzU0YjNhNGIiLCJleHAiOjE2MTg0MzQ4ODl9.lNinuiecnz3e6GPNrLyswg4txZaPL8aMtNyf1grDRgc";
+  let token = getToken();
 
   const listItems = messages.map((message) => (
     <li
