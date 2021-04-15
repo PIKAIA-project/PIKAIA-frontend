@@ -1,6 +1,12 @@
 import React from "react";
-import "./Home.css";
+import ChartWidget from "./ChartWidget";
+import MusicWidget from "./MusicWidget";
 import Quotes from "./prevChat/Componants/Quotes";
+import Wave from "./Wave";
+
+import "./Home.css";
+import { Link } from "react-router-dom";
+import { Menu, MenuItem } from "@material-ui/core";
 
 function Home() {
   return (
@@ -11,10 +17,26 @@ function Home() {
         </div>
         <div className="home__bottom">
           <div className="home__bottomLeft">
-            <div className="home__bottomLeftTop"></div>
-            <div className="home__bottomLeftBottom"></div>
+            <div className="home__bottomLeftTop">
+              <Link
+                to="/charts"
+                style={{ color: "inherit", textDecoration: "inherit" }}
+              >
+                <ChartWidget />
+              </Link>
+            </div>
+            <div className="home__bottomLeftBottom">
+              <Link
+                to="/binaural-beats"
+                style={{ color: "inherit", textDecoration: "inherit" }}
+              >
+                <MusicWidget />
+              </Link>
+            </div>
           </div>
-          <div className="home__bottomRight"></div>
+          <div className="home__bottomRight">
+            <Wave />
+          </div>
         </div>
       </div>
     </div>

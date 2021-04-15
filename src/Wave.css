@@ -1,0 +1,206 @@
+.wave__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 100%;
+}
+
+.wave__info {
+  height: 45%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.wave__infoHeader {
+  margin-top: 2rem;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.wave__percent {
+  width: auto;
+}
+.wave__percent > h1 {
+  font-size: 50px;
+  font-weight: 800;
+}
+.wave__percent h1 > sup {
+  font-size: 20px;
+}
+
+.wave__Heading > h3 {
+  font-size: 25px;
+  margin-bottom: 0.5rem;
+}
+
+.wave__Heading > h5 {
+  font-size: 24px;
+}
+
+.wave__summary {
+  margin-top: 2rem;
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: left;
+  background-color: var(--widgets-background);
+  border-radius: 20px;
+  margin-right: 2rem;
+}
+
+.wave__summary > h4 {
+  margin-left: 1rem;
+  font-size: 20px;
+}
+.wave__summary > p {
+  width: 90%;
+  margin-left: 1rem;
+  font-size: 16px;
+}
+
+.wave__percent {
+  padding-left: 8px;
+  padding-right: 6px;
+  padding-top: 4px;
+  padding-bottom: 3px;
+  background: var(--nav-color);
+  color: white;
+  font-weight: 800;
+  border-radius: 16px;
+}
+
+.wave__Heading {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: flex-start;
+}
+.wave__info > h1 {
+  font-size: 60px;
+}
+.box {
+  height: 55%;
+  width: 100%;
+  position: relative;
+  background: transparent;
+  overflow: hidden;
+}
+.box .water {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  transform: translate(0, 50%);
+  background-image: linear-gradient(
+    180deg,
+    var(--wave-background),
+    var(--wave-back)
+  );
+  transition: all 0.3s;
+}
+.box .water_wave {
+  width: 200%;
+  position: absolute;
+  bottom: 99%;
+}
+.box .water_wave_back {
+  right: 0;
+  fill: var(--wave-background);
+  animation: wave-back 1.4s infinite linear;
+}
+.box .water_wave_front {
+  left: 0;
+  fill: var(--wave-back);
+  margin-bottom: -1px;
+  animation: wave-front 0.7s infinite linear;
+}
+@-moz-keyframes wave-front {
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+@-webkit-keyframes wave-front {
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+@-o-keyframes wave-front {
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+@keyframes wave-front {
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+@-moz-keyframes wave-back {
+  100% {
+    transform: translate(50%, 0);
+  }
+}
+@-webkit-keyframes wave-back {
+  100% {
+    transform: translate(50%, 0);
+  }
+}
+@-o-keyframes wave-back {
+  100% {
+    transform: translate(50%, 0);
+  }
+}
+@keyframes wave-back {
+  100% {
+    transform: translate(50%, 0);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .wave__info {
+    flex-direction: column;
+    height: 65%;
+  }
+  .box {
+    height: 35%;
+  }
+  .wave__percent > h1 {
+    font-size: 24px;
+    font-weight: 800;
+  }
+  .wave__percent h1 > sup {
+    font-size: 12px;
+  }
+  .wave__summary > h4 {
+    font-size: 16px;
+  }
+  .wave__summary > p {
+    font-size: 13px;
+  }
+
+  .wave__Heading > h3 {
+    font-size: 18px;
+    margin-bottom: 3px;
+  }
+
+  .wave__Heading > h5 {
+    font-size: 14px;
+  }
+  .wave__summary {
+    width: 85%;
+    height: 50%;
+    margin-right: 0;
+    margin-top: 0;
+  }
+}

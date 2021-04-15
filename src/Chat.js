@@ -19,7 +19,11 @@ const useStyles = makeStyles((theme) => ({
 function ChatVeiw() {
   const classes = useStyles();
   let messages = [];
+
   let token = getToken();
+
+  // let token =
+  //   "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiJlNTRmNjE2Ny1hMmM2LTRkM2MtYmU5OC1jNmQ4NzU0YjNhNGIiLCJleHAiOjE2MTg0NjEwODB9.wySuBSMfvCqDUOAkMMxhhka8B-kDmmJnqGWixgnFtRk";
 
   const listItems = messages.map((message) => (
     <li
