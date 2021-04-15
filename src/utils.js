@@ -27,9 +27,3 @@ export const getCookie = (c_name) => {
   }
   return "";
 };
-
-export const logOutUser = () => {
-  // remove previously created cookie
-  document.cookie =
-    "token" + "=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
-};
