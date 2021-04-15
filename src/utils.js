@@ -6,7 +6,8 @@ export const getIsLoggedIn = () => {
 };
 
 export const getToken = () => {
-  return "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiJiNzQ5YTRjOS0wMWY0LTRjYzgtYjM4Ny0zMzFmNzE3NDQzMWQiLCJleHAiOjE2MTg0OTYwMzR9.GtHcsbS7Dt_XbR9Rsx_N_WMzN1EMYluxjcaHHrWnGBw";
+  let token = getCookie("token");
+  return token;
 };
 
 export const getApiURL = () => {
