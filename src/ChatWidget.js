@@ -1,5 +1,5 @@
-
 import React from "react";
+import { Link } from "react-router-dom";
 import "./ChatWidget.css";
 import Bot from "./Images/SignUp.png";
 
@@ -11,7 +11,13 @@ function ChatWidget() {
       </div>
       <div className="chatWidget__bottom">
         <p>Talk with someone who understands how you feel...</p>
-        <button> Start Chating </button>
+        <Link
+          className="chatWidget__link"
+          to="/chat"
+          style={{ color: "inherit", textDecoration: "inherit" }}
+        >
+          <button> Start Chating </button>
+        </Link>
       </div>
     </div>
   );
