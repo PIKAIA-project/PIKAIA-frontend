@@ -18,6 +18,7 @@ import {
 // react-route-guard import
 import { GuardProvider, GuardedRoute } from "react-router-guards";
 import { BrowserRouter } from "react-router-dom";
+import About from "./About";
 
 // const getIsLoggedIn = () => {
 //   return false;
@@ -74,6 +75,7 @@ function App() {
                     component={Home}
                     meta={{ auth: true }}
                   />
+
                   <GuardedRoute
                     path="*"
                     meta={{ redirect: true }}
