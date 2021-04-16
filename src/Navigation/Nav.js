@@ -127,6 +127,8 @@ if (theme) {
              <button onClick={themeOne} class="btn-hover color-1"> Woodland - theme </button>
             <button onClick={themeScecond} class="btn-hover color-2"> Lakeside - theme  </button>
             <button onClick={themeThree} class="btn-hover color-3"> Cornfield - theme  </button>
+            {/* Logout */}
+            <button  class="btn-hover color-4"> Log Out  </button>
             </div>
           </div>
         </div>
