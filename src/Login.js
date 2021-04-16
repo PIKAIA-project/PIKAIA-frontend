@@ -44,6 +44,8 @@ const Login = () => {
     fetch("https://pikaia.azurewebsites.net/login", requestOptions)
       .then((response) => response.json())
       .then((data) => {
+        // ?: success from - here
+
         let token = data.token;
         // remove previously created cookie
         document.cookie =
@@ -54,11 +56,18 @@ const Login = () => {
         date.setTime(date.getTime() + 3 * 60 * 60 * 1000); // 3 hours
         let expires = "; expires=" + date.toUTCString();
         document.cookie = "token=" + token + expires + "; path=/";
+
+        // change login state - this is what causes infine loop... destroy this state after redirect
         setLoggedIn("true");
         alert("login success");
+
+        // ?: success to - here
       })
       .catch((error) => {
+        // ?: login error from - here
         alert(error);
+
+        // ?: login error to - here
       });
   };
 
@@ -86,10 +95,10 @@ const Login = () => {
           isActive ? "login__container" : "login__container sign-up-mode"
         }
       >
-        {/* {
-          loggedIn ? <Redirect to="/home" /> : ""
+        {
+          // loggedIn ? <Redirect to="/home" /> : ""
           //return <Redirect to='/login'  />
-        } */}
+        }
         <div className="forms-container">
           <div className="signin-signup">
             <form action="#" class="sign-in-form">
