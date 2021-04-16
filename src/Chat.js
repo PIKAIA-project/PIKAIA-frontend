@@ -18,38 +18,11 @@ const useStyles = makeStyles((theme) => ({
 
 function ChatVeiw() {
   const classes = useStyles();
-  let messages = [];
 
   let token = getToken();
 
   // let token =
   //   "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiJlNTRmNjE2Ny1hMmM2LTRkM2MtYmU5OC1jNmQ4NzU0YjNhNGIiLCJleHAiOjE2MTg0NjEwODB9.wySuBSMfvCqDUOAkMMxhhka8B-kDmmJnqGWixgnFtRk";
-
-  const listItems = messages.map((message) => (
-    <li
-      className={`${
-        message.sender === "user" ? "chat__message--user" : "chat__message--bot"
-      }`}
-      key={message.id}
-    >
-      <div className="chat__avatar">
-        <>
-          {message.sender === "user" ? (
-            <div className="chat__avatar--user">
-              {" "}
-              <img src={User} />
-            </div>
-          ) : (
-            <div className="chat__avatar--bot">
-              {" "}
-              <img src={Bot} />
-            </div>
-          )}
-        </>
-      </div>
-      <p>{message.message}</p>
-    </li>
-  ));
 
   //
   const chatGetAPI = async () => {
@@ -74,10 +47,27 @@ function ChatVeiw() {
 
       arrayOfQuotes = data.data;
       let chats = arrayOfQuotes.conversations;
+      let chatId = 0;
       chats.map((chat) => {
-        console.log(chat["user_sentence"]);
+        console.log(chat);
+        // { id: "11", sender: "user", message: "user - message 11" },
+        // { id: "12", sender: "bot", message: "bot - message 12" },
+        const botMessage = {
+          id: chatId++,
+          sender: "bot",
+          message: chat["chatbot_sentence"],
+          time: chat["date_time"],
+        };
+        const userMessage = {
+          id: chatId++,
+          sender: "user",
+          message: chat["user_sentence"],
+          time: chat["date_time"],
+        };
+        loadedMessages.push(botMessage);
+        loadedMessages.push(userMessage);
       });
-      // console.log(chats);
+      setMessages(loadedMessages);
 
       // var chatbot_sentence = arrayOfQuotes
       //   .map((x) => x.chatbot_sentence)
@@ -164,6 +154,35 @@ function ChatVeiw() {
   //     .catch((error) => console.log("error", error));
   // }, []);
 
+  const [messages, setMessages] = useState([]);
+  let loadedMessages = [];
+
+  const listItems = messages.map((message) => (
+    <li
+      className={`${
+        message.sender === "user" ? "chat__message--user" : "chat__message--bot"
+      }`}
+      key={message.id}
+    >
+      <div className="chat__avatar">
+        <>
+          {message.sender === "user" ? (
+            <div className="chat__avatar--user">
+              {" "}
+              <img src={User} />
+            </div>
+          ) : (
+            <div className="chat__avatar--bot">
+              {" "}
+              <img src={Bot} />
+            </div>
+          )}
+        </>
+      </div>
+      <p>{message.message}</p>
+    </li>
+  ));
+
   return (
     <div className="align__chat">
       <div className="chat">
@@ -204,3 +223,5 @@ function ChatVeiw() {
 }
 
 export default ChatVeiw;
+// { id: "11", sender: "user", message: "user - message 11" },
+// { id: "12", sender: "bot", message: "bot - message 12" },
