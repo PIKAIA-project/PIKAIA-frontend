@@ -64,8 +64,8 @@
     margin-bottom: 0;
   }
   .chart__container > .chart__one {
-    height: 30%;
-    min-height: 30%;
+    height: 70%;
+    min-height: 70%;
   }
 
   .chart__container > .chart__two {
