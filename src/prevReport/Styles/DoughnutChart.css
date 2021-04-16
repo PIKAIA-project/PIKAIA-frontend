@@ -19,7 +19,7 @@
   }
   .dashboard__chartInfo {
     width: 80%;
-    height: 20%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     align-items: left;
