@@ -52,20 +52,22 @@ function ChatVeiw() {
         console.log(chat);
         // { id: "11", sender: "user", message: "user - message 11" },
         // { id: "12", sender: "bot", message: "bot - message 12" },
-        const botMessage = {
-          id: chatId++,
-          sender: "bot",
-          message: chat["chatbot_sentence"],
-          time: chat["date_time"],
-        };
         const userMessage = {
           id: chatId++,
           sender: "user",
           message: chat["user_sentence"],
           time: chat["date_time"],
         };
-        loadedMessages.push(botMessage);
+
+        const botMessage = {
+          id: chatId++,
+          sender: "bot",
+          message: chat["chatbot_sentence"],
+          time: chat["date_time"],
+        };
+
         loadedMessages.push(userMessage);
+        loadedMessages.push(botMessage);
       });
       setMessages(loadedMessages);
 
@@ -157,6 +159,7 @@ function ChatVeiw() {
   const [messages, setMessages] = useState([]);
   let loadedMessages = [];
 
+  // TODO: add message time to here...
   const listItems = messages.map((message) => (
     <li
       className={`${
