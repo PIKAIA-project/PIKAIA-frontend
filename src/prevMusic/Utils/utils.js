@@ -12,6 +12,7 @@ function chillHop() {
       id: uuidv4(),
       active: true,
     },
+    
     {
       name: "Daylight",
       cover:
