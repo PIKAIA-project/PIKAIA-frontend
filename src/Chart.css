@@ -6,63 +6,90 @@
   justify-content: space-around;
   align-items: center;
   width: 100vw;
-  height: 85vh;
+  height: 78vh;
 }
 
 .chart__container > div {
-  /* background-image: linear-gradient(
-    180deg,
-    var(--widgets-color),
-    rgba(19, 3, 31, 0),
-    var(--widgets-color)
-  ); */
+  backdrop-filter: blur(30px);
   background-color: var(--chart-background);
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 20px;
-  width: 90vw;
+  width: 50%;
+  height: 80%;
 }
 
-.chart__container > .chart__one {
-  height: 30%;
-  min-height: 30%;
-}
-
-.chart__container > .chart__two {
-  height: 30%;
-  min-height: 30%;
-}
-
-.chart__container > .chart__three {
-  height: 30%;
-  min-height: 30%;
-}
-
-.chart__container > .chart__four {
-  height: 30%;
-  min-height: 30%;
-}
-
-.chart__container > .chart__five {
-  height: 30%;
-  min-height: 30%;
-}
-
-.chart__container > .chart__six {
-  height: 30%;
-  min-height: 30%;
-}
 .chart__header {
-  background-color: transparent;
-  height: 1%;
+  height: 10%;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+  width: 90%;
+}
+
+.chart__header > h1 {
+  font-size: 35px;
 }
 
 .chart__container {
-  height: 85%;
+  height: 86%;
   width: 95%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: inline-grid;
+  grid-template-columns: auto auto;
   overflow-x: scroll !important;
   margin-bottom: 2%;
+}
+
+@media only screen and (max-width: 760px) {
+  .chart__container {
+    background-image: url("./Images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 98vh;
+    background-position: 0% 60.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .chart__container > div {
+    backdrop-filter: blur(30px);
+    background-color: var(--chart-background);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    width: 90vw;
+  }
+  .chart__header > h1 {
+    font-size: 35px;
+  }
+  .chart__header {
+    margin-bottom: 0;
+  }
+  .chart__container > .chart__one {
+    height: 30%;
+    min-height: 30%;
+  }
+
+  .chart__container > .chart__two {
+    height: 30%;
+    min-height: 30%;
+  }
+
+  .chart__container > .chart__three {
+    height: 30%;
+    min-height: 30%;
+  }
+
+  .chart__container > .chart__four {
+    height: 30%;
+    min-height: 30%;
+  }
+
+  .chart__container > .chart__five {
+    height: 30%;
+    min-height: 30%;
+  }
+
+  .chart__container > .chart__six {
+    height: 30%;
+    min-height: 30%;
+  }
 }
