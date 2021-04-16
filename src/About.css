@@ -1,10 +1,10 @@
-.tab-controller-btn {
+.tab-tab-controller-btn {
   border: none;
   color: white;
   font-size: 12px;
 }
 
-.container {
+.tab-container {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -14,11 +14,11 @@
   word-break: keep-all;
 }
 
-.bloc-tabs {
+.tab-bloc-tabs {
   display: flex;
 }
 
-.tabs {
+.tab-tabs {
   padding: 10px;
   text-align: center;
   width: 50%;
@@ -40,12 +40,12 @@
   border-right: 1px solid rgba(0, 0, 0, 0.274);
 } */
 
-.active-tabs {
+.tab-active-tabs {
   border-bottom: 1px solid transparent;
   width: 80%;
 }
 
-.active-tabs::after {
+.tab-active-tabs::after {
   content: "";
   display: block;
   position: absolute;
@@ -57,28 +57,23 @@
   background-color: rgb(62, 11, 155);
 }
 
-.content-tabs {
+.tab-content-tabs {
   flex-grow: 1;
 }
-.content {
+.tab-content {
   /* padding: 20px; */
   width: 99%;
   height: 100%;
   display: none;
 }
-.content h2 {
+.tab-content h2 {
   padding: 20px 0 5px 5px;
   margin: 0 auto 0;
-}
-.content hr {
-  width: 100px;
-  height: 2px;
-  background: #222;
-  margin-bottom: 5px;
+  font-size: 24px;
 }
 
 /* displays the active tab content */
-.active-content {
+.tab-active-content {
   display: block;
   text-align: center;
 }

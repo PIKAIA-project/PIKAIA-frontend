@@ -12,13 +12,13 @@ const About = () => {
 
   return (
     <div>
-      <div className="container">
-        <div className="bloc-tabs">
+      <div className="tab-container">
+        <div className="tab-bloc-tabs">
           <button
             className={
               toggleState === 1
-                ? "tabs active-tabs tab-controller-btn"
-                : "tabs tab-controller-btn"
+                ? "tab-tabs tab-active-tabs tab-tab-controller-btn"
+                : "tab-tabs tab-tab-controller-btn"
             }
             onClick={() => toggleTab(1)}
           >
@@ -27,8 +27,8 @@ const About = () => {
           <button
             className={
               toggleState === 2
-                ? "tabs active-tabs tab-controller-btn"
-                : "tabs tab-controller-btn"
+                ? "tab-tabs tab-active-tabs tab-tab-controller-btn"
+                : "tab-tabs tab-tab-controller-btn"
             }
             onClick={() => toggleTab(2)}
           >
@@ -37,8 +37,8 @@ const About = () => {
           <button
             className={
               toggleState === 3
-                ? "tabs active-tabs tab-controller-btn"
-                : "tabs tab-controller-btn"
+                ? "tab-tabs tab-active-tabs tab-tab-controller-btn"
+                : "tab-tabs tab-tab-controller-btn"
             }
             onClick={() => toggleTab(3)}
           >
@@ -46,10 +46,12 @@ const About = () => {
           </button>
         </div>
 
-        <div className="content-tabs">
+        <div className="tab-content-tabs">
           <div
             className={
-              toggleState === 1 ? "content  active-content" : "content"
+              toggleState === 1
+                ? "tab-content  tab-active-content"
+                : "tab-content"
             }
           >
             <Tab1 />
@@ -57,7 +59,9 @@ const About = () => {
 
           <div
             className={
-              toggleState === 2 ? "content  active-content" : "content"
+              toggleState === 2
+                ? "tab-content  tab-active-content"
+                : "tab-content"
             }
           >
             <Tab2 />
@@ -65,7 +69,9 @@ const About = () => {
 
           <div
             className={
-              toggleState === 3 ? "content  active-content" : "content"
+              toggleState === 3
+                ? "tab-content  tab-active-content"
+                : "tab-content"
             }
           >
             <Tab3 />
