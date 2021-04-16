@@ -37,7 +37,7 @@ function AppContainer() {
           className="appContainer__swipableContainer"
           enableMouseEvents
         >
-          <Route path="/home" component={Home} />
+          <Route path="/" component={Home} />
           <Route path="/chat" component={ChatVeiw} />
           <Route path="/binaural-beats" component={Music} />
           <Route path="/charts" component={Chart} />

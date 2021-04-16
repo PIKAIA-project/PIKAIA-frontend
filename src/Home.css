@@ -16,7 +16,7 @@
 }
 .home__top {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: flex-start;
   height: 50%;
@@ -50,24 +50,18 @@
   width: 48%;
   height: 90%;
   background-color: var(--widgets-color);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(30px);
   border-radius: 20px;
-}
-
-.home__bottomRight:hover {
-  transform: scale(1.01);
+  overflow: hidden;
+  position: relative;
 }
 
 .home__bottomLeft > div {
   border-radius: 20px;
   height: 48%;
   background-color: var(--widgets-color);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(30px);
   width: 100%;
-}
-
-.home__bottomLeft > div:hover {
-  transform: scale(1.01);
 }
 
 @media only screen and (max-width: 600px) {
@@ -76,5 +70,14 @@
   }
   .home__bottom {
     height: 60%;
+  }
+  .home__top {
+    flex-direction: column;
+  }
+  .home__bottom {
+    background-image: url("./Images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 93vh;
+    background-position: 0% 88%;
   }
 }

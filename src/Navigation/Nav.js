@@ -16,7 +16,7 @@ function Nav() {
 
   return (
     <div className="nav">
-      <Binaural />
+      {/* <Binaural /> */}
       <ReactTouchEvents onClick={toggleMenu} open={open}>
         <div className={open ? "nav__user" : "nav__toggle"}>
           <h1>Settings</h1>
