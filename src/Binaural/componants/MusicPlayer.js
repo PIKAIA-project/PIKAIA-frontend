@@ -1,5 +1,4 @@
 import React from "react";
-import MoreVertIcon from "@material-ui/icons/MoreVert";
 import { IconButton } from "@material-ui/core";
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
 import SkipPreviousIcon from "@material-ui/icons/SkipPrevious";
@@ -7,8 +6,6 @@ import SkipNextIcon from "@material-ui/icons/SkipNext";
 import PauseIcon from "@material-ui/icons/Pause";
 
 import "../styles/MusicPlayer.css";
-
-
 
 class MusicPlayer extends React.Component {
   state = {

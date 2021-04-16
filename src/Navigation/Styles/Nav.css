@@ -76,4 +76,7 @@
   .nav .MuiAvatar-circle {
     margin-top: 0;
   }
+  .nav {
+    height: 3.5rem;
+  }
 }

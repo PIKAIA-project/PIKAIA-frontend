@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-import { IconButton } from "@material-ui/core";
-import Player from "./componants/Player";
-import Minimized from "./componants/Minimized";
 import MusicPlayer from "./componants/MusicPlayer";
 
 function Binaural() {

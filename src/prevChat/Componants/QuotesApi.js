@@ -10,7 +10,9 @@ const OuoteApi = () => {
   const quoteAPI = async () => {
     let arrayOfQuotes = [];
     try {
-      const data = await axios.get("https://api.quotable.io/random");
+      const data = await axios.get(
+        "https://api.quotable.io/random?maxLength=50"
+      );
       arrayOfQuotes = data.data;
     } catch (error) {
       console.log(error);

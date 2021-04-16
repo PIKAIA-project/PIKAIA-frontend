@@ -10,7 +10,7 @@ function ChatWidget() {
         <img src={Bot} alt="" />
       </div>
       <div className="chatWidget__bottom">
-        <p>Talk with someone who understands how you feel...</p>
+        <p>Talk with someone who understands how you feel.</p>
         <Link
           className="chatWidget__link"
           to="/chat"
