@@ -84,7 +84,7 @@
   .home__bottom {
     background-image: var(--back_groundImg);
     background-repeat: no-repeat;
-    background-size: 100vh;
-    background-position:0% 79%;
+    background-size: 93vh;
+    background-position: 0% 85%;
   }
 }

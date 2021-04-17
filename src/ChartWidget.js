@@ -1,6 +1,7 @@
 import "./ChartWidget.css";
 import Graph from "./Images/Graph.svg";
 
+
 import React from "react";
 
 function ChartWidget() {

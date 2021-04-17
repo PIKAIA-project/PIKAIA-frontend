@@ -8,6 +8,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import SendIcon from "@material-ui/icons/Send";
 import MicIcon from "@material-ui/icons/Mic";
 import { getToken } from "./utils";
+import LoadSpinner from "./LoadSpinner";
 
 const useStyles = makeStyles((theme) => ({
   sizeAvatar: {
@@ -183,7 +184,9 @@ function ChatVeiw() {
           )}
         </>
       </div>
-      <p>{message.message}</p>
+      <p>
+        {message.message}
+      </p>
     </li>
   ));
 
@@ -227,5 +230,3 @@ function ChatVeiw() {
 }
 
 export default ChatVeiw;
-// { id: "11", sender: "user", message: "user - message 11" },
-// { id: "12", sender: "bot", message: "bot - message 12" },

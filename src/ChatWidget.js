@@ -4,14 +4,14 @@ import Bot from "./Images/SignUp.png";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import QuotesSkeleton from "./prevChat/Componants/QuotesSkeleton";
+import { getToken } from "../src/utils";
 
 function ChatWidget() {
   const [emotion, setLastEmotion] = useState("");
   const emotionAPI = async () => {
     let arrayOfQuotes = [];
     var key = "1a55d8e0ffa94fc7988a1fc24deb69b0";
-    var token =
-      "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiJlNTRmNjE2Ny1hMmM2LTRkM2MtYmU5OC1jNmQ4NzU0YjNhNGIiLCJleHAiOjE2MTg2MzM3NDB9.b7LowoNKDNSE5CereVwljMrcUUKPpQZA5MqUbfo69Js";
+    var token = getToken();
     try {
       let axiosConfig = {
         headers: {
@@ -49,15 +49,17 @@ function ChatWidget() {
       <div className="chatWidget__bottom">
         <p>
           {!emotion && <QuotesSkeleton />}
-          {emotion == "joy"
-            ? "Seems Like you're having a good day, Tell me about it."
-            : emotion == "anger"
-            ? "Looks like you had a tough day today, Tell me what happend?"
-            : emotion == "sadness"
-            ? "Looks like you're quite upset today, Let's talk about it."
-            : emotion == "fear"
-            ? "You seem to be afraid, I can help you.."
-            : "Hi there, How's things?, Tell me how was your day."}
+          {emotion == "joy" ? (
+            "Seems Like you're having a good day, Tell me about it."
+          ) : emotion == "anger" ? (
+            "Looks like you had a tough day today, Tell me what happend?"
+          ) : emotion == "sadness" ? (
+            "Looks like you're quite upset today, Let's talk about it."
+          ) : emotion == "fear" ? (
+            "You seem to be afraid, I can help you.."
+          ) : (
+            <QuotesSkeleton />
+          )}
         </p>
         <Link
           className="chatWidget__link"

@@ -14,8 +14,7 @@ const DoughnutChart = () => {
     let count_arrayNeutrul = [0, 0, 0, 0, 0];
     let count_dailyEmotion = [0, 0, 0, 0, 0];
     let empAge = [];
-    let token =
-      "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiJlNTRmNjE2Ny1hMmM2LTRkM2MtYmU5OC1jNmQ4NzU0YjNhNGIiLCJleHAiOjE2MTg2MzM3NDB9.b7LowoNKDNSE5CereVwljMrcUUKPpQZA5MqUbfo69Js";
+    let token = getToken();
     var key = "1a55d8e0ffa94fc7988a1fc24deb69b0";
     let axiosConfig = {
       headers: {
@@ -45,22 +44,21 @@ const DoughnutChart = () => {
             count_dailyEmotion[4]++;
           }
         }
-        console.log("Daily count: " + count_dailyEmotion);
 
         setChartData({
-          labels: ["joy", "fear", "anger", "sadness", "neutral"],
+          labels: ["Joy", "Fear", "Anger", "Sadness", "Neutral"],
           datasets: [
             {
               label: "Today's emotion",
               data: count_dailyEmotion,
               backgroundColor: [
-                "rgba(0,255,127, 0.8)",
-                "rgba(105,105,105, 0.8)",
-                "rgba(220,20,60, 0.8)",
-                "rgba(106,90,205, 0.8)",
-                "rgba(241, 255, 27)",
+                "rgba(2555, 173, 173)",
+                "rgb(255, 255, 90)",
+                "rgb(255, 25, 71)",
+                "rgb(71, 0, 190)",
+                "rgb(93, 255, 90)",
               ],
-              borderWidth: 1,
+              borderWidth: 0,
             },
           ],
         });
@@ -82,8 +80,39 @@ const DoughnutChart = () => {
       </div>
       <div className="dashboard__chartLine">
         <Doughnut
+          options={{
+            legend: {
+              labels: {
+                fontColor: "white",
+              },
+            },
+            responsive: true,
+            scales: {
+              yAxes: [
+                {
+                  gridLines: {
+                    display: false,
+                    drawOnChartArea: false,
+                  },
+                  ticks: {
+                    display: false,
+                    beginAtZero: true,
+                  },
+                },
+              ],
+              xAxes: [
+                {
+                  gridLines: {
+                    display: false,
+                  },
+                  ticks: {
+                    display: false,
+                  },
+                },
+              ],
+            },
+          }}
           data={chartData}
-          
         />
       </div>
     </div>
