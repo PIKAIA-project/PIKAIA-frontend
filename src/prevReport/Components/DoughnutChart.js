@@ -83,38 +83,7 @@ const DoughnutChart = () => {
       <div className="dashboard__chartLine">
         <Doughnut
           data={chartData}
-          options={{
-            legend: {
-              labels: {
-                fontColor: "white",
-              },
-            },
-            responsive: true,
-            scales: {
-              yAxes: [
-                {
-                  gridLines: {
-                    display: true,
-                    drawOnChartArea: true,
-                  },
-                  ticks: {
-                    display: true,
-                    beginAtZero: true,
-                  },
-                },
-              ],
-              xAxes: [
-                {
-                  gridLines: {
-                    display: true,
-                  },
-                  ticks: {
-                    display: true,
-                  },
-                },
-              ],
-            },
-          }}
+          
         />
       </div>
     </div>

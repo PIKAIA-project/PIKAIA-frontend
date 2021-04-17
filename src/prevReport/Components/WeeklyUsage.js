@@ -48,36 +48,11 @@ const DoughnutChart = () => {
       <Radar
           data={chartData}
           options={{
-            legend: {
-              labels: {
-                fontColor: "white",
-              },
-            },
-            responsive: true,
-            scales: {
-              yAxes: [
-                {
-                  gridLines: {
-                    display: true,
-                    drawOnChartArea: true,
-                  },
-                  ticks: {
-                    display: true,
-                    beginAtZero: true,
-                  },
-                },
-              ],
-              xAxes: [
-                {
-                  gridLines: {
-                    display: true,
-                  },
-                  ticks: {
-                    display: true,
-                  },
-                },
-              ],
-            },
+            elements: {
+              line: {
+                borderWidth: 5
+              }
+            }
           }}
         />
       </div>
