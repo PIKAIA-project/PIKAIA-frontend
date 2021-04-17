@@ -1,7 +1,105 @@
 .chart {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: 78vh;
+}
+
+.chart__container > div {
+  backdrop-filter: blur(30px);
+  background-color: var(--chart-background);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  width: 50%;
+  height: 80%;
+}
+
+.chart__header {
+  height: 10%;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+  width: 90%;
+}
+
+.chart__header > h1 {
+  font-size: 35px;
+}
+
+.chart__container {
+  height: 86%;
+  width: 95%;
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  overflow-x: scroll !important;
+  margin-bottom: 2%;
+}
+
+@media only screen and (max-width: 760px) {
+  .chart__container {
+    background-image: var(--back_groundImg);
+    background-repeat: no-repeat;
+    background-size: 98vh;
+    background-position: 0% 60.5%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
   }
-  
+  .chart__container > div {
+    backdrop-filter: blur(30px);
+    background-color: var(--chart-background);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    width: 90vw;
+  }
+  .chart__header > h1 {
+    font-size: 35px;
+  }
+  .chart__header {
+    margin-bottom: 0;
+  }
+  .chart__container > .chart__one {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .chart__container > .chart__two {
+    height: 77vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .chart__container > .chart__three {
+    height: 77vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .chart__container > .chart__four {
+    height: 77vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .chart__container > .chart__five {
+    height: 77vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .chart__container > .chart__six {
+    height: 77vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

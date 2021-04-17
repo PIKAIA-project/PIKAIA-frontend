@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import { IconButton } from "@material-ui/core";
-import Player from "./componants/Player";
-import Minimized from "./componants/Minimized";
+import MusicPlayer from "./componants/MusicPlayer";
 
 function Binaural() {
   const [open, setOpen] = useState(false);
@@ -12,16 +10,13 @@ function Binaural() {
 
   return (
     <div>
-      <IconButton>
-        <div
-          onClick={() => {
-            setOpen(true);
-          }}
-        >
-          <Minimized />
-        </div>
-        {open ? <Player toggle={toggleMenu} /> : null}
-      </IconButton>
+      <div
+        onClick={() => {
+          setOpen(true);
+        }}
+      >
+        <MusicPlayer />
+      </div>
     </div>
   );
 }

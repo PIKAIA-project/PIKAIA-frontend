@@ -8,6 +8,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import SendIcon from "@material-ui/icons/Send";
 import MicIcon from "@material-ui/icons/Mic";
 import { getToken } from "./utils";
+import LoadSpinner from "./LoadSpinner";
 
 const useStyles = makeStyles((theme) => ({
   sizeAvatar: {
@@ -18,38 +19,11 @@ const useStyles = makeStyles((theme) => ({
 
 function ChatVeiw() {
   const classes = useStyles();
-  let messages = [];
 
   let token = getToken();
 
   // let token =
   //   "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiJlNTRmNjE2Ny1hMmM2LTRkM2MtYmU5OC1jNmQ4NzU0YjNhNGIiLCJleHAiOjE2MTg0NjEwODB9.wySuBSMfvCqDUOAkMMxhhka8B-kDmmJnqGWixgnFtRk";
-
-  const listItems = messages.map((message) => (
-    <li
-      className={`${
-        message.sender === "user" ? "chat__message--user" : "chat__message--bot"
-      }`}
-      key={message.id}
-    >
-      <div className="chat__avatar">
-        <>
-          {message.sender === "user" ? (
-            <div className="chat__avatar--user">
-              {" "}
-              <img src={User} />
-            </div>
-          ) : (
-            <div className="chat__avatar--bot">
-              {" "}
-              <img src={Bot} />
-            </div>
-          )}
-        </>
-      </div>
-      <p>{message.message}</p>
-    </li>
-  ));
 
   //
   const chatGetAPI = async () => {
@@ -74,11 +48,31 @@ function ChatVeiw() {
 
       arrayOfQuotes = data.data;
       let chats = arrayOfQuotes.conversations;
+      let chatId = 0;
       chats.map((chat) => {
-        console.log(chat["user_sentence"]);
-      });
-      // console.log(chats);
+        // console.log(chat);
+        // { id: "11", sender: "user", message: "user - message 11" },
+        // { id: "12", sender: "bot", message: "bot - message 12" },
+        const userMessage = {
+          id: chatId++,
+          sender: "user",
+          message: chat["user_sentence"],
+          time: chat["date_time"],
+        };
 
+        const botMessage = {
+          id: chatId++,
+          sender: "bot",
+          message: chat["chatbot_sentence"],
+          time: chat["date_time"],
+        };
+
+        loadedMessages.push(userMessage);
+        loadedMessages.push(botMessage);
+      });
+      setMessages(loadedMessages);
+      let scrollElement = document.getElementById("chat-scroll");
+      scrollElement.scrollTop = scrollElement.scrollHeight;
       // var chatbot_sentence = arrayOfQuotes
       //   .map((x) => x.chatbot_sentence)
       //   .filter((x) => x);
@@ -94,6 +88,7 @@ function ChatVeiw() {
     } catch (error) {
       console.log(error);
     }
+    // document.getElementById("chat-input").value = "gorror";
   };
 
   useEffect(() => {
@@ -103,7 +98,6 @@ function ChatVeiw() {
 
   const sendNewMessage = () => {
     let userMessage = document.getElementById("chat-input").value;
-
     var myHeaders = new Headers();
     myHeaders.append("x-access-token", token);
     myHeaders.append("Content-Type", "application/json");
@@ -123,7 +117,6 @@ function ChatVeiw() {
       .then((response) => response.text())
       .then((result) => {
         chatGetAPI();
-        userMessage = "";
       })
       .catch((error) => console.log("error", error));
   };
@@ -165,6 +158,38 @@ function ChatVeiw() {
   //     .catch((error) => console.log("error", error));
   // }, []);
 
+  const [messages, setMessages] = useState([]);
+  let loadedMessages = [];
+
+  // TODO: add message time to here...
+  const listItems = messages.map((message) => (
+    <li
+      className={`${
+        message.sender === "user" ? "chat__message--user" : "chat__message--bot"
+      }`}
+      key={message.id}
+    >
+      <div className="chat__avatar">
+        <>
+          {message.sender === "user" ? (
+            <div className="chat__avatar--user">
+              {" "}
+              <img src={User} />
+            </div>
+          ) : (
+            <div className="chat__avatar--bot">
+              {" "}
+              <img src={Bot} />
+            </div>
+          )}
+        </>
+      </div>
+      <p>
+        {message.message}
+      </p>
+    </li>
+  ));
+
   return (
     <div className="align__chat">
       <div className="chat">
@@ -172,7 +197,7 @@ function ChatVeiw() {
           <div className="chat__header">
             <h1>Chat</h1>
           </div>
-          <div className="chat__body" onScroll={handleScroll}>
+          <div id="chat-scroll" className="chat__body" onScroll={handleScroll}>
             {listItems}
           </div>
         </div>

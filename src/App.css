@@ -24,13 +24,91 @@
   --chat-user: #ad68ec;
   --chat-bot: #ddd5e041;
   --navigation-bottom: rgba(5, 1, 41, 0.137);
+  --chart-background: #1408499c;
+
+  --back_groundImg: url("./Images/bg.jpg");
 
   /* Wave animation */
   --wave-background: #4af870;
   --wave-back: #45f1b89f;
 
   /* Widgets */
-  --widgets-background:#561dd071;
+  --widgets-background: #561dd071;
+}
+
+.firstTheme {
+  --white-blur: rgba(165, 175, 169, 0.233);
+  --dark-blur: rgba(3, 3, 3, 0.288);
+  --library-color: rgba(0, 0, 0, 0.103);
+  --font-white: rgb(255, 255, 255);
+  --hover-color: rgba(197, 131, 8, 0.349);
+  --active-color: rgba(19, 20, 22, 0.315);
+  --nav-color: #c6ccc8 !important;
+  --widgets-color: #8b5d08b4;
+  --input-field: #8b5d08cc;
+  --scroll-bar: #cacaca93;
+  --chat-gradient: rgb(41, 32, 1);
+  --chat-user: #ece368;
+  --chat-bot: #d5e0d641;
+  --navigation-bottom: rgba(3, 17, 7, 0.609);
+  --back_groundImg: url("./Images/green.jpg");
+
+  /* Wave animation */
+  --wave-background: #0b6ea7;
+  --wave-back: #0a573d9f;
+
+  /* Widgets */
+  --widgets-background: #615408a1;
+}
+
+.secondTheme {
+  --white-blur: rgba(165, 175, 169, 0.233);
+  --dark-blur: rgba(3, 3, 3, 0.288);
+  --library-color: rgba(0, 0, 0, 0.103);
+  --font-white: rgb(255, 255, 255);
+  --hover-color: rgba(151, 101, 9, 0.349);
+  --active-color: rgba(19, 20, 22, 0.315);
+  --nav-color: #c6ccc8 !important;
+  --widgets-color: #474242c0;
+  --input-field: #5a5c5acc;
+  --scroll-bar: #cacaca93;
+  --chat-gradient: rgb(65, 68, 66);
+  --chat-user: #68ecae;
+  --chat-bot: #474747cc;
+  --navigation-bottom: rgba(99, 204, 125, 0.609);
+  --back_groundImg: url("./Images/whiteHue.jpg");
+
+  /*Wave animation */
+  --wave-background: #0a054e;
+  --wave-back: #076a749f;
+
+  /* Widgets */
+  --widgets-background: #232e26a1;
+}
+
+.thirdTheme {
+  --white-blur: rgba(175, 165, 165, 0.233);
+  --dark-blur: rgba(3, 3, 3, 0.288);
+  --library-color: rgba(0, 0, 0, 0.103);
+  --font-white: rgb(255, 255, 255);
+  --hover-color: rgba(218, 214, 214, 0.349);
+  --active-color: rgba(19, 20, 22, 0.315);
+  --nav-color: #d8f06f !important;
+  --widgets-color: #4938089c;
+  --input-field: #686323cc;
+  --scroll-bar: #cacaca93;
+  --chat-gradient: rgb(41, 32, 1);
+  --chat-user: #d4ec68;
+  --chat-bot: #ddd5e041;
+  --navigation-bottom: rgba(5, 1, 41, 0.137);
+  --back_groundImg: url("./Images/PaddyIeld.jpg");
+
+  /* Wave animation */
+  --wave-background: #44062c;
+  --wave-back: #f145bd9f;
+
+  /* Widgets */
+  --widgets-background: #54660671;
 }
 
 .app {

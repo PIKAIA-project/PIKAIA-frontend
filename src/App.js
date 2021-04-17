@@ -65,7 +65,7 @@ function App() {
                     path="/"
                     exact
                     component={Home}
-                    meta={{ auth: true }}
+                    meta={{ auth: false }}
                   >
                     <Redirect to="/home" />
                   </GuardedRoute>
@@ -73,9 +73,12 @@ function App() {
                     path="/home"
                     exact
                     component={Home}
-                    meta={{ auth: true }}
+                    meta={{ auth: false }}
                   />
-
+                  <GuardedRoute
+                    path={["/about", "/about-us"]}
+                    component={About}
+                  />
                   <GuardedRoute
                     path="*"
                     meta={{ redirect: true }}

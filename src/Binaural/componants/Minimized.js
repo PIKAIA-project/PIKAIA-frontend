@@ -4,6 +4,7 @@ import PlayArrowIcon from "@material-ui/icons/PlayArrow";
 import PauseIcon from "@material-ui/icons/Pause";
 import SkipNextIcon from "@material-ui/icons/SkipNext";
 import { IconButton } from "@material-ui/core";
+import MusicPlayer from "./MusicPlayer";
 
 import "../styles/minimized.css";
 
@@ -24,31 +25,7 @@ const Minimized = () => {
 
   return (
     <div className="minimized">
-      The Player Part
-      {clicked ? (
-        <PauseIcon
-          className="dashboard__timer__button__pause"
-          onClick={() => {
-            pauseTimer();
-            setClicked(false);
-          }}
-          activeClass={startAnimate ? "active" : undefined}
-          style={{ fontSize: "35px" }}
-        />
-      ) : (
-        <PlayArrowIcon
-          className="dashboard__timer__button__play"
-          onClick={() => {
-            startTimer();
-            setClicked(true);
-          }}
-          activeClass={!startAnimate ? "active" : undefined}
-          style={{ fontSize: "35px" }}
-        />
-      )}
-      <IconButton>
-        <SkipNextIcon />
-      </IconButton>
+      YOOOOOOOO
     </div>
   );
 };

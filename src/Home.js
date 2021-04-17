@@ -21,7 +21,7 @@ function Home() {
           <div className="home__bottomLeft">
             <div className="home__bottomLeftTop">
               <Link
-                to="/charts"
+                to="/emotion-analytics"
                 style={{ color: "inherit", textDecoration: "inherit" }}
               >
                 <ChartWidget />

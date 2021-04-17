@@ -14,7 +14,7 @@
     align-items: center;
     top: 0;
     left: 0;
-    background-color: #000000c5;
+    background-color: #0000001c;
     backdrop-filter: blur(30px);
     transition: transform 200ms ease-in;
     transform: translateX(0%);
@@ -31,7 +31,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #000000c5;
+    background-color: #00000025;
     transition: transform 400ms;
     transform: translateX(100%);
 }

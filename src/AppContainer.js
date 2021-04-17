@@ -40,25 +40,40 @@ function AppContainer() {
           <Route path="/" component={Home} />
           <Route path="/chat" component={ChatVeiw} />
           <Route path="/binaural-beats" component={Music} />
-          <Route path="/charts" component={Chart} />
+          <Route path="/emotion-analytics" component={Chart} />
         </SwipeableRoutes>
         <div className="appContainer__nav">
-          <Link to="/home">
+          <Link
+            to="/home"
+            style={{ color: "inherit", textDecoration: "inherit" }}
+          >
             <IconButton>
               <HomeRoundedIcon />
             </IconButton>
           </Link>{" "}
-          <Link to="/chat">
+          <Link
+            to="/chat"
+            style={{
+              color: "inherit",
+              textDecoration: "inherit",
+            }}
+          >
             <IconButton>
               <Chat />
             </IconButton>
           </Link>{" "}
-          <Link to="/binaural-beats">
+          <Link
+            to="/binaural-beats"
+            style={{ color: "inherit", textDecoration: "inherit" }}
+          >
             <IconButton>
               <MusicNoteRoundedIcon />
             </IconButton>
           </Link>{" "}
-          <Link to="/charts">
+          <Link
+            to="/emotion-analytics"
+            style={{ color: "inherit", textDecoration: "inherit" }}
+          >
             <IconButton>
               <ShowChartRoundedIcon />
             </IconButton>
