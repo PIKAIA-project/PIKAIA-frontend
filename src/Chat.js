@@ -49,7 +49,7 @@ function ChatVeiw() {
       let chats = arrayOfQuotes.conversations;
       let chatId = 0;
       chats.map((chat) => {
-        console.log(chat);
+        // console.log(chat);
         // { id: "11", sender: "user", message: "user - message 11" },
         // { id: "12", sender: "bot", message: "bot - message 12" },
         const userMessage = {
@@ -70,7 +70,8 @@ function ChatVeiw() {
         loadedMessages.push(botMessage);
       });
       setMessages(loadedMessages);
-
+      let scrollElement = document.getElementById("chat-scroll");
+      scrollElement.scrollTop = scrollElement.scrollHeight;
       // var chatbot_sentence = arrayOfQuotes
       //   .map((x) => x.chatbot_sentence)
       //   .filter((x) => x);
@@ -193,7 +194,7 @@ function ChatVeiw() {
           <div className="chat__header">
             <h1>Chat</h1>
           </div>
-          <div className="chat__body" onScroll={handleScroll}>
+          <div id="chat-scroll" className="chat__body" onScroll={handleScroll}>
             {listItems}
           </div>
         </div>
