@@ -90,7 +90,7 @@
     font-size: 24px;
     margin-bottom: 0.4rem;
   }
-  .quote_p {
+  .apiQuote__quote > p {
     font-size: 12px;
   }
 }

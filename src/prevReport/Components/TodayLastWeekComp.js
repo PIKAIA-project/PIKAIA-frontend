@@ -10,7 +10,7 @@ const BarChart = () => {
   const chart = () => {
     let count_dailyEmotion = [0, 0, 0, 0, 0];
     let count_lastweekTodayEmotion = [0, 0, 0, 0, 0];
-    let token =getToken();
+    let token = getToken();
     var key = "1a55d8e0ffa94fc7988a1fc24deb69b0";
     var dayHolder = "";
     let axiosConfig = {

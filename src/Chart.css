@@ -1,7 +1,6 @@
 .chart {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
@@ -41,7 +40,7 @@
 
 @media only screen and (max-width: 760px) {
   .chart__container {
-    background-image: url("./Images/bg.jpg");
+    background-image: var(--back_groundImg);
     background-repeat: no-repeat;
     background-size: 98vh;
     background-position: 0% 60.5%;
@@ -64,7 +63,7 @@
     margin-bottom: 0;
   }
   .chart__container > .chart__one {
-    height: 50vh;
+    height: 60vh;
     display: flex;
     flex-direction: column;
   }

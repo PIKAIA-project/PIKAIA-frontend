@@ -77,4 +77,7 @@
     width: 90%;
     margin-left: 0rem;
   }
+  .chatWidget__bottom > p {
+    font-size: 12px;
+  }
 }

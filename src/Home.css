@@ -82,9 +82,9 @@
     height: 50%;
   }
   .home__bottom {
-    background-image: url("./Images/bg.jpg");
+    background-image: var(--back_groundImg);
     background-repeat: no-repeat;
-    background-size: 93vh;
-    background-position: 0% 88%;
+    background-size: 100vh;
+    background-position:0% 79%;
   }
 }

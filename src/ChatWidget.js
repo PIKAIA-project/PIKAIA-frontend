@@ -3,7 +3,7 @@ import "./ChatWidget.css";
 import Bot from "./Images/SignUp.png";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import EmotionSkeleton from "../src/prevChat/Componants/emotionSkeleton";
+import QuotesSkeleton from "./prevChat/Componants/QuotesSkeleton";
 
 function ChatWidget() {
   const [emotion, setLastEmotion] = useState("");
@@ -11,7 +11,7 @@ function ChatWidget() {
     let arrayOfQuotes = [];
     var key = "1a55d8e0ffa94fc7988a1fc24deb69b0";
     var token =
-      "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiJlNTRmNjE2Ny1hMmM2LTRkM2MtYmU5OC1jNmQ4NzU0YjNhNGIiLCJleHAiOjE2MTg2MDg3NTN9.XhEJvMce7vPqX4ADBs8aTfg9PTDEGPd9TKL1pk5Wxh0";
+      "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiJlNTRmNjE2Ny1hMmM2LTRkM2MtYmU5OC1jNmQ4NzU0YjNhNGIiLCJleHAiOjE2MTg2MzM3NDB9.b7LowoNKDNSE5CereVwljMrcUUKPpQZA5MqUbfo69Js";
     try {
       let axiosConfig = {
         headers: {
@@ -31,6 +31,7 @@ function ChatWidget() {
     }
     try {
       setLastEmotion(arrayOfQuotes.last__emotion[0]);
+      console.log(emotion);
     } catch (error) {
       console.log(error);
     }
@@ -38,7 +39,8 @@ function ChatWidget() {
 
   useEffect(() => {
     emotionAPI();
-  });
+  }, []);
+
   return (
     <div className="chatWidget">
       <div className="chatWidget__avatar">
@@ -46,16 +48,16 @@ function ChatWidget() {
       </div>
       <div className="chatWidget__bottom">
         <p>
-          {!emotion && <EmotionSkeleton type="text" />}
+          {!emotion && <QuotesSkeleton />}
           {emotion == "joy"
-            ? " Seems Like you're having a good day, Tell me about it."
+            ? "Seems Like you're having a good day, Tell me about it."
             : emotion == "anger"
-            ? "Looks Like you had a tough day today, tell me what happend?"
+            ? "Looks like you had a tough day today, Tell me what happend?"
             : emotion == "sadness"
-            ? "Looks like you're quite upset today, let's talk about it."
+            ? "Looks like you're quite upset today, Let's talk about it."
             : emotion == "fear"
-            ? "You seem to be afraid, i can help you.."
-            : ""}
+            ? "You seem to be afraid, I can help you.."
+            : "Hi there, How's things?, Tell me how was your day."}
         </p>
         <Link
           className="chatWidget__link"

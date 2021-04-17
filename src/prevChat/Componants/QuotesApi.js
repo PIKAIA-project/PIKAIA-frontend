@@ -32,9 +32,11 @@ const OuoteApi = () => {
   return (
     <div className="apiQuote">
       <div className="apiQuote__quote">
-        {" "}
-        {` "` + quote + `" `}
-        {!quote && <QuotesSkeleton />}
+        <p>
+          {" "}
+          {` "` + quote + `" `}
+          {!quote && <QuotesSkeleton />}
+        </p>
       </div>
       <div className="apiQuote__author">
         <strong> &hearts;&ensp;{author}</strong>

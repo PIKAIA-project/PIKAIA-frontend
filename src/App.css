@@ -24,15 +24,16 @@
   --chat-user: #ad68ec;
   --chat-bot: #ddd5e041;
   --navigation-bottom: rgba(5, 1, 41, 0.137);
-  --chart-background:#1408499c;
-  --back_groundImg:url("./Images/bg.jpg");
+  --chart-background: #1408499c;
+
+  --back_groundImg: url("./Images/bg.jpg");
 
   /* Wave animation */
   --wave-background: #4af870;
   --wave-back: #45f1b89f;
 
   /* Widgets */
-  --widgets-background:#561dd071;
+  --widgets-background: #561dd071;
 }
 
 .firstTheme {
@@ -50,14 +51,14 @@
   --chat-user: #ece368;
   --chat-bot: #d5e0d641;
   --navigation-bottom: rgba(3, 17, 7, 0.609);
-  --back_groundImg:url("./Images/Moody_forest_green.jpg");
+  --back_groundImg: url("./Images/green.jpg");
 
   /* Wave animation */
   --wave-background: #0b6ea7;
   --wave-back: #0a573d9f;
 
   /* Widgets */
-  --widgets-background:#615408a1;
+  --widgets-background: #615408a1;
 }
 
 .secondTheme {
@@ -75,14 +76,14 @@
   --chat-user: #68ecae;
   --chat-bot: #474747cc;
   --navigation-bottom: rgba(0, 8, 2, 0.609);
-  --back_groundImg:url("./Images/whiteHue.jpg");
+  --back_groundImg: url("./Images/whiteHue.jpg");
 
   /*Wave animation */
-   --wave-background: #0a054e;
+  --wave-background: #0a054e;
   --wave-back: #076a749f;
 
   /* Widgets */
-  --widgets-background:#232e26a1;
+  --widgets-background: #232e26a1;
 }
 
 .thirdTheme {
@@ -100,17 +101,15 @@
   --chat-user: #d4ec68;
   --chat-bot: #ddd5e041;
   --navigation-bottom: rgba(5, 1, 41, 0.137);
-  --back_groundImg:url("./Images/PaddyIeld.jpg");
-  
+  --back_groundImg: url("./Images/PaddyIeld.jpg");
 
   /* Wave animation */
   --wave-background: #44062c;
   --wave-back: #f145bd9f;
 
   /* Widgets */
-  --widgets-background:#54660671;
+  --widgets-background: #54660671;
 }
-
 
 .app {
   height: 100vh;

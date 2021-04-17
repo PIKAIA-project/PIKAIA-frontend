@@ -7,7 +7,6 @@ const QuotesSkeleton = () => {
     <div className="skeleton-wrapper">
       <SkeletonElement type="text" />
       <SkeletonElement type="text" />
-      <SkeletonElement type="text" />
       <Shimmer />
     </div>
   );
