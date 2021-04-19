@@ -94,7 +94,7 @@ const Tab2 = () => {
 
 // TODO: add tab 3 content here
 const Tab3 = () => {
-  return <h2>Mental Health Awareness</h2>
+  return <h2>Mental Awareness Code comes here</h2>
 }
 
 export default About
