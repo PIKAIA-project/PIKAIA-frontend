@@ -89,7 +89,7 @@ const Tab1 = () => {
 
 // TODO: add tab 2 content here
 const Tab2 = () => {
-  return <h2>Meet the Amazing people behind the project</h2>
+  return <h2>Meet the team code comes here</h2>
 }
 
 // TODO: add tab 3 content here
