@@ -37,7 +37,7 @@ function Wave() {
         </div>
       </div>
       <div className="box">
-        <div id="water" class="water">
+        <div id="water" className="water">
           <svg viewBox="0 0 560 20" class="water_wave water_wave_back">
             <use xlinkHref="#wave"></use>
           </svg>

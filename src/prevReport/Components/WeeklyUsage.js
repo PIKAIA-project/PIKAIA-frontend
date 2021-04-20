@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Radar } from "react-chartjs-2";
-import axios from "axios";
 
 const DoughnutChart = () => {
   const [chartData, setChartData] = useState({});

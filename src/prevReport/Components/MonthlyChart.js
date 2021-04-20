@@ -12,8 +12,6 @@ const MonthlyChart = () => {
   const [chartData, setChartData] = useState({});
 
   const chart = () => {
-    let count_dailyEmotion = [0, 0, 0, 0, 0];
-    let count_lastweekTodayEmotion = [0, 0, 0, 0, 0];
     let monthly_JoyCount = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     let monthly_FearCount = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     let monthly_AngerCount = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
@@ -21,7 +19,6 @@ const MonthlyChart = () => {
     let monthly_netrualCount = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     let token = getToken();
     var key = "1a55d8e0ffa94fc7988a1fc24deb69b0";
-    var dayHolder = "";
     let axiosConfig = {
       headers: {
         "x-access-token": token,
