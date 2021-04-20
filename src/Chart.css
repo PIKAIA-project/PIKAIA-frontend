@@ -40,19 +40,14 @@
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 20px;
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   padding-left: 15px;
   padding-right: 15px;
-}
-
-.chart__go {
-  width: 40%;
 }
 
 .chart__header {
@@ -85,6 +80,7 @@
     height: 3%;
   }
   .chart__container > div {
+    min-height: 42%;
     margin-left: 2%;
     width: 88%;
     backdrop-filter: blur(30px);
@@ -96,8 +92,6 @@
     text-align: center;
   }
   .chart__container > div > p {
-    margin-top: 5px;
     font-size: 12px;
-    margin-bottom: 1rem;
   }
 }
