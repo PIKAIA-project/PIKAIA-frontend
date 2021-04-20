@@ -89,8 +89,228 @@ const Tab1 = () => {
 
 // TODO: add tab 2 content here
 const Tab2 = () => {
-  return <h2>Meet the team code comes here</h2>
-}
+  return (
+    <div className="container">
+      <h1 className="heading">Meet The Team</h1>
+      <div className="card-wrapper">
+          <div className="card">
+              <img
+                      src="Images/pikaia_bot.png"
+                      alt="card background"
+                      className="card-img"
+              />
+              <img
+                      src="Images/image_1.jpg"
+                      alt="profile image"
+                      className="profile-img"
+              />
+              <h1>Shohan Saverimuttu</h1>
+              <p className="job-title">Team leader</p>
+              <p className="about">
+                  Gibberish, also called jibber-jabber or gobbledygook, is speech
+                  that is (or appears to be) nonsense. It may include speech sounds
+                  that are not actual words, or language games and specialized
+                  jargon that seems nonsensical to outsiders.
+              </p>
+              <a href="#" className="btn">Contact</a>
+              <ul className="social-media">
+                  <li>
+                      <a href="#"><i className="fab fa-facebook-square"></i></a>
+                  </li>
+                  <li>
+                      <a href="#"><i className="fab fa-twitter-square"></i></a>
+                  </li>
+                  <li>
+                      <a href="#"><i className="fab fa-instagram-square"></i></a>
+                  </li>
+                  <li>
+                      <a href="#"><i className="fab fa-google-plus-square"></i></a>
+                  </li>
+              </ul>
+          </div>
+
+          <div className="card">
+              <img
+                      src="Images/pikaia_bot.png"
+                      alt="card background"
+                      className="card-img"
+              />
+              <img
+                      src="Images/thalha.jpg"
+                      alt="profile image"
+                      className="profile-img"
+              />
+              <h1>Thalha Muksith</h1>
+              <p className="job-title">Member</p>
+              <p className="about">
+                  Gibberish, also called jibber-jabber or gobbledygook, is speech
+                  that is (or appears to be) nonsense. It may include speech sounds
+                  that are not actual words, or language games and specialized
+                  jargon that seems nonsensical to outsiders.
+              </p>
+              <a href="#" className="btn">Contact</a>
+              <ul className="social-media">
+                  <li>
+                      <a href="#"><i className="fab fa-facebook-square"></i></a>
+                  </li>
+                  <li>
+                      <a href="#"><i className="fab fa-twitter-square"></i></a>
+                  </li>
+                  <li>
+                      <a href="#"><i className="fab fa-instagram-square"></i></a>
+                  </li>
+                  <li>
+                      <a href="#"><i className="fab fa-google-plus-square"></i></a>
+                  </li>
+              </ul>
+          </div>
+
+          <div className="card">
+              <img
+                      src="Images/pikaia_bot.png"
+                      alt="card background"
+                      className="card-img"
+              />
+              <img
+                      src="Images/thoshitha.jpg"
+                      alt="profile image"
+                      className="profile-img"
+              />
+              <h1>Thoshitha Kaduruwewa</h1>
+              <p className="job-title">Member</p>
+              <p className="about">
+                  Gibberish, also called jibber-jabber or gobbledygook, is speech
+                  that is (or appears to be) nonsense. It may include speech sounds
+                  that are not actual words, or language games and specialized
+                  jargon that seems nonsensical to outsiders.
+              </p>
+              <a href="#" className="btn">Contact</a>
+              <ul className="social-media">
+                  <li>
+                      <a href="#"><i className="fab fa-facebook-square"></i></a>
+                  </li>
+                  <li>
+                      <a href="#"><i className="fab fa-twitter-square"></i></a>
+                  </li>
+                  <li>
+                      <a href="#"><i className="fab fa-instagram-square"></i></a>
+                  </li>
+                  <li>
+                      <a href="#"><i className="fab fa-google-plus-square"></i></a>
+                  </li>
+              </ul>
+          </div>
+
+          <div className="card">
+              <img
+                      src="Images/pikaia_bot.png"
+                      alt="card background"
+                      className="card-img"
+              />
+              <img
+                      src="Images/shehan.jpg"
+                      alt="profile image"
+                      className="profile-img"
+              />
+              <h1>Shehan Saverimuttu</h1>
+              <p className="job-title">Member</p>
+              <p className="about">
+                  Gibberish, also called jibber-jabber or gobbledygook, is speech
+                  that is (or appears to be) nonsense. It may include speech sounds
+                  that are not actual words, or language games and specialized
+                  jargon that seems nonsensical to outsiders.
+              </p>
+              <a href="#" className="btn">Contact</a>
+              <ul className="social-media">
+                  <li>
+                      <a href="#"><i className="fab fa-facebook-square"></i></a>
+                  </li>
+                  <li>
+                      <a href="#"><i className="fab fa-twitter-square"></i></a>
+                  </li>
+                  <li>
+                      <a href="#"><i className="fab fa-instagram-square"></i></a>
+                  </li>
+                  <li>
+                      <a href="#"><i className="fab fa-google-plus-square"></i></a>
+                  </li>
+              </ul>
+          </div>
+
+          <div className="card">
+              <img
+                      src="Images/pikaia_bot.png"
+                      alt="card background"
+                      className="card-img"
+              />
+              <img
+                      src="Images/shuhaib.jpg"
+                      alt="profile image"
+                      className="profile-img"
+              />
+              <h1>Shuhaib Ahmed</h1>
+              <p className="job-title">Member</p>
+              <p className="about">
+                  Gibberish, also called jibber-jabber or gobbledygook, is speech
+                  that is (or appears to be) nonsense. It may include speech sounds
+                  that are not actual words, or language games and specialized
+                  jargon that seems nonsensical to outsiders.
+              </p>
+              <a href="#" className="btn">Contact</a>
+              <ul className="social-media">
+                  <li>
+                      <a href="#"><i className="fab fa-facebook-square"></i></a>
+                  </li>
+                  <li>
+                      <a href="#"><i className="fab fa-twitter-square"></i></a>
+                  </li>
+                  <li>
+                      <a href="#"><i className="fab fa-instagram-square"></i></a>
+                  </li>
+                  <li>
+                      <a href="#"><i className="fab fa-google-plus-square"></i></a>
+                  </li>
+              </ul>
+          </div>
+
+          <div className="card">
+              <img
+                      src="Images/pikaia_bot.png"
+                      alt="card background"
+                      className="card-img"
+              />
+              <img
+                      src="Images/chanod.jpg"
+                      alt="profile image"
+                      className="profile-img"
+              />
+              <h1>Chanod Bulugammana</h1>
+              <p className="job-title">Member</p>
+              <p className="about">
+                  Gibberish, also called jibber-jabber or gobbledygook, is speech
+                  that is (or appears to be) nonsense. It may include speech sounds
+                  that are not actual words, or language games and specialized
+                  jargon that seems nonsensical to outsiders.
+              </p>
+              <a href="#" className="btn">Contact</a>
+              <ul className="social-media">
+                  <li>
+                      <a href="#"><i className="fab fa-facebook-square"></i></a>
+                  </li>
+                  <li>
+                      <a href="#"><i className="fab fa-twitter-square"></i></a>
+                  </li>
+                  <li>
+                      <a href="#"><i className="fab fa-instagram-square"></i></a>
+                  </li>
+                  <li>
+                      <a href="#"><i className="fab fa-google-plus-square"></i></a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+    </div>
+)}
 
 // TODO: add tab 3 content here
 const Tab3 = () => {
