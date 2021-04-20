@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Doughnut } from "react-chartjs-2";
 import axios from "axios";
-import "../../prevReport/Styles/DoughnutChart.css";
+
 import { getToken } from "../../utils";
 const DoughnutChart = () => {
   const [chartData, setChartData] = useState({});
@@ -52,7 +52,7 @@ const DoughnutChart = () => {
               label: "Today's emotion",
               data: count_dailyEmotion,
               backgroundColor: [
-                "rgba(2555, 173, 173)",
+                "rgb(2555, 173, 173)",
                 "rgb(255, 255, 90)",
                 "rgb(255, 25, 71)",
                 "rgb(71, 0, 190)",
@@ -73,49 +73,43 @@ const DoughnutChart = () => {
   }, []);
 
   return (
-    <div className="dashboard__chart">
-      <div className="dashboard__chartInfo">
-        <h3>Todays Emotion Analytics</h3>
-        <p>How are you feeling today?</p>
-      </div>
-      <div className="dashboard__chartLine">
-        <Doughnut
-          options={{
-            legend: {
-              labels: {
-                fontColor: "white",
+    <>
+      <Doughnut
+        options={{
+          legend: {
+            labels: {
+              fontColor: "white",
+            },
+          },
+          responsive: true,
+          scales: {
+            yAxes: [
+              {
+                gridLines: {
+                  display: false,
+                  drawOnChartArea: false,
+                },
+                ticks: {
+                  display: false,
+                  beginAtZero: true,
+                },
               },
-            },
-            responsive: true,
-            scales: {
-              yAxes: [
-                {
-                  gridLines: {
-                    display: false,
-                    drawOnChartArea: false,
-                  },
-                  ticks: {
-                    display: false,
-                    beginAtZero: true,
-                  },
+            ],
+            xAxes: [
+              {
+                gridLines: {
+                  display: false,
                 },
-              ],
-              xAxes: [
-                {
-                  gridLines: {
-                    display: false,
-                  },
-                  ticks: {
-                    display: false,
-                  },
+                ticks: {
+                  display: false,
                 },
-              ],
-            },
-          }}
-          data={chartData}
-        />
-      </div>
-    </div>
+              },
+            ],
+          },
+        }}
+        data={chartData}
+      />
+    </>
   );
 };
 

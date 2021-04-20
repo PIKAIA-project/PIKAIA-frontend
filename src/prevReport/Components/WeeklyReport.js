@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../../prevReport/Styles/WeeklyReport.css";
+
 import { Line } from "react-chartjs-2";
 import axios from "axios";
 import { getToken } from "../../utils";
@@ -153,32 +153,32 @@ const Dankmemes = () => {
             {
               label: "Joy",
               data: count_arrayJoy,
-              backgroundColor: ["rgba(75, 192, 192, 0.6)"],
-              borderWidth: 1,
+              backgroundColor: ["rgba(2555, 173, 173)"],
+              borderWidth: 0,
             },
             {
               label: "Fear",
               data: count_arrayFear,
-              backgroundColor: ["rgba(255,0,255,0.75)"],
-              borderWidth: 1,
+              backgroundColor: ["rgb(255, 255, 90)"],
+              borderWidth: 0,
             },
             {
               label: "Anger",
               data: count_arrayAnger,
-              backgroundColor: ["rgba(0,255,0,0.75)"],
-              borderWidth: 1,
+              backgroundColor: ["rgb(255, 25, 71)"],
+              borderWidth: 0,
             },
             {
               label: "Sadness",
               data: count_arraySadness,
-              backgroundColor: ["rgba(184, 71, 255, 0.34)"],
-              borderWidth: 1,
+              backgroundColor: ["rgb(71, 0, 190)"],
+              borderWidth: 0,
             },
             {
               label: "Neutrul",
               data: count_arrayNeutrul,
-              backgroundColor: ["rgba(184, 71, 255, 0.08)"],
-              borderWidth: 1,
+              backgroundColor: ["rgb(93, 255, 90)"],
+              borderWidth: 0,
             },
           ],
         });
@@ -193,49 +193,41 @@ const Dankmemes = () => {
   }, []);
 
   return (
-    <div className="dashboard__chart">
-      <div className="dashboard__chartInfo">
-        <h3>Emotion Analytics</h3>
-        <p>Track your daily emotion changes, and improve your mental health.</p>
-      </div>
-      <div className="dashboard__chartLine">
-        <Line
-          data={chartData}
-          options={{
-            legend: {
-              labels: {
-                fontColor: "white",
+    <Line
+      data={chartData}
+      options={{
+        legend: {
+          labels: {
+            fontColor: "white",
+          },
+        },
+        responsive: true,
+        scales: {
+          yAxes: [
+            {
+              gridLines: {
+                display: true,
+                drawOnChartArea: true,
+              },
+              ticks: {
+                display: true,
+                beginAtZero: true,
               },
             },
-            responsive: true,
-            scales: {
-              yAxes: [
-                {
-                  gridLines: {
-                    display: true,
-                    drawOnChartArea: true,
-                  },
-                  ticks: {
-                    display: true,
-                    beginAtZero: true,
-                  },
-                },
-              ],
-              xAxes: [
-                {
-                  gridLines: {
-                    display: true,
-                  },
-                  ticks: {
-                    display: true,
-                  },
-                },
-              ],
+          ],
+          xAxes: [
+            {
+              gridLines: {
+                display: false,
+              },
+              ticks: {
+                display: true,
+              },
             },
-          }}
-        />
-      </div>
-    </div>
+          ],
+        },
+      }}
+    />
   );
 };
 

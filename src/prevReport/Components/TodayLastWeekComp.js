@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Bar } from "react-chartjs-2";
 import axios from "axios";
-import "../../prevReport/Styles/TodayLastWeekComp.css";
+
 import { getToken } from "../../utils";
 
 const BarChart = () => {
@@ -82,24 +82,24 @@ const BarChart = () => {
                   label: "Today's emotion",
                   data: count_dailyEmotion,
                   backgroundColor: [
-                  "rgba(75, 192, 192, 0.6)",
-                  "rgba(255, 159, 64, 0.2)",
-                  "rgba(255, 205, 86, 0.2)",
-                  "rgba(75, 192, 192, 0.2)",
-                  "rgba(54, 162, 235, 0.2)"
+                    "rgba(2555, 173, 173)",
+                    "rgb(255, 255, 90)",
+                    "rgb(255, 25, 71)",
+                    "rgb(71, 0, 190)",
+                    "rgb(93, 255, 90)",
               ],
-                  borderWidth: 4
+                  borderWidth: 0
                 },{
                   label: "Last week today",
                   data: count_lastweekTodayEmotion,
                   backgroundColor: [
-                  "rgba(75, 192, 192, 0.6)",
-                  "rgba(255, 159, 64, 0.2)",
-                  "rgba(255, 205, 86, 0.2)",
-                  "rgba(75, 192, 192, 0.2)",
-                  "rgba(54, 162, 235, 0.2)"
+                    "rgba(2555, 173, 173)",
+                    "rgb(255, 255, 90)",
+                    "rgb(255, 25, 71)",
+                    "rgb(71, 0, 190)",
+                    "rgb(93, 255, 90)",
               ],
-                  borderWidth: 4
+                  borderWidth: 0
                 }
               ]
             });  
@@ -123,14 +123,6 @@ const BarChart = () => {
   
 
   return (
-    <div className="dashboard__chart">
-      <div className="dashboard__chartInfo">
-        <h3>Today vs. last week today Emotion Analytics</h3>
-        <p>
-          Compare your emotional changes to last week.
-        </p>
-      </div>
-      <div className="dashboard__chartLine">
       <Bar
           data={chartData}
           options={{
@@ -144,11 +136,11 @@ const BarChart = () => {
               yAxes: [
                 {
                   gridLines: {
-                    display: true,
+                    display: false,
                     drawOnChartArea: true,
                   },
                   ticks: {
-                    display: true,
+                    display: false,
                     beginAtZero: true,
                   },
                 },
@@ -166,8 +158,6 @@ const BarChart = () => {
             },
           }}
         />
-      </div>
-    </div>
   );
 }
 
