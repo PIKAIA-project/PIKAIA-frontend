@@ -83,15 +83,15 @@
   box-sizing: border-box;
 }
 
+.About_main{ 
+    
 
- .About_main{ 
-   
 padding-top: 10px;
 padding-left: 20px;
 display: flex;
 flex-direction: column;
 position: relative;
-overflow-y:scroll
+
 
 
 } 
@@ -99,8 +99,9 @@ overflow-y:scroll
 
 div.about_card {
  
-  height: 900px;
-  background-color: --widgets-background;
+  height: 2000px;
+  margin-bottom: 100%;
+ background-color: --widgets-background;
   backdrop-filter: blur(30px);
   transition: transform 200ms ease-in;
   transform: translateX(0%);
@@ -161,13 +162,13 @@ p.P2_Para{
 
 
 .about_image{
-  display: block;
+ 
   margin-left: auto;
   margin-right: auto;
   width: 100px;
   display: flex;
   flex-direction: column;
-  margin-top: 120%;
+  margin-top: 150%;
 
 }
 
@@ -208,9 +209,10 @@ h1.about_comp{
   border-radius: 20px;
   margin-right: 20%;
   margin-left: 3%;
-  margin-bottom: 10%;
-  
+  margin-bottom: 76%;
 }
+  
+
 
 p.About_img_comp_para{
   text-align: right;
@@ -226,6 +228,7 @@ p.About_img_compHack_para{
 
 .About_img_Complement_para{
   padding-right: 10%;
+  margin-bottom: 60%;
   
 }
 
@@ -246,6 +249,16 @@ hr.hr2{
 
 
 @media screen and (max-width: 601px) {
+
+  div.about_card{
+   height: 1400px; 
+  }
+
+  div.about_card{
+
+    margin-bottom: 120%;
+  }
+
   h1.H1_header {
     font-size: 30px;
   }
@@ -265,7 +278,7 @@ p.P2_Para {
 
  .about_image{
       max-width: 50px;
-      margin-top: 900%;
+      margin-top: 450%;
       
     }
 
@@ -285,10 +298,10 @@ div.tab{
       text-align: center;
       
     }
- .container_1{
+.container_1{
       display: table;
-            align-items: center;
-            justify-content: center
+      align-items: center;
+      justify-content: center
     }
 p.About_img_comp_para{
   padding-top: 20%;
@@ -328,6 +341,7 @@ p.About_img_compHack_para{
 
   max-width: 300px;
   text-align: left;
+  margin-bottom: 5%;
   
 }
 
@@ -335,7 +349,8 @@ p.About_img_compHack_para{
   padding-top: 20%;
   text-align: center;
   font-size: 20px;
-  padding-bottom: 70%;
+  margin-bottom: 230%;
+ 
 
 }
 

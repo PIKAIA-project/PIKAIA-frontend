@@ -122,7 +122,7 @@ const Tab1 = () => {
       <img src={Complement}  alt="Ayeee!" class="about_img_Complements"/>
       <p class="About_img_Complement_para"> Mrs Anna Kalm (Founder CEO of Ascentic) and Mrs Dhanisha Paul (Director Delivery at Sysco Labs) acknowledge team Pyop's project PIKAIA both in Linkedin and on the day of HaxMas 2021 </p>
       </div>
-      </div>
+   </div>
       
 
   
