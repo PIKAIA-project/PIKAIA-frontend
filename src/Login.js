@@ -128,25 +128,10 @@ const Login = () => {
                 }}
                 type="submit"
                 value="Login"
-                class="btn solid"
+                className="btn solid"
               />
-              <p className="social-text">Or Sign in with social platforms</p>
-              <div className="social-media">
-                <a href="#" class="social-icon">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" class="social-icon">
-                  <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#" class="social-icon">
-                  <i class="fab fa-google"></i>
-                </a>
-                <a href="#" class="social-icon">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </div>
             </form>
-            <form action="#" class="sign-up-form">
+            <form action="#" className="sign-up-form">
               <h2 className="title">Sign up</h2>
               <div className="input-field">
                 <i className="fas fa-user"></i>
@@ -157,25 +142,10 @@ const Login = () => {
                 <input type="email" placeholder="Email" />
               </div>
               <div className="input-field">
-                <i class="fas fa-lock"></i>
+                <i className="fas fa-lock"></i>
                 <input type="password" placeholder="Password" />
               </div>
-              <input type="submit" class="btn" value="Sign up" />
-              <p className="social-text">Or Sign up with social platforms</p>
-              <div class="social-media">
-                <a href="#" class="social-icon">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" class="social-icon">
-                  <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#" class="social-icon">
-                  <i class="fab fa-google"></i>
-                </a>
-                <a href="#" class="social-icon">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </div>
+              <input type="submit" className="btn" value="Sign up" />
             </form>
           </div>
         </div>

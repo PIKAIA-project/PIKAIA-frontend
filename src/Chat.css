@@ -16,6 +16,7 @@
     rgba(255, 255, 255, 0),
     var(--chat-gradient)
   );
+  transition: all 400ms ease-in;
   border-bottom-right-radius: 30px;
   border-bottom-left-radius: 30px;
   height: 100%;
@@ -36,6 +37,7 @@
   height: 2%;
   margin-bottom: 2rem;
   margin-left: 2rem;
+  width: 90%;
 }
 
 .chat__header > h1 {
@@ -60,6 +62,7 @@
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   list-style: none;
+  transition: all 400ms ease-in;
   max-width: 80%;
   background-color: var(--chat-user);
   padding: 14px;
@@ -78,6 +81,7 @@
   align-self: flex-start;
   list-style: none;
   background-color: var(--chat-bot);
+  transition: all 400ms ease-in;
   padding: 14px;
 }
 
@@ -143,6 +147,7 @@
   border: transparent;
 }
 .chat__footer > .chat__value {
+  transition: all 400ms ease-in;
   background: var(--input-field);
   width: 68%;
   position: relative;
@@ -201,7 +206,7 @@
     width: 100%;
   }
   .chat__header > h1 {
-    font-size: 3em;
+    font-size: 35px;
   }
 
   .chat__sendIcon {

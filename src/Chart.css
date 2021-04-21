@@ -1,105 +1,100 @@
+.align__chart {
+  width: 100vw;
+  height: 78vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
 .chart {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  width: 100vw;
-  height: 78vh;
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0),
+    var(--chat-gradient)
+  );
+  transition: all 400ms ease-in;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  height: 100%;
+  width: 75%;
+}
+
+.chart__container {
+  border-radius: 5px;
+  width: 87%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90%;
+  overflow-y: scroll;
+  gap: 10px;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
 }
 
 .chart__container > div {
-  backdrop-filter: blur(30px);
-  background-color: var(--chart-background);
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 20px;
-  width: 50%;
-  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .chart__header {
   height: 10%;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   margin-left: 2rem;
   width: 90%;
 }
 
 .chart__header > h1 {
-  font-size: 35px;
+  font-size: 55px;
 }
 
-.chart__container {
-  height: 86%;
-  width: 95%;
-  display: inline-grid;
-  grid-template-columns: auto auto;
-  overflow-x: scroll !important;
-  margin-bottom: 2%;
-}
-
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 768px) {
   .chart__container {
+    width: 93%;
+  }
+  .chart {
+    width: 100%;
     background-image: var(--back_groundImg);
+    transition: all 200ms ease-in;
     background-repeat: no-repeat;
     background-size: 98vh;
-    background-position: 0% 60.5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .chart__container > div {
-    backdrop-filter: blur(30px);
-    background-color: var(--chart-background);
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 20px;
-    width: 90vw;
+    background-position: 0% 45.5%;
   }
   .chart__header > h1 {
     font-size: 35px;
   }
+
   .chart__header {
-    margin-bottom: 0;
+    height: 3%;
   }
-  .chart__container > .chart__one {
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .chart__container > .chart__two {
-    height: 77vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .chart__container > div {
+    min-height: 42%;
+    margin-left: 2%;
+    width: 88%;
+    backdrop-filter: blur(30px);
+    background-color: var(--chart-background);
+    transition: all 400ms ease-in;
   }
 
-  .chart__container > .chart__three {
-    height: 77vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .chart__container > div > h3 {
+    font-size: 16px;
+    text-align: center;
   }
-
-  .chart__container > .chart__four {
-    height: 77vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .chart__container > .chart__five {
-    height: 77vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .chart__container > .chart__six {
-    height: 77vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .chart__container > div > p {
+    font-size: 12px;
   }
 }

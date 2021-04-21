@@ -41,24 +41,25 @@
   --dark-blur: rgba(3, 3, 3, 0.288);
   --library-color: rgba(0, 0, 0, 0.103);
   --font-white: rgb(255, 255, 255);
-  --hover-color: rgba(197, 131, 8, 0.349);
-  --active-color: rgba(19, 20, 22, 0.315);
-  --nav-color: #c6ccc8 !important;
-  --widgets-color: #8b5d08b4;
-  --input-field: #8b5d08cc;
-  --scroll-bar: #cacaca93;
-  --chat-gradient: rgb(41, 32, 1);
-  --chat-user: #ece368;
-  --chat-bot: #d5e0d641;
-  --navigation-bottom: rgba(3, 17, 7, 0.609);
+  --hover-color: #cf8b7479;
+  --active-color: rgba(19, 20, 22, 0.459);
+  --nav-color: #22262ad3 !important;
+  --widgets-color: #4c59ba86;
+  --input-field: #6978ec;
+  --scroll-bar: #22262a;
+  --chat-gradient: #4c58ba;
+  --chat-user: #658f70;
+  --chat-bot: #cf8b74a9;
+  --navigation-bottom: #61c07ab4;
   --back_groundImg: url("./Images/green.jpg");
+  --chart-background: #cf8b7436;
 
   /* Wave animation */
-  --wave-background: #0b6ea7;
-  --wave-back: #0a573d9f;
+  --wave-background: #4af870;
+  --wave-back: #45f1b89f;
 
   /* Widgets */
-  --widgets-background: #615408a1;
+  --widgets-background: #cf8b74da;
 }
 
 .secondTheme {

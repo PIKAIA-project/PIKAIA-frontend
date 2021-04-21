@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Radar } from "react-chartjs-2";
-import axios from "axios";
-import "../../prevReport/Styles/WeeklyUsage.css";
+
 const DoughnutChart = () => {
   const [chartData, setChartData] = useState({});
 
@@ -13,11 +12,11 @@ const DoughnutChart = () => {
           label: "Today's emotion",
           data: [2, 1.5, 1, 2, 1, 0.5, 0.25],
           backgroundColor: [
-            "rgba(75, 192, 192, 0.6)",
-            "rgba(255, 159, 64, 0.2)",
-            "rgba(255, 205, 86, 0.2)",
-            "rgba(75, 192, 192, 0.2)",
-            "rgba(54, 162, 235, 0.2)",
+            "rgba(2555, 173, 173)",
+            "rgb(255, 255, 90)",
+            "rgb(255, 25, 71)",
+            "rgb(71, 0, 190)",
+            "rgb(93, 255, 90)",
           ],
           borderWidth: 1,
         },
@@ -30,59 +29,50 @@ const DoughnutChart = () => {
   }, []);
 
   return (
-    <div className="dashboard__chart">
-      <div className="dashboard__chartInfo">
-        <h3>Your activity: Usage Time</h3>
-        <p>
-          The average time you've spent per day using PIKAIA app for the last
-          week.
-        </p>
-      </div>
-      <div className="dashboard__chartLine">
-        <Radar
-          options={{
-            legend: {
-              labels: {
-                fontColor: "white",
+    <Radar
+      options={{
+        legend: {
+          labels: {
+            fontColor: "white",
+          },
+        },
+        responsive: true,
+        scales: {
+          yAxes: [
+            {
+              gridLines: {
+                display: true,
+                color: "#FFFFFF",
+                drawOnChartArea: false,
+              },
+              ticks: {
+                display: false,
+                beginAtZero: true,
               },
             },
-            responsive: true,
-            scales: {
-              yAxes: [
-                {
-                  gridLines: {
-                    display: false,
-                    drawOnChartArea: false,
-                  },
-                  ticks: {
-                    display: false,
-                    beginAtZero: true,
-                  },
-                },
-              ],
-              xAxes: [
-                {
-                  gridLines: {
-                    display: false,
-                  },
-                  ticks: {
-                    display: false,
-                  },
-                },
-              ],
-            },
-          }}
-          data={chartData}
-          options={{
-            elements: {
-              line: {
-                borderWidth: 5,
+          ],
+          xAxes: [
+            {
+              gridLines: {
+                display: true,
+                color: "rgb(2555, 173, 173)",
+              },
+              ticks: {
+                display: true,
               },
             },
-          }}
-        />
-      </div>
-    </div>
+          ],
+        },
+      }}
+      data={chartData}
+      options={{
+        elements: {
+          line: {
+            borderWidth: 5,
+          },
+        },
+      }}
+    />
   );
 };
 

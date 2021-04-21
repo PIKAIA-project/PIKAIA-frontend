@@ -5,6 +5,7 @@ import { getIsLoggedIn } from "./utils";
 import PageNotFound from "./PageNotFound";
 import Loading from "./Loading";
 import "./App.css";
+import "./MeetTheTeam.css";
 import Home from "./AppContainer";
 import {
   BrowserRouter as Router,
@@ -118,7 +119,10 @@ function App() {
                 component={Home}
                 meta={{ auth: false }}
               />
-
+              <GuardedRoute
+                path={["/about", "/about-us"]}
+                component={About}
+              />
               <GuardedRoute
                 path="*"
                 meta={{ redirect: true }}
