@@ -15,7 +15,7 @@ const About = () => {
   const buttonClasses = {}
 
   return (
-    <div>
+    <div class="Main_tab2_div">
       <div className='tab-container'>
         <div className='tab-bloc-tabs'>
           <button
@@ -358,16 +358,16 @@ const Tab2 = () => {
 
 // TODO: add tab 3 content here
 const Tab3 = () => {
-  return <div class="About_main">
-  <div class="about_card">
+  return <div class="About_main_tab3">
+  <div class="about_card_tab3">
     
-      <img src={Bot1}  alt="Pikaia" class="about_image"/>
-      <h1 class="H1_header">PROJECT PIKAIA </h1>
-      <p class="P1_Para" >~ Mental health? ~</p>
+      <img src={Bot1}  alt="Pikaia" class="about_image_tab3"/>
+      <h1 class="H1_header_tab3">PROJECT PIKAIA </h1>
+      <p class="P1_Para_tab3" >~ Mental health? ~</p>
 
       <hr></hr>
       
-      <p class="P2_Para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+      <p class="P2_Para_tab3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
   
 
   
