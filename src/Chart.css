@@ -17,6 +17,7 @@
     rgba(255, 255, 255, 0),
     var(--chat-gradient)
   );
+  transition: all 400ms ease-in;
   border-bottom-right-radius: 30px;
   border-bottom-left-radius: 30px;
   height: 100%;
@@ -68,6 +69,7 @@
   .chart {
     width: 100%;
     background-image: var(--back_groundImg);
+    transition: all 200ms ease-in;
     background-repeat: no-repeat;
     background-size: 98vh;
     background-position: 0% 45.5%;
@@ -85,6 +87,7 @@
     width: 88%;
     backdrop-filter: blur(30px);
     background-color: var(--chart-background);
+    transition: all 400ms ease-in;
   }
 
   .chart__container > div > h3 {

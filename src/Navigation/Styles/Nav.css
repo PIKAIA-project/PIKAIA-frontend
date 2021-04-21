@@ -64,6 +64,22 @@
   transform: translateX(100%);
 }
 
+.nav__settings > button {
+  margin-top:50%;
+  width: 30%;
+  border-radius: 30px;
+  background-color: var(--nav-color);
+  transition: all 200ms ease-in;
+  height: 50px;
+  color: white;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
 .nav__userImg {
   width: 10rem;
   height: 10rem;
@@ -117,7 +133,48 @@
 
 .nav__settings > h3 {
   width: 80%;
-  margin-top: 15%;
+  margin-top: 5%;
+}
+
+.nav__goal {
+  width: 85%;
+  margin-top: 2%;
+}
+
+.nav__goalContainer {
+  margin-top: 5%;
+  border: 0.5px solid grey;
+  border-radius: 20px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  overflow-x: scroll;
+}
+
+.nav__goalContainer > div {
+  cursor: pointer;
+  min-width: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.226);
+  padding: 1.5%;
+  transition: all 200ms ease-in;
+}
+.nav__goalContainer > div:hover {
+  background-color: rgba(138, 129, 212, 0.712);
+}
+
+.nav__goalContainer > .nav__goalPic {
+  width: 40px;
+  height: 40px;
+}
+
+.nav__goalPic > img {
+  width: 100%;
+  height: auto;
 }
 
 .nav__themeControl {
@@ -137,10 +194,14 @@
   width: 50px;
   border-radius: 50%;
   height: 100%;
+  transition: all 200ms ease-in;
+}
+.nav__themeControl > div:hover {
+  transform: scale(1.1);
 }
 
 .nav__themeControl > .nav__themeOne {
-  background-color: #A4AEFF;
+  background-color: #a4aeff;
 }
 
 .nav__themeControl > .nav__themeTwo {
@@ -189,5 +250,9 @@
   }
   .nav__settings > h3 {
     font-size: 14px;
+  }
+  .nav__goal > h3 {
+    font-size: 14px;
+    margin-top: 5%;
   }
 }

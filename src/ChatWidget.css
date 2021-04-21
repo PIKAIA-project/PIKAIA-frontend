@@ -45,6 +45,7 @@
   letter-spacing: 0.5px;
   color: white;
   background-color: var(--nav-color);
+  transition: all 400ms ease-in;
   height: 2.5rem;
   outline: none;
   border: none;

@@ -6,7 +6,13 @@ import SettingsIcon from "@material-ui/icons/Settings";
 import CloseIcon from "@material-ui/icons/Close";
 import MoodIcon from "@material-ui/icons/Mood";
 import MusicIcon from "../Images/Music.svg";
+import Fire from "../Images/fire.svg";
+import Love from "../Images/love.svg";
+import Meditation from "../Images/meditation.svg";
 import First_Theme from "../Images/First_Theme.svg";
+import Sleep from "../Images/sleep.svg";
+import Health from "../Images/healthcare.svg";
+import Tooltip from "@material-ui/core/Tooltip";
 
 function Nav() {
   const [open, setOpen] = useState(false);
@@ -128,6 +134,37 @@ function Nav() {
               </div>
               <div className="nav__themePic">
                 <img src={First_Theme} alt="" />
+              </div>
+            </div>
+            <div className="nav__goal">
+              <h3>Set Daily Goal</h3>
+              <div className="nav__goalContainer">
+                <Tooltip title="Energitic Day">
+                  <div className="nav__goalPic goalOne">
+                    <img src={Fire} alt="" />
+                  </div>
+                </Tooltip>
+                <Tooltip title="Health Care">
+                  <div className="nav__goalPic goalOne">
+                    <img src={Health} alt="" />
+                  </div>
+                </Tooltip>
+                <Tooltip title="Calmness">
+                  <div className="nav__goalPic goalOne">
+                    <img src={Love} alt="" />
+                  </div>
+                </Tooltip>
+
+                <Tooltip title="Improve Sleep">
+                  <div className="nav__goalPic goalOne">
+                    <img src={Sleep} alt="" />
+                  </div>
+                </Tooltip>
+                <Tooltip title="Meditation">
+                  <div className="nav__goalPic goalOne">
+                    <img src={Meditation} alt="" />
+                  </div>
+                </Tooltip>
               </div>
             </div>
             <button>Log Out</button>
