@@ -103,7 +103,14 @@ const Tab1 = () => {
 
       <hr class="hr1"></hr>
       
-      <p class="P2_Para">Lorem ipsum dolor sit amet, consectetur  adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p class="P2_Para">We all go through a wide range of mood swings when we go through our day to day lives. We seldom find someone 
+      to talk about how we feel nor to rant about our lives. This is both due to our personal insecurities and the busy life style.
+       This is where Pikaia comes in. In Pikaia, you will always find someone to talk to. Pikaia will not only listen to whatever you 
+       have to say, it has a way of comforting you too. Our group developed this application with hopes of utilizing music therapy to help you cope with your mood 
+       swings. Music therapy is a proven way to relieve you of your negative emotions and moods.
+        Pikaia will not only be your companion who will listen to whatever you have to say, but will comfort you with the most appropriate
+         music to make you feel good. Still not convinced? Just hop in and start chatting to find out yourself!</p>
+
       
       <hr class="hr2"></hr>
       
