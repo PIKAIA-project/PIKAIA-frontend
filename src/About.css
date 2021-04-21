@@ -346,4 +346,41 @@ hr.hr2{
 
 
 
+/* -------------------------------------meet the team page css----------------------------------------- */
+.Tab2_container{
+  
+  height: 900px;
+   margin-top: 1%;
+   margin-bottom: 50%;
+  background-color: --widgets-background;
+  backdrop-filter: blur(30px);
+  transition: transform 200ms ease-in;
+  transform: translateX(0%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.603);
+  padding-top: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  overflow-y:scroll
+ 
+}
+
+.Tab2_heading{
+  margin-top: 170%;
+  font-size: 100px;
+  
+}
+
+.card{
+  margin-bottom: 10%;
+}
+
+.tab2_hr{
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
 
