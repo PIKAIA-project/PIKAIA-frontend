@@ -353,7 +353,7 @@ p.P2_Para {
 
  .about_image{
       max-width: 50px;
-      margin-top: 1200%;
+      margin-top: 1250%;
       margin-bottom: 1px;
       
     }
@@ -465,83 +465,176 @@ hr.hr2{
 
 
 /* -------------------------------------meet the team page css----------------------------------------- */
-.Main_tab2_div{
+.About_main_tab2{
+     
 
-  
-  padding-top: 10px;
-  padding-left: 20px;
-  display: flex;
-  flex-direction: column;
-  position: relative;
+padding-top: 10px;
+padding-left: 20px;
+display: flex;
+flex-direction: column;
+position: relative;
+ 
+}
+.H1_header_tab2{
+font-size: 100px ;
+margin-bottom: 5%;
 }
 
-.Tab2_container{
-  
-  height: 900px;
-   margin-top: 1%;
-   margin-bottom: 60%;
-  background-color: --widgets-background;
+.P1_Para_tab2{
+  font-size: 20px;
+  margin-bottom: 5%;
+}
+
+.about_card_tab2{
+  height: 450px;
+  margin-bottom: 10%;
+ background-color: --widgets-background;
   backdrop-filter: blur(30px);
   transition: transform 200ms ease-in;
   transform: translateX(0%);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.603);
-  padding-top: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.692);
+  padding-top: 10%;
   padding-left: 20px;
   padding-right: 20px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  overflow-y:scroll
- 
+  overflow: scroll;
 }
 
-.Tab2_heading{
-  margin-top: 150%;
-  font-size: 70px;
+
+.about_image_tab2{
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100%;
+
+  
+}
+.about_img_teamT{
+  margin-top: 30px;
+  border-radius: 20px;
+}
+
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+  width: 300px;
+  margin-top: 20%;
+  margin-bottom: 30%;
+  border-radius: 20px;
+  background-color: #000000ab;
   
 }
 
-.card{
-  margin-bottom: 1%;
-}
-
-.tab2_hr{
-  margin-top: 10px;
-  margin-bottom: 30px;
-}
-
-@media screen and (max-width: 601px) {
- 
+.card2 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+  width: 300px;
+  margin-top: 20%;
+  margin-bottom: 30%;
+  border-radius: 20px;
+  background-color: #000000ab;
   
+}
 
-  .card{
-   max-height: 1000px;
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #084ee6;
+  color: rgba(49, 46, 46, 0.253);
+}
+
+.container {
+  padding: 0 16px;
+  padding-bottom: 12px;
+  padding-top: 12px;
+  
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+  font-size: 20px;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+
+  .H1_header_tab2{
+    font-size: 30px;
   }
 
-  .Tab2_container{
-  
-    margin-right: 15px;
-   
+  .P1_Para_tab2{
+    font-size: 10px;
+  }
+  .column {
+    width: 100%;
+    display: block;
+  }
+  .About_main_tab2{ 
+    padding-right: 10px;
+    padding-left: 5%;
+  } 
+
+  .about_image_tab2{
+    max-width: 50px;
+    margin-top: 950%;
+    
+    
   }
 
-  .Tab2_heading{
-  margin-top: 1500%;
-  font-size: 30px;
-  
-}
-.card{
-  max-width: 300px;
+  .card1{
  
-  
+    margin-bottom: 10%;
+    }
+  .card2{
+ 
+    margin-bottom: 100%;
+    }
+}
+
+.about_img_teamT{
+  width: 200px;
 }
 
 
-}
+
 
 
 /* .........................................................tab3-mental health awareness.................... */
-.About_main_tab3{ 
+.About_main_tab2{ 
     
 
   padding-top: 10px;

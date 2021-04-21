@@ -5,11 +5,17 @@ import Comp from '../src/Images/HaxMas.jpg';
 import CompHACK from '../src/Images/IIT HACK.jpeg';
 import Complement from '../src/Images/Complements.jpg';
 import Shohan from '../src/Images/shohan.jpg';
+import Shohan2 from '../src/Images/Shohan2.jpeg';
 import Shehan from '../src/Images/Shehan2.jpg';
+import Shehan2 from '../src/Images/shehan.jpg';
 import Shuhaib from '../src/Images/Shuhaib2.jpg';
+import Shuhaib2 from '../src/Images/Shuhaib_A.jpg';
 import Thoshitha from '../src/Images/thoshitha2.jpg';
-import Thalha from '../src/Images/thalha2.jpg';
+import Thoshitha2 from '../src/Images/thoshitha.jpg';
+import Thalha2 from '../src/Images/thalha2.jpg';
+import Thalha1 from '../src/Images/thalha.jpg';
 import Chanod from '../src/Images/chanod2.jpg';
+import Chanod2 from '../src/Images/chanod.jpg';
 const About = () => {
   const [toggleState, setToggleState] = useState(1)
 
@@ -17,7 +23,14 @@ const About = () => {
     setToggleState(index)
   }
 
+  
+  
+
   const buttonClasses = {}
+
+  
+
+
 
   return (
     <div>
@@ -163,7 +176,7 @@ const Tab1 = () => {
       <hr class="hr2"></hr>
       <div class="container_1">
       <p class="About_img_team1_para"> Mrs Anna Kalm (Founder CEO of Ascentic) and Mrs Dhanisha Paul (Director Delivery at Sysco Labs) acknowledge team Pyop's project PIKAIA both in Linkedin and on the day of HaxMas 2021 </p>
-      <img src={Thalha}  alt="Ayeee!" class="about_img_team5"/>
+      <img src={Thalha2}  alt="Ayeee!" class="about_img_team5"/>
      
       </div>
 
@@ -194,228 +207,96 @@ const Tab1 = () => {
 
 // TODO: add tab 2 content here
 const Tab2 = () => {
-  return (
-    <div class="Tab2_container">
-      <h1 class="Tab2_heading">Meet The Team</h1>
-      <hr class="tab2_hr"></hr>
-      <div class="card-wrapper">
-          <div class="card">
-              <img
-                      src="Images/pikaia_bot.png"
-                      alt="card background"
-                      class="card-img"
-              />
-              <img
-                      src="Images/image_1.jpg"
-                      alt="profile image"
-                      class="profile-img"
-              />
-              <h1>Shohan Saverimuttu</h1>
-              <p class="job-title">Team leader</p>
-              <p class="about">
-                  Gibberish, also called jibber-jabber or gobbledygook, is speech
-                  that is (or appears to be) nonsense. It may include speech sounds
-                  that are not actual words, or language games and specialized
-                  jargon that seems nonsensical to outsiders.
-              </p>
-              <a href="#" class="btn">Contact</a>
-              <ul class="social-media">
-                  <li>
-                      <a href="#"><i class="fab fa-facebook-square"></i></a>
-                  </li>
-                  <li>
-                      <a href="#"><i class="fab fa-twitter-square"></i></a>
-                  </li>
-                  <li>
-                      <a href="#"><i class="fab fa-instagram-square"></i></a>
-                  </li>
-                  <li>
-                      <a href="#"><i class="fab fa-google-plus-square"></i></a>
-                  </li>
-              </ul>
-          </div>
-
-          <div class="card">
-              <img
-                      src="Images/pikaia_bot.png"
-                      alt="card background"
-                      class="card-img"
-              />
-              <img
-                      src="Images/thalha.jpg"
-                      alt="profile image"
-                      class="profile-img"
-              />
-              <h1>Thalha Muksith</h1>
-              <p class="job-title">Member</p>
-              <p class="about">
-                  Gibberish, also called jibber-jabber or gobbledygook, is speech
-                  that is (or appears to be) nonsense. It may include speech sounds
-                  that are not actual words, or language games and specialized
-                  jargon that seems nonsensical to outsiders.
-              </p>
-              <a href="#" class="btn">Contact</a>
-              <ul class="social-media">
-                  <li>
-                      <a href="#"><i class="fab fa-facebook-square"></i></a>
-                  </li>
-                  <li>
-                      <a href="#"><i class="fab fa-twitter-square"></i></a>
-                  </li>
-                  <li>
-                      <a href="#"><i class="fab fa-instagram-square"></i></a>
-                  </li>
-                  <li>
-                      <a href="#"><i class="fab fa-google-plus-square"></i></a>
-                  </li>
-              </ul>
-          </div>
-
-          <div class="card">
-              <img
-                      src="Images/pikaia_bot.png"
-                      alt="card background"
-                      class="card-img"
-              />
-              <img
-                      src="Images/thoshitha.jpg"
-                      alt="profile image"
-                      class="profile-img"
-              />
-              <h1>Thoshitha Kaduruwewa</h1>
-              <p class="job-title">Member</p>
-              <p class="about">
-                  Gibberish, also called jibber-jabber or gobbledygook, is speech
-                  that is (or appears to be) nonsense. It may include speech sounds
-                  that are not actual words, or language games and specialized
-                  jargon that seems nonsensical to outsiders.
-              </p>
-              <a href="#" class="btn">Contact</a>
-              <ul class="social-media">
-                  <li>
-                      <a href="#"><i class="fab fa-facebook-square"></i></a>
-                  </li>
-                  <li>
-                      <a href="#"><i class="fab fa-twitter-square"></i></a>
-                  </li>
-                  <li>
-                      <a href="#"><i class="fab fa-instagram-square"></i></a>
-                  </li>
-                  <li>
-                      <a href="#"><i class="fab fa-google-plus-square"></i></a>
-                  </li>
-              </ul>
-          </div>
-
-          <div class="card">
-              <img
-                      src="Images/pikaia_bot.png"
-                      alt="card background"
-                      class="card-img"
-              />
-              <img
-                      src="Images/shehan.jpg"
-                      alt="profile image"
-                      class="profile-img"
-              />
-              <h1>Shehan Saverimuttu</h1>
-              <p class="job-title">Member</p>
-              <p class="about">
-                  Gibberish, also called jibber-jabber or gobbledygook, is speech
-                  that is (or appears to be) nonsense. It may include speech sounds
-                  that are not actual words, or language games and specialized
-                  jargon that seems nonsensical to outsiders.
-              </p>
-              <a href="#" class="btn">Contact</a>
-              <ul class="social-media">
-                  <li>
-                      <a href="#"><i class="fab fa-facebook-square"></i></a>
-                  </li>
-                  <li>
-                      <a href="#"><i class="fab fa-twitter-square"></i></a>
-                  </li>
-                  <li>
-                      <a href="#"><i class="fab fa-instagram-square"></i></a>
-                  </li>
-                  <li>
-                      <a href="#"><i class="fab fa-google-plus-square"></i></a>
-                  </li>
-              </ul>
-          </div>
-
-          <div class="card">
-              <img
-                      src="Images/pikaia_bot.png"
-                      alt="card background"
-                      class="card-img"
-              />
-              <img
-                      src="Images/shuhaib.jpg"
-                      alt="profile image"
-                      class="profile-img"
-              />
-              <h1>Shuhaib Ahmed</h1>
-              <p class="job-title">Member</p>
-              <p class="about">
-                  Gibberish, also called jibber-jabber or gobbledygook, is speech
-                  that is (or appears to be) nonsense. It may include speech sounds
-                  that are not actual words, or language games and specialized
-                  jargon that seems nonsensical to outsiders.
-              </p>
-              <a href="#" class="btn">Contact</a>
-              <ul className="social-media">
-                  <li>
-                      <a href="#"><i class="fab fa-facebook-square"></i></a>
-                  </li>
-                  <li>
-                      <a href="#"><i class="fab fa-twitter-square"></i></a>
-                  </li>
-                  <li>
-                      <a href="#"><i class="fab fa-instagram-square"></i></a>
-                  </li>
-                  <li>
-                      <a href="#"><i class="fab fa-google-plus-square"></i></a>
-                  </li>
-              </ul>
-          </div>
-
-          <div class="card">
-              <img
-                      src="Images/pikaia_bot.png"
-                      alt="card background"
-                      class="card-img"
-              />
-              <img
-                      src="Images/chanod.jpg"
-                      alt="profile image"
-                      class="profile-img"
-              />
-              <h1>Chanod Bulugammana</h1>
-              <p class="job-title">Member</p>
-              <p class="about">
-                  Gibberish, also called jibber-jabber or gobbledygook, is speech
-                  that is (or appears to be) nonsense. It may include speech sounds
-                  that are not actual words, or language games and specialized
-                  jargon that seems nonsensical to outsiders.
-              </p>
-              <a href="#" class="btn">Contact</a>
-              <ul class="social-media">
-                  <li>
-                      <a href="#"><i class="fab fa-facebook-square"></i></a>
-                  </li>
-                  <li>
-                      <a href="#"><i class="fab fa-twitter-square"></i></a>
-                  </li>
-                  <li>
-                      <a href="#"><i class="fab fa-instagram-square"></i></a>
-                  </li>
-                  <li>
-                      <a href="#"><i class="fab fa-google-plus-square"></i></a>
-                  </li>
-              </ul>
-          </div>
+  return (<div class="About_main_tab2">
+    <div class="about_card_tab2">
+      
+        <img src={Bot1}  alt="Pikaia" class="about_image_tab2"/>
+        <h1 class="H1_header_tab2">PROJECT PIKAIA </h1>
+        <p class="P1_Para_tab2" >~ The intellects behind Project Pikaia~</p>
+  
+        <hr class="tab3_hr"></hr>
+        <div class="row">
+  <div class="column">
+    <div class="card">
+    <img src={Shohan2}  alt="Ayeee!" class="about_img_teamT"/>
+      <div class="container">
+        <h2>Shohan Saverimuttu</h2>
+        <p class="title">PhyOps Team Leader</p>
+       
+       
       </div>
     </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+    <img src={Thoshitha2}  alt="Ayeee!" class="about_img_teamT"/>
+      <div class="container">
+        <h2>Thoshitha</h2>
+        <p class="title">PhyOps Team Member</p>
+       
+      
+       
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+    <img src={Shehan2}  alt="Ayeee!" class="about_img_teamT"/>
+      <div class="container">
+        <h2>Shehan Saverimuttu</h2>
+        <p class="title">PhyOps Team Member</p>
+     
+        
+        
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+    <img src={Chanod2}  alt="Ayeee!" class="about_img_teamT"/>
+      <div class="container">
+        <h2>Chanod</h2>
+        <p class="title">PhyOps Team Member</p>
+      
+      
+       
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+    <img src={Shuhaib2}  alt="Ayeee!" class="about_img_teamT"/>
+      <div class="container">
+        <h2>Shuhaib</h2>
+        <p class="title">PhyOps Team Member</p>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card2">
+    <img src={Thalha1}  alt="Ayeee!" class="about_img_teamT"/>
+      <div class="container">
+        <h2>Thalha Mukshik</h2>
+        <p class="title">PhyOps Team Memmber</p>
+        
+        
+       
+      </div>
+    </div>
+  </div>
+</div>
+       
+       </div>
+    
+  
+    
+  
+  </div>
 )}
 
 // TODO: add tab 3 content here
