@@ -16,6 +16,11 @@ import Thalha2 from '../src/Images/thalha2.jpg';
 import Thalha1 from '../src/Images/thalha_m.jpg';
 import Chanod from '../src/Images/chanod2.jpg';
 import Chanod2 from '../src/Images/chanod.jpg';
+import Awareness1 from '../src/Images/awareness.jpg';
+import depressed from '../src/Images/sad_boy.jpg';
+import help from '../src/Images/help.jpg';
+
+
 const About = () => {
   const [toggleState, setToggleState] = useState(1)
 
@@ -310,7 +315,34 @@ const Tab3 = () => {
 
       <hr class="tab3_hr"></hr>
       
-      <p class="P2_Para_tab3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+      <p class="P2_Para_tab3">  Mental illnesses affect 19% of the adult population, 46% of teenagers and 13% of children each year.
+       Anxiety disorders and mood disorders are two most common mental illnesses. Unfortunately, most of those cases go unnoticed due 
+       to the stigma attached to mental health. Helping people combat anxiety and negative mood swings is the goal of the developers.
+        Our effort of providing an innovative solution to this existing problem is one of our SDG goals. </p>
+
+        <img src={Awareness1}  alt="sad girl" class="awareness_image_tab3"/>  
+
+      <p class="P3_Para_tab3">Sri Lanka has one of the highest suicide rates in the world, with an average of 6000 deaths per year,
+       nearly 100,000 attempt to take their own life every year. Historically, Sri Lanka has always turned a blind eye towards mental
+        health due to social taboos and lack of knowledge about the subject matter among the general populace.
+         This is evident from the fact that resources and funding in the country has always been low when it comes to mental healthcare.
+          Even after the tragedy of a war citizens had to endure for nearly 3 decades. Data shows that there are only one psychiatrist
+           for every 500,000 Sri Lankans. Furthermore, majority of the available experts are concentrated in urban areas. 
+           Another huge drawback when it comes to mental health in Sri Lanka is the lack of trained staff with the healthcare system. </p>
+
+        
+           <img src={depressed}  alt="sad boy" class="sad_image_tab3"/> 
+
+      <p class="P4-Para-tab3">Those are the reasons which fueled the creation of Pikaia. While developers are making no effort to 
+      replace professional healthcare, we are trying to make a difference out there. 
+      With Pikaia, you will always have someone to listen to. Someone to rant about your daily struggles. 
+      Pikaia will not only listen to you, it will make you feel good through the magical medicine of music. 
+ </p> 
+
+ <img src={help}  alt="helping hand" class="helping_hand_tab3"/> 
+
+
+        </div>
   
 
   
