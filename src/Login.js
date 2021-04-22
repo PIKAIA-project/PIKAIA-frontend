@@ -9,7 +9,6 @@ import { Redirect } from "react-router";
 
 const Login = () => {
   const [isActive, setActive] = useState("false");
-  const [loggedIn, setLoggedIn] = useState("false");
   const [loginDetails, setLoginDetails] = useState({
     loginUse: "",
     loginPass: "",
@@ -45,12 +44,13 @@ const Login = () => {
   // login ======================== from here
   const loginUser = () => {
     // prevent submit behaviour of page
-
+    const username = loginDetails.loginUse;
+    const password = loginDetails.loginPass;
+    alert(" " + username + password);
     let authorization = "";
 
     // base 64 encoding and creating authorization header
-    authorization =
-      "Basic " + btoa(loginDetails.loginUse + ":" + loginDetails.loginPass);
+    authorization = "Basic " + btoa(username + ":" + password);
 
     var myHeaders = new Headers();
     myHeaders.append(
@@ -63,31 +63,69 @@ const Login = () => {
       headers: myHeaders,
       redirect: "follow",
     };
-    fetch("https://pikaia.azurewebsites.net/login", requestOptions)
+
+    fetch("https://pikaia-rest.azurewebsites.net" + "/login", requestOptions)
       .then((response) => response.json())
       .then((data) => {
-        let token = data.token;
-        // remove previously created cookie
-        document.cookie =
-          "token" + "=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
-
-        // saving token in cookie
-        let date = new Date();
-        date.setTime(date.getTime() + 3 * 60 * 60 * 1000); // 3 hours
-        let expires = "; expires=" + date.toUTCString();
-        document.cookie = "token=" + token + expires + "; path=/";
-
-        // change login state - this is what causes infine loop... destroy this state after redirect
-        setLoggedIn("true");
-        alert("login success");
-
-        // ?: success to - here
+        if (true) {
+          alert("comes here");
+          console.log(data);
+          if (data.token) {
+            let token = data.token;
+            alert("1");
+            // remove previously created cookie
+            document.cookie =
+              "token" + "=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+            alert("2");
+            // saving token in cookie
+            let date = new Date();
+            alert("3");
+            date.setTime(date.getTime() + 3 * 60 * 60 * 1000); // 3 hours
+            let expires = "; expires=" + date.toUTCString();
+            document.cookie = "token=" + token + expires + "; path=/";
+            alert("4");
+            // updating isLoggedInState
+            alert("PASS");
+          } else {
+            alert("fail");
+          }
+        } else {
+          alert("fail");
+        }
       })
       .catch((error) => {
-        // ?: login error from - here
-        alert("login success");
-        // ?: login error to - here
+        alert(error);
       });
+    // fetch("https://pikaia.azurewebsites.net/login", requestOptions)
+    //   .then((response) => response.json())
+    //   .then((data) => {
+    //     let token = data.token;
+    //     if (data.user["isAdmin"]) {
+    //       alert("is an admin user");
+    //     } else {
+    //       alert("is not an admin user");
+    //     }
+    //     // remove previously created cookie
+    //     document.cookie =
+    //       "token" + "=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+
+    //   // saving token in cookie
+    //   let date = new Date();
+    //   date.setTime(date.getTime() + 3 * 60 * 60 * 1000); // 3 hours
+    //   let expires = "; expires=" + date.toUTCString();
+    //   document.cookie = "token=" + token + expires + "; path=/";
+
+    //   // change login state - this is what causes infine loop... destroy this state after redirect
+
+    //   alert("login success");
+
+    //   // ?: success to - here
+    // })
+    // .catch((error) => {
+    //   // ?: login error from - here
+    //   alert("login success");
+    //   // ?: login error to - here
+    // });
   };
 
   // login ======================== to here

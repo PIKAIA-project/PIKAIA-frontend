@@ -17,7 +17,7 @@
 .nav__Binaural {
   z-index: 99;
   height: 100vh;
-  width: 100vw;
+  width: 50vw;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -25,10 +25,10 @@
   align-items: center;
   top: 0;
   left: 0;
-  background-color: #000000c5;
+  background-color: #00000070;
   backdrop-filter: blur(30px);
   transition: transform 200ms ease-in;
-  transform: translateX(-70%);
+  transform: translateX(-100%);
 }
 
 .nav__toggleBinaural {
@@ -38,13 +38,14 @@
   align-items: center;
   z-index: 99;
   height: 100vh;
-  width: 100vw;
+  width: 50vw;
+  backdrop-filter: blur(30px);
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #000000c5;
+  background-color: #00000070;
   transition: transform 400ms;
-  transform: translateX(-100%);
+  transform: translate(0%);
 }
 
 .nav__user {
@@ -65,7 +66,7 @@
 }
 
 .nav__settings > button {
-  margin-top:50%;
+  margin-top: 50%;
   width: 30%;
   border-radius: 30px;
   background-color: var(--nav-color);
@@ -239,14 +240,10 @@
   }
   .nav__user {
     transform: translateX(0%);
+    width: 100vw;
   }
   .nav__toggle {
     width: 100vw;
-  }
-
-  .nav__user {
-    width: 100vw;
-    transform: translateX(0%);
   }
   .nav__settings > h3 {
     font-size: 14px;
@@ -254,5 +251,12 @@
   .nav__goal > h3 {
     font-size: 14px;
     margin-top: 5%;
+  }
+  .nav__toggleBinaural {
+    width: 100vw;
+  }
+  .nav__Binaural {
+    width: 100vw;
+    transform: translateX(0%);
   }
 }

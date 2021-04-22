@@ -13,6 +13,8 @@ import First_Theme from "../Images/First_Theme.svg";
 import Sleep from "../Images/sleep.svg";
 import Health from "../Images/healthcare.svg";
 import Tooltip from "@material-ui/core/Tooltip";
+import ReactMusicPlayer from "../ReactMusicPlayer";
+import QueueMusicIcon from "@material-ui/icons/QueueMusic";
 
 function Nav() {
   const [open, setOpen] = useState(false);
@@ -104,12 +106,12 @@ function Nav() {
   return (
     <div className="nav">
       <IconButton onClick={togglebinaural} open={openBinaural}>
-        {openBinaural ? <CloseIcon /> : <MoodIcon src={MusicIcon} alt="" />}
+        {openBinaural ? <QueueMusicIcon /> : <CloseIcon />}
       </IconButton>
       <ReactTouchEvents onClick={togglebinaural} open={openBinaural}>
-        <div
-          className={openBinaural ? "nav__Binaural" : "nav__toggleBinaural"}
-        ></div>
+        <div className={openBinaural ? "nav__toggleBinaural" : "nav__Binaural"}>
+          <ReactMusicPlayer />
+        </div>
       </ReactTouchEvents>
       <ReactTouchEvents onClick={toggleMenu} open={open}>
         <div className={open ? "nav__user" : "nav__toggle"}>
