@@ -49,17 +49,15 @@ function ChatWidget() {
       <div className="chatWidget__bottom">
         <p>
           {!emotion && <QuotesSkeleton />}
-          {emotion == "joy" ? (
-            "Seems Like you're having a good day, Tell me about it."
-          ) : emotion == "anger" ? (
-            "Looks like you had a tough day today, Tell me what happend?"
-          ) : emotion == "sadness" ? (
-            "Looks like you're quite upset today, Let's talk about it."
-          ) : emotion == "fear" ? (
-            "You seem to be afraid, I can help you.."
-          ) : (
-            <QuotesSkeleton />
-          )}
+          {emotion == "joy"
+            ? "Seems Like you're having a good day, Tell me about it."
+            : emotion == "anger"
+            ? "Looks like you had a tough day today, Tell me what happend?"
+            : emotion == "sadness"
+            ? "Looks like you're quite upset today, Let's talk about it."
+            : emotion == "fear"
+            ? "You seem to be afraid, I can help you.."
+            : "I'm bored can you talk with me?"}
         </p>
         <Link
           className="chatWidget__link"
