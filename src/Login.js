@@ -10,24 +10,29 @@ import { Redirect } from "react-router";
 const Login = () => {
   const [isActive, setActive] = useState("false");
   const [loggedIn, setLoggedIn] = useState("false");
-  const [loginDetails, setLoginDetails] = useState({loginUse: "", loginPass: ""}); 
-  const [signupDetails, setSignupDetails] = useState({signUpUse: "", signUpPass: ""}); 
+  const [loginDetails, setLoginDetails] = useState({
+    loginUse: "",
+    loginPass: "",
+  });
+  const [signupDetails, setSignupDetails] = useState({
+    signUpUse: "",
+    signUpPass: "",
+  });
   const onSignupDetailsChange = (e) => {
     setSignupDetails((prevstate) => ({
       ...prevstate,
-      [e.target.name]:e.target.value
+      [e.target.name]: e.target.value,
     }));
-    
   };
   const onLoginDetailsChange = (e) => {
     setLoginDetails((prevstate) => ({
       ...prevstate,
-      [e.target.name]:e.target.value
+      [e.target.name]: e.target.value,
     }));
   };
 
   const handleLogin = () => {
-    alert("signup " + loginDetails.loginUse + " " + loginDetails.loginPass);
+    loginUser();
   };
   const handleSignup = () => {
     alert("signup " + signupDetails.signUpPass + " " + signupDetails.signUpUse);
@@ -39,18 +44,13 @@ const Login = () => {
 
   // login ======================== from here
   const loginUser = () => {
-    let username = document.getElementById("login-username").value;
-    let password = document.getElementById("login-password").value;
     // prevent submit behaviour of page
-    document
-      .getElementById("login-submit")
-      .addEventListener("click", function (event) {
-        event.preventDefault();
-      });
+
     let authorization = "";
 
     // base 64 encoding and creating authorization header
-    authorization = "Basic " + btoa(username + ":" + password);
+    authorization =
+      "Basic " + btoa(loginDetails.loginUse + ":" + loginDetails.loginPass);
 
     var myHeaders = new Headers();
     myHeaders.append(
@@ -66,8 +66,6 @@ const Login = () => {
     fetch("https://pikaia.azurewebsites.net/login", requestOptions)
       .then((response) => response.json())
       .then((data) => {
-        // ?: success from - here
-
         let token = data.token;
         // remove previously created cookie
         document.cookie =
@@ -87,8 +85,7 @@ const Login = () => {
       })
       .catch((error) => {
         // ?: login error from - here
-        alert(error);
-
+        alert("login success");
         // ?: login error to - here
       });
   };
@@ -132,7 +129,9 @@ const Login = () => {
                   required
                   type="text"
                   placeholder="Username"
-                  onChange={onLoginDetailsChange} name="loginUse" value={loginDetails.loginUse} 
+                  onChange={onLoginDetailsChange}
+                  name="loginUse"
+                  value={loginDetails.loginUse}
                 />
               </div>
               <div className="input-field">
@@ -142,7 +141,9 @@ const Login = () => {
                   required
                   type="password"
                   placeholder="Password"
-                  onChange={onLoginDetailsChange} name="loginPass" value={loginDetails.loginPass} 
+                  onChange={onLoginDetailsChange}
+                  name="loginPass"
+                  value={loginDetails.loginPass}
                 />
               </div>
               <input
@@ -157,14 +158,31 @@ const Login = () => {
               <h2 className="title">Sign up</h2>
               <div className="input-field">
                 <i className="fas fa-user"></i>
-                <input onChange={onSignupDetailsChange} name="signUpUse" value={signupDetails.username} type="text" placeholder="Username" />
+                <input
+                  onChange={onSignupDetailsChange}
+                  name="signUpUse"
+                  value={signupDetails.username}
+                  type="text"
+                  placeholder="Username"
+                />
               </div>
-              
+
               <div className="input-field">
                 <i className="fas fa-lock"></i>
-                <input onChange={onSignupDetailsChange}  name="signUpPass" value={signupDetails.password} type="password" placeholder="Password" />
+                <input
+                  onChange={onSignupDetailsChange}
+                  name="signUpPass"
+                  value={signupDetails.password}
+                  type="password"
+                  placeholder="Password"
+                />
               </div>
-              <input onClick={handleSignup} type="text" className="btn" value="Sign up" />
+              <input
+                onClick={handleSignup}
+                type="text"
+                className="btn"
+                value="Sign up"
+              />
             </form>
           </div>
         </div>
