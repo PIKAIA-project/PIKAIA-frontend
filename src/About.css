@@ -189,7 +189,7 @@ h1.about_comp{
 
 .about_img_haxmas{
   margin-top: 10%;
-  border-radius: 20px;
+  border-radius: 5px;
   margin-right: 10%;
   max-width: 500px;
   
@@ -202,7 +202,7 @@ h1.about_comp{
   margin-top: 10%;
   width: 500px;
   left: 200px;
-  border-radius: 20px;
+  border-radius: 5px;
   margin-left: 1%;
  
 }
@@ -211,7 +211,7 @@ h1.about_comp{
   margin-top: 10%;
   
   max-width: 500px;
-  border-radius: 20px;
+  border-radius: 5px;
   margin-right: 5%;
   margin-left: 20%;
   margin-bottom: 206%;
@@ -259,7 +259,7 @@ hr.hr2{
 .about_img_team1{
   margin-top: 10%;
   width: 500px;
-  border-radius: 20px;
+  border-radius: 5px;
   margin-right: 1%;
   margin-left: 25px;
   
@@ -268,7 +268,7 @@ hr.hr2{
 .about_img_team2{
   margin-top: 10%;
   width: 500px;
-  border-radius: 20px;
+  border-radius: 5px;
   margin-right: 20%;
   margin-left: 1px;
   
@@ -277,7 +277,7 @@ hr.hr2{
 .about_img_team3{
   margin-top: 10%;
   width: 500px;
-  border-radius: 20px;
+  border-radius: 5px;
   margin-right: 0%;
   margin-left: 250px;
   
@@ -286,7 +286,7 @@ hr.hr2{
 .about_img_team4{
   margin-top: 10%;
   width: 500px;
-  border-radius: 20px;
+  border-radius: 5px;
   margin-right: 20%;
   margin-left: 1%;
   
@@ -295,7 +295,7 @@ hr.hr2{
 .about_img_team5{
   margin-top: 10%;
   width: 500px;
-  border-radius: 20px;
+  border-radius: 5px;
   margin-right: 1%;
   margin-left: 250px;
   
@@ -304,7 +304,7 @@ hr.hr2{
 .about_img_team6{
   margin-top: 10%;
   width: 500px;
-  border-radius: 20px;
+  border-radius: 5px;
   margin-right: 30%;
   margin-left: 1px;
   
@@ -345,6 +345,8 @@ margin-left: 10%;
     
     
   }
+
+  
   .about_img_team2{
   
     width: 300px;
@@ -617,6 +619,8 @@ margin-bottom: 5%;
 .about_img_teamT{
   margin-top: 30px;
   border-radius: 20px;
+ 
+  
 }
 
 

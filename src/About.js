@@ -13,7 +13,7 @@ import Shuhaib2 from '../src/Images/Shuhaib_A.jpg';
 import Thoshitha from '../src/Images/thoshitha2.jpg';
 import Thoshitha2 from '../src/Images/thoshitha.jpg';
 import Thalha2 from '../src/Images/thalha2.jpg';
-import Thalha1 from '../src/Images/thalha.jpg';
+import Thalha1 from '../src/Images/thalha_m.jpg';
 import Chanod from '../src/Images/chanod2.jpg';
 import Chanod2 from '../src/Images/chanod.jpg';
 const About = () => {
@@ -170,7 +170,7 @@ const Tab1 = () => {
       <hr class="hr2"></hr>
       <div class="container_1">
       <img src={Shuhaib}  alt="Ayeee!" class="about_img_team4"/>
-      <p class="About_img_team4_para"> "ahh.. this mic is to heavy " </p>
+      <p class="About_img_team4_para"> "ahh.. this mic is too heavy " </p>
       </div>
 
       <hr class="hr2"></hr>
@@ -189,7 +189,7 @@ const Tab1 = () => {
       <hr class="hr2"></hr>
 
       <div class="container_1">
-      <p class="About_img_Complement_para"> * karate chop * </p>
+      <p class="About_img_Complement_para">" *karate chop* "" </p>
       <img src={Shohan}  alt="Ayeee!" class="about_img_Complements"/>
     
       </div>
