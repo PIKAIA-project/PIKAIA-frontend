@@ -46,7 +46,7 @@ const Login = () => {
     // prevent submit behaviour of page
     const username = loginDetails.loginUse;
     const password = loginDetails.loginPass;
-    alert(" " + username + password);
+
     let authorization = "";
 
     // base 64 encoding and creating authorization header
@@ -67,30 +67,25 @@ const Login = () => {
     fetch("https://pikaia-rest.azurewebsites.net" + "/login", requestOptions)
       .then((response) => response.json())
       .then((data) => {
-        if (true) {
-          alert("comes here");
-          console.log(data);
+        if (data.user.isAdmin === false) {
+          console.log(data.user);
           if (data.token) {
             let token = data.token;
-            alert("1");
             // remove previously created cookie
             document.cookie =
               "token" + "=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
-            alert("2");
             // saving token in cookie
             let date = new Date();
-            alert("3");
             date.setTime(date.getTime() + 3 * 60 * 60 * 1000); // 3 hours
             let expires = "; expires=" + date.toUTCString();
             document.cookie = "token=" + token + expires + "; path=/";
-            alert("4");
             // updating isLoggedInState
-            alert("PASS");
+            window.location.href = "/home";
           } else {
-            alert("fail");
+            alert("Login Unsuccessful");
           }
         } else {
-          alert("fail");
+          alert("Login Unsuccessful");
         }
       })
       .catch((error) => {
