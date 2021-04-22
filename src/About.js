@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './About.css'
 import Bot1 from '../src/Images/Bot.png';
 import Comp from '../src/Images/HaxMas.jpg';
-import CompHACK from '../src/Images/IIT HACK.jpeg';
+import CompHACK from '../src/Images/IITHACK.jpg';
 import Complement from '../src/Images/Complements.jpg';
 import Shohan from '../src/Images/shohan.jpg';
 import Shohan2 from '../src/Images/Shohan2.jpeg';
@@ -156,13 +156,13 @@ const Tab1 = () => {
       <div class="container_1">
      
       <img src={Shehan}  alt="Ayeee!" class="about_img_team2"/>
-      <p class="About_img_team1_para"> Mrs Anna Kalm (Founder CEO of Ascentic) and Mrs Dhanisha Paul (Director Delivery at Sysco Labs) acknowledge team Pyop's project PIKAIA both in Linkedin and on the day of HaxMas 2021 </p>
+      <p class="About_img_team1_para"> Shehan just being shehan </p>
     
       </div>
 
       <hr class="hr2"></hr>
       <div class="container_1">
-      <p class="About_img_team1_para"> Mrs Anna Kalm (Founder CEO of Ascentic) and Mrs Dhanisha Paul (Director Delivery at Sysco Labs) acknowledge team Pyop's project PIKAIA both in Linkedin and on the day of HaxMas 2021 </p>
+      <p class="About_img_team3_para"> When eminem is your Competition </p>
       <img src={Thoshitha}  alt="Ayeee!" class="about_img_team3"/>
       
       </div>
@@ -170,12 +170,12 @@ const Tab1 = () => {
       <hr class="hr2"></hr>
       <div class="container_1">
       <img src={Shuhaib}  alt="Ayeee!" class="about_img_team4"/>
-      <p class="About_img_team1_para"> Mrs Anna Kalm (Founder CEO of Ascentic) and Mrs Dhanisha Paul (Director Delivery at Sysco Labs) acknowledge team Pyop's project PIKAIA both in Linkedin and on the day of HaxMas 2021 </p>
+      <p class="About_img_team4_para"> "ahh.. this mic is to heavy " </p>
       </div>
 
       <hr class="hr2"></hr>
       <div class="container_1">
-      <p class="About_img_team1_para"> Mrs Anna Kalm (Founder CEO of Ascentic) and Mrs Dhanisha Paul (Director Delivery at Sysco Labs) acknowledge team Pyop's project PIKAIA both in Linkedin and on the day of HaxMas 2021 </p>
+      <p class="About_img_team5_para"> "Staring contest??? Game on son!!" </p>
       <img src={Thalha2}  alt="Ayeee!" class="about_img_team5"/>
      
       </div>
@@ -183,13 +183,13 @@ const Tab1 = () => {
       <hr class="hr2"></hr>
       <div class="container_1">
       <img src={Chanod}  alt="Ayeee!" class="about_img_team6"/>
-      <p class="About_img_team2_para"> Mrs Anna Kalm (Founder CEO of Ascentic) and Mrs Dhanisha Paul (Director Delivery at Sysco Labs) acknowledge team Pyop's project PIKAIA both in Linkedin and on the day of HaxMas 2021 </p>
+      <p class="About_img_team6_para"> " *breathes* "  </p>
       </div>
 
       <hr class="hr2"></hr>
 
       <div class="container_1">
-      <p class="About_img_Complement_para"> |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| </p>
+      <p class="About_img_Complement_para"> * karate chop * </p>
       <img src={Shohan}  alt="Ayeee!" class="about_img_Complements"/>
     
       </div>
