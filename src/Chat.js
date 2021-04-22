@@ -42,7 +42,7 @@ function ChatVeiw() {
       };
 
       const data = await axios.get(
-        "https://pikaia-apim.azure-api.net/chat",
+        "http://pikaia-rest.azurewebsites.net/chat",
         axiosConfig
       );
 
@@ -184,9 +184,7 @@ function ChatVeiw() {
           )}
         </>
       </div>
-      <p>
-        {message.message}
-      </p>
+      <p>{message.message}</p>
     </li>
   ));
 

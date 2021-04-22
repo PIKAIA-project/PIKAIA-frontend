@@ -21,7 +21,7 @@ function ChatWidget() {
       };
 
       const data = await axios.get(
-        "https://pikaia-apim.azure-api.net/emotion_last",
+        "https://pikaia-rest.azurewebsites.net/emotion_last",
         axiosConfig
       );
 

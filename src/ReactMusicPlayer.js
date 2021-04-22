@@ -1,12 +1,9 @@
-import React from "react";
 import "./ReactMusic.css";
 import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
 import PauseCircleFilledIcon from "@material-ui/icons/PauseCircleFilled";
 import SkipPreviousIcon from "@material-ui/icons/SkipPrevious";
 import VolumeUpIcon from "@material-ui/icons/VolumeUp";
-import ReplayIcon from "@material-ui/icons/Replay";
 import VolumeDownIcon from "@material-ui/icons/VolumeDown";
-import DeleteIcon from "@material-ui/icons/Delete";
 import SkipNextIcon from "@material-ui/icons/SkipNext";
 import Forward10Icon from "@material-ui/icons/Forward10";
 import Replay10Icon from "@material-ui/icons/Replay10";
@@ -14,6 +11,11 @@ import VolumeMuteIcon from "@material-ui/icons/VolumeMute";
 import VolumeOffIcon from "@material-ui/icons/VolumeOff";
 import AddIcon from "@material-ui/icons/Add";
 import RemoveIcon from "@material-ui/icons/Remove";
+import React, { useEffect, useState } from "react";
+import { getToken } from "../src/utils";
+import axios from "axios";
+import QuotesSkeleton from "./prevChat/Componants/QuotesSkeleton";
+import BinauralCheck from "./BinauralCheck";
 
 const Button = ({ content, icon, size, ...props }) => (
   <button {...props}>
@@ -37,6 +39,7 @@ class ReactMusicPlayer extends React.Component {
     muted: false,
     volume: 1,
     volumeInterval: 0.2,
+
     playlist: [
       {
         title: "Beethoven - Moonlight Sonata",
@@ -309,6 +312,7 @@ class ReactMusicPlayer extends React.Component {
             {this.state.currentTrack.title}
           </div>
           <div className="time">
+            <BinauralCheck />
             <span className="currentTime" title="Current time">
               {this.formateTime(this.state.currentTime)}
             </span>
