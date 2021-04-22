@@ -11,7 +11,12 @@ export const getToken = () => {
 };
 
 export const getApiURL = () => {
-  return "https://pikaia.azurewebsites.net/";
+  return "https://pikaia-backend.azurewebsites.net/";
+};
+// https://pikaia-backend.azurewebsites.net/
+
+export const getSubscriptionKey = () => {
+  return "6a0340feb8de4a3e836242730cc5ceec";
 };
 
 export const getCookie = (c_name) => {

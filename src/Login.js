@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Hi from "./Images/SignUp.png";
 import Sign from "./Images/SignIn.png";
-import { getCookie } from "./utils";
+import { getCookie, getApiURL, getSubscriptionKey } from "./utils";
 import { useHistory } from "react-router-dom";
 
 import "./Login.css";
@@ -31,17 +31,14 @@ const Login = () => {
     authorization = "Basic " + btoa(username + ":" + password);
 
     var myHeaders = new Headers();
-    myHeaders.append(
-      "Ocp-Apim-Subscription-Key",
-      "1a55d8e0ffa94fc7988a1fc24deb69b0"
-    );
+    myHeaders.append("Ocp-Apim-Subscription-Key", getSubscriptionKey());
     myHeaders.append("Authorization", authorization);
     var requestOptions = {
       method: "GET",
       headers: myHeaders,
       redirect: "follow",
     };
-    fetch("https://pikaia.azurewebsites.net/login", requestOptions)
+    fetch(getApiURL() + "login", requestOptions)
       .then((response) => response.json())
       .then((data) => {
         // ?: success from - here
@@ -66,7 +63,6 @@ const Login = () => {
       .catch((error) => {
         // ?: login error from - here
         alert(error);
-
         // ?: login error to - here
       });
   };

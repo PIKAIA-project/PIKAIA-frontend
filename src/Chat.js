@@ -9,7 +9,9 @@ import SendIcon from "@material-ui/icons/Send";
 import MicIcon from "@material-ui/icons/Mic";
 import { getToken } from "./utils";
 import LoadSpinner from "./LoadSpinner";
-
+import MessageLoad from "./MessageLoad";
+import { Message } from "@material-ui/icons";
+import { getCookie, getApiURL, getSubscriptionKey } from "./utils";
 const useStyles = makeStyles((theme) => ({
   sizeAvatar: {
     height: theme.spacing(3),
@@ -19,6 +21,11 @@ const useStyles = makeStyles((theme) => ({
 
 function ChatVeiw() {
   const classes = useStyles();
+  const [chatData, setChatData] = useState({ chat: "" });
+
+  function changeChatData(e) {
+    setChatData({ ...chatData, [e.target.name]: e.target.value });
+  }
 
   let token = getToken();
 
@@ -28,7 +35,7 @@ function ChatVeiw() {
   //
   const chatGetAPI = async () => {
     let arrayOfQuotes = [];
-    var key = "1a55d8e0ffa94fc7988a1fc24deb69b0";
+    var key = getSubscriptionKey();
     try {
       // const data = await axios.get("https://api.quotable.io/random");
       // arrayOfQuotes = data.data;
@@ -41,10 +48,7 @@ function ChatVeiw() {
         },
       };
 
-      const data = await axios.get(
-        "https://pikaia-apim.azure-api.net/chat",
-        axiosConfig
-      );
+      const data = await axios.get(getApiURL() + "chat", axiosConfig);
 
       arrayOfQuotes = data.data;
       let chats = arrayOfQuotes.conversations;
@@ -96,8 +100,9 @@ function ChatVeiw() {
   }, []);
   //
 
-  const sendNewMessage = () => {
-    let userMessage = document.getElementById("chat-input").value;
+  const sendNewMessage = (chat) => {
+    let userMessage = changeChatData;
+
     var myHeaders = new Headers();
     myHeaders.append("x-access-token", token);
     myHeaders.append("Content-Type", "application/json");
@@ -113,10 +118,19 @@ function ChatVeiw() {
       redirect: "follow",
     };
 
-    fetch("https://pikaia.azurewebsites.net/chat", requestOptions)
+    // user message - create object
+    // push to loadied message state
+
+    // toggle message loading state to true
+
+    fetch(getApiURL() + "chat", requestOptions)
       .then((response) => response.text())
       .then((result) => {
-        chatGetAPI();
+        // chatGetAPI();
+        //
+        // toggle message loading state to false
+        // chat message - create object
+        // push to loadied message state
       })
       .catch((error) => console.log("error", error));
   };
@@ -159,6 +173,7 @@ function ChatVeiw() {
   // }, []);
 
   const [messages, setMessages] = useState([]);
+  const [messagesIsLoading, setMessagesIsLoading] = useState([]);
   let loadedMessages = [];
 
   // TODO: add message time to here...
@@ -184,9 +199,7 @@ function ChatVeiw() {
           )}
         </>
       </div>
-      <p>
-        {message.message}
-      </p>
+      <p>{message.message}</p>
     </li>
   ));
 
@@ -199,6 +212,7 @@ function ChatVeiw() {
           </div>
           <div id="chat-scroll" className="chat__body" onScroll={handleScroll}>
             {listItems}
+            <MessageLoad />
           </div>
         </div>
         <div className="chat__footer">
