@@ -10,6 +10,28 @@ import { Redirect } from "react-router";
 const Login = () => {
   const [isActive, setActive] = useState("false");
   const [loggedIn, setLoggedIn] = useState("false");
+  const [loginDetails, setLoginDetails] = useState({loginUse: "", loginPass: ""}); 
+  const [signupDetails, setSignupDetails] = useState({signUpUse: "", signUpPass: ""}); 
+  const onSignupDetailsChange = (e) => {
+    setSignupDetails((prevstate) => ({
+      ...prevstate,
+      [e.target.name]:e.target.value
+    }));
+    
+  };
+  const onLoginDetailsChange = (e) => {
+    setLoginDetails((prevstate) => ({
+      ...prevstate,
+      [e.target.name]:e.target.value
+    }));
+  };
+
+  const handleLogin = () => {
+    alert("signup " + loginDetails.loginUse + " " + loginDetails.loginPass);
+  };
+  const handleSignup = () => {
+    alert("signup " + signupDetails.signUpPass + " " + signupDetails.signUpUse);
+  };
 
   const handleToggle = () => {
     setActive(!isActive);
@@ -110,6 +132,7 @@ const Login = () => {
                   required
                   type="text"
                   placeholder="Username"
+                  onChange={onLoginDetailsChange} name="loginUse" value={loginDetails.loginUse} 
                 />
               </div>
               <div className="input-field">
@@ -119,14 +142,13 @@ const Login = () => {
                   required
                   type="password"
                   placeholder="Password"
+                  onChange={onLoginDetailsChange} name="loginPass" value={loginDetails.loginPass} 
                 />
               </div>
               <input
                 id="login-submit"
-                onClick={() => {
-                  loginUser();
-                }}
-                type="submit"
+                onClick={handleLogin}
+                type="text"
                 value="Login"
                 className="btn solid"
               />
@@ -135,17 +157,14 @@ const Login = () => {
               <h2 className="title">Sign up</h2>
               <div className="input-field">
                 <i className="fas fa-user"></i>
-                <input type="text" placeholder="Username" />
+                <input onChange={onSignupDetailsChange} name="signUpUse" value={signupDetails.username} type="text" placeholder="Username" />
               </div>
-              <div className="input-field">
-                <i className="fas fa-envelope"></i>
-                <input type="email" placeholder="Email" />
-              </div>
+              
               <div className="input-field">
                 <i className="fas fa-lock"></i>
-                <input type="password" placeholder="Password" />
+                <input onChange={onSignupDetailsChange}  name="signUpPass" value={signupDetails.password} type="password" placeholder="Password" />
               </div>
-              <input type="submit" className="btn" value="Sign up" />
+              <input onClick={handleSignup} type="text" className="btn" value="Sign up" />
             </form>
           </div>
         </div>
