@@ -772,7 +772,8 @@ margin-bottom: 5%;
   width: 100px;
   display: flex;
   flex-direction: column;
-  margin-top: 0.1%;
+  align-content: left;
+  margin-top: 210%;
 
   
 }
@@ -785,30 +786,76 @@ margin-bottom: 5%;
 }
 
 .awareness_image_tab3{
-  width: 300px;
+  width: 800px;
+  margin-left: 25%;
+
+}
+
+.P3_Para_tab3{
+font-size: 30px;
+margin-top: 10%;
+}
+
+.P4-Para-tab3{
+  font-size: 30px;
+  margin-top: 10%;
 }
 
 .sad_image_tab3{
-  width: 300px;
+  width: 600px;
+  margin-left: 25%;
+  margin-top: 10%;
 }
 
 .helping_hand_tab3{
-  width: 300px;
+  width: 700px;
+  margin-left: 30%;
+  margin-top: 10%;
+  margin-bottom: 20%;
+  
 }
+
+.P2_Para_tab3{
+  font-size: 30px;
+  margin-top: 10%;
+}
+
 
 
 
 @media screen and (max-width: 601px) {
 
   .about_image_tab3{
-    max-width: 50px;
-    margin-top: 100%;
+    max-width: 20px;
+    margin-top: 750%;
     
   }
   .P2_Para_tab3{
-    margin-bottom: 100%;
+    margin-bottom: 10%;
     margin-top: 90px;
   }
+  .awareness_image_tab3{
+    width: 300px;
+    margin-right: 20%;
+    margin-left: 40px;
+    
+  
+  
+  }
+  .helping_hand_tab3{
+    width: 300px;
+    margin-left: 40px;
+    
+    
+    
+  }
+
+  
+.sad_image_tab3{
+  width: 300px;
+  margin-left: 40px;
+  
+}
 
   .about_card_tab3{
    margin-right: 20px;
