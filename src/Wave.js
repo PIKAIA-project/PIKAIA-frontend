@@ -33,7 +33,7 @@ function Wave() {
         </div>
         <div className="wave__summary">
           <h4>Summary</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p>You've completed 20 percent of your goals!</p>
         </div>
       </div>
       <div className="box">

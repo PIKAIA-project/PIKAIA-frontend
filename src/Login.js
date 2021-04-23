@@ -225,8 +225,7 @@ const Login = () => {
             <div className="content">
               <h3>New here ?</h3>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Debitis, ex ratione. Aliquid!
+                Well if you're, introduce yourself. Ill show you around!
               </p>
               <button
                 id="sign-up-btn"

@@ -16,24 +16,24 @@ function Chart() {
         <div className="chart__container">
           <div className="chart__one">
             <h3>Today's Emotion Analytics</h3>
-            <p>How are you feeling today?</p>
+            <p>How are you feeling today? View today's mood fluctuations.</p>
             <DoughnutChart className="chart__go" />
           </div>
           <div className="chart__two">
-            <h3>Today vs. last week today Emotion Analytics</h3>
+            <h3>Today vs. last week today </h3>
             <p>Compare your emotional changes to last week.</p>
             <TodayLastWeekComp />
           </div>
           <div className="chart__three">
             <h3>Emotion Analytics</h3>
             <p>
-              Track your daily emotion changes, and improve your mental health.
+              Track your mood changes for this week and improve your mental health.
             </p>
             <PrevReport />
           </div>
           <div className="chart__four">
             <h3>Monthly Mood Analytics</h3>
-            <p>Compare your emotional changes to last week.</p>
+            <p>Compare your emotional changes throughout the year.</p>
             <MonthlyChart />
           </div>
           <div className="chart__five">
