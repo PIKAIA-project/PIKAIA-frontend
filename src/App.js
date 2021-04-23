@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserView, MobileView } from "react-device-detect";
 import Login from "./Login";
 import { getIsLoggedIn } from "./utils";
@@ -119,10 +119,7 @@ function App() {
                 component={Home}
                 meta={{ auth: false }}
               />
-              <GuardedRoute
-                path={["/about", "/about-us"]}
-                component={About}
-              />
+              <GuardedRoute path={["/about", "/about-us"]} component={About} />
               <GuardedRoute
                 path="*"
                 meta={{ redirect: true }}

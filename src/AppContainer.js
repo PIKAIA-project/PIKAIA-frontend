@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./AppContainer.css";
 import { IconButton } from "@material-ui/core";
 import HomeRoundedIcon from "@material-ui/icons/HomeRounded";
@@ -6,6 +6,7 @@ import MusicNoteRoundedIcon from "@material-ui/icons/MusicNoteRounded";
 import ShowChartRoundedIcon from "@material-ui/icons/ShowChartRounded";
 import Nav from "./Navigation/Nav";
 import { Chat } from "@material-ui/icons";
+import { getIsLoggedIn } from "./utils";
 import SwipeableRoutes from "react-swipeable-routes";
 import ChatVeiw from "./Chat";
 import Home from "./Home";
@@ -14,6 +15,11 @@ import Chart from "./Chart";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 function AppContainer() {
+  useEffect(() => {
+    if (getIsLoggedIn() === false) {
+      window.location.href = "/login";
+    }
+  }, []);
   // const theme = useTheme();
   const [value, setValue] = React.useState(0);
 
