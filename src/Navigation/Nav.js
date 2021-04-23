@@ -19,7 +19,7 @@ import { logOutUser } from "./../utils";
 
 function Nav() {
   const [open, setOpen] = useState(false);
-  const [openBinaural, setOpenBinaural] = useState(true);
+  const [openBinaural, setOpenBinaural] = useState(false);
 
   const toggleMenu = () => {
     setOpen(!open);
@@ -115,7 +115,7 @@ function Nav() {
         {openBinaural ? <QueueMusicIcon /> : <CloseIcon />}
       </IconButton>
       <ReactTouchEvents onClick={togglebinaural} open={openBinaural}>
-        <div className={openBinaural ? "nav__toggleBinaural" : "nav__Binaural"}>
+        <div className={openBinaural ? "nav__Binaural" : "nav__toggleBinaural"}>
           <ReactMusicPlayer />
         </div>
       </ReactTouchEvents>
