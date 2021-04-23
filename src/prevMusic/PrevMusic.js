@@ -106,9 +106,6 @@ function PrevMusic() {
   return (
     <div className="dashboard-home__music">
       <div className="container">
-        <IconButton>
-          <button onClick={addRec}>Recommend Me!</button>
-        </IconButton>
 
         <Library
           songs={songs}
