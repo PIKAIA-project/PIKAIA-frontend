@@ -15,7 +15,7 @@ const DoughnutChart = () => {
     let count_dailyEmotion = [0, 0, 0, 0, 0];
     let empAge = [];
     let token = getToken();
-    var key = "1a55d8e0ffa94fc7988a1fc24deb69b0";
+    var key = "5d27293d79294a19a608781776244e97";
     let axiosConfig = {
       headers: {
         "x-access-token": token,
@@ -24,7 +24,7 @@ const DoughnutChart = () => {
     };
 
     axios
-      .get("https://pikaia-rest.azurewebsites.net/chart_days/1", axiosConfig)
+      .get("https://pikaia-rest-apim.developer.azure-api.net/chart_days/1", axiosConfig)
       .then((res) => {
         console.log(res);
         for (const dataObj of res.data.chart_daily) {

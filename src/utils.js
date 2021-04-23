@@ -10,8 +10,9 @@ export const getToken = () => {
   return token;
 };
 
+
 export const getApiURL = () => {
-  return "https://pikaia.azurewebsites.net/";
+  return "https://pikaia-rest-apim.developer.azure-api.net";
 };
 
 export const getCookie = (c_name) => {

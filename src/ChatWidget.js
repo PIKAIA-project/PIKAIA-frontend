@@ -10,7 +10,7 @@ function ChatWidget() {
   const [emotion, setLastEmotion] = useState("");
   const emotionAPI = async () => {
     let arrayOfQuotes = [];
-    var key = "1a55d8e0ffa94fc7988a1fc24deb69b0";
+    var key = "5d27293d79294a19a608781776244e97";
     var token = getToken();
     try {
       let axiosConfig = {
@@ -21,7 +21,7 @@ function ChatWidget() {
       };
 
       const data = await axios.get(
-        "https://pikaia-rest.azurewebsites.net/emotion_last",
+        "https://pikaia-rest-apim.developer.azure-api.net/emotion_last",
         axiosConfig
       );
 

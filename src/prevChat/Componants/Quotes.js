@@ -46,10 +46,10 @@ class Quotes extends Component {
           <div className="quotes__greeting">
             <h1>
               {hour < 12
-                ? `Good Morning, ${username+`.`}`
+                ? "Good Morning"
                 : hour >= 12 && hour < 18
-                ? `Good Afternoon, ${username+`.`}`
-                : `Good Evening, ${username}.`}
+                ? "Good Afternoon"
+                : "Good Evening"}
             </h1>
           </div>
           <div className="quotes__words">
@@ -57,7 +57,8 @@ class Quotes extends Component {
           </div>
         </div>
         <div className="quotes__right">
-          <img className="quotes__rightImage"
+          <img
+            className="quotes__rightImage"
             src={hour < 12 ? Morning : hour >= 12 && hour < 18 ? Noon : Night}
           />
         </div>

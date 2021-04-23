@@ -28,7 +28,7 @@ function ChatVeiw() {
   //
   const chatGetAPI = async () => {
     let arrayOfQuotes = [];
-    var key = "1a55d8e0ffa94fc7988a1fc24deb69b0";
+    var key = "5d27293d79294a19a608781776244e97";
     try {
       // const data = await axios.get("https://api.quotable.io/random");
       // arrayOfQuotes = data.data;
@@ -42,7 +42,7 @@ function ChatVeiw() {
       };
 
       const data = await axios.get(
-        "http://pikaia-rest.azurewebsites.net/chat",
+        "https://pikaia-rest-apim.developer.azure-api.net/chat",
         axiosConfig
       );
 
@@ -113,7 +113,7 @@ function ChatVeiw() {
       redirect: "follow",
     };
 
-    fetch("https://pikaia.azurewebsites.net/chat", requestOptions)
+    fetch("https://pikaia-rest-apim.developer.azure-api.net/chat", requestOptions)
       .then((response) => response.text())
       .then((result) => {
         chatGetAPI();

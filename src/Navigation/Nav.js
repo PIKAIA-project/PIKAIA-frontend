@@ -112,7 +112,7 @@ function Nav() {
   return (
     <div className="nav">
       <IconButton onClick={togglebinaural} open={openBinaural}>
-        {openBinaural ? <QueueMusicIcon /> : <CloseIcon />}
+        {openBinaural ? <CloseIcon /> : <QueueMusicIcon />}
       </IconButton>
       <ReactTouchEvents onClick={togglebinaural} open={openBinaural}>
         <div className={openBinaural ? "nav__Binaural" : "nav__toggleBinaural"}>
@@ -175,7 +175,14 @@ function Nav() {
                 </Tooltip>
               </div>
             </div>
-            <button onClick={onLogout}>Log Out</button>
+            <div className="btn__div">
+              <button onClick={onLogout}>Log Out</button>
+              <Tooltip title="Speak to us in confidence and share your burden. We assure 100% Confidentiality, Anonymity and Acceptance with respect and care.">
+                <a href="tel:+94 11 2682535" className="buttonOne">
+                  SOS
+                </a>
+              </Tooltip>
+            </div>
           </div>
         </div>
       </ReactTouchEvents>

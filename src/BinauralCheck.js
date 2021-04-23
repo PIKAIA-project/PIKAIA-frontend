@@ -7,9 +7,8 @@ function BinauralCheck() {
   const [emotion, setLastEmotion] = useState("");
   const emotionAPI = async () => {
     let arrayOfQuotes = [];
-    var key = "1a55d8e0ffa94fc7988a1fc24deb69b0";
-    var token =
-      "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiI5YTg0NGJhNC1jOWYyLTRiOGMtYTM4Mi0yMjg0YjE1NDdmZjAiLCJleHAiOjE2MTkxNTA0MDJ9.hvlA4qbfOprpyNmzUrFt0DcKAHDG57GfUH2AeD0tcHU";
+    var key = "5d27293d79294a19a608781776244e97";
+    var token = getToken();
     try {
       let axiosConfig = {
         headers: {
@@ -19,7 +18,7 @@ function BinauralCheck() {
       };
 
       const data = await axios.get(
-        "http://pikaia-rest.azurewebsites.net/emotion_last",
+        "https://pikaia-rest-apim.developer.azure-api.net/emotion_last",
         axiosConfig
       );
 

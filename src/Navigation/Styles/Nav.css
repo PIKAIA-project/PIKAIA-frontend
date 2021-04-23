@@ -65,13 +65,20 @@
   transform: translateX(100%);
 }
 
-.nav__settings > button {
+.nav__settings > .btn__div {
   margin-top: 10%;
   width: 30%;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.btn__div > button {
   border-radius: 30px;
   background-color: var(--nav-color);
   transition: all 200ms ease-in;
   height: 50px;
+  width: 150px;
   color: white;
   border: 0;
   outline: none;
@@ -79,6 +86,18 @@
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.5px;
+}
+.btn__div > .buttonOne {
+  border-radius: 30px;
+  background-color: var(--nav-color);
+  transition: all 200ms ease-in;
+  height: 50px;
+  width: 150px;
+  background-color: rgb(231, 55, 55);
+  text-align: center;
+  line-height: 50px;
+  text-decoration: none;
+  color: white;
 }
 
 .nav__userImg {
@@ -109,7 +128,7 @@
 }
 
 .nav__userImg > img {
-  width: 150%;
+  width: 250%;
   height: auto;
 }
 
@@ -259,7 +278,12 @@
     width: 100vw;
     transform: translateX(0%);
   }
-  .nav__settings > button {
+
+  .nav__settings > .btn__div {
     margin-top: 50%;
+  }
+
+  .btn__div > button {
+    width: 150px;
   }
 }

@@ -55,7 +55,7 @@ const Login = () => {
     var myHeaders = new Headers();
     myHeaders.append(
       "Ocp-Apim-Subscription-Key",
-      "1a55d8e0ffa94fc7988a1fc24deb69b0"
+      "5d27293d79294a19a608781776244e97"
     );
     myHeaders.append("Authorization", authorization);
     var requestOptions = {
@@ -64,7 +64,10 @@ const Login = () => {
       redirect: "follow",
     };
 
-    fetch("https://pikaia-rest.azurewebsites.net" + "/login", requestOptions)
+    fetch(
+      "https://pikaia-rest-apim.developer.azure-api.net" + "/login",
+      requestOptions
+    )
       .then((response) => response.json())
       .then((data) => {
         if (data.user.isAdmin === false) {
