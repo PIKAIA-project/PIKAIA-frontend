@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Doughnut } from "react-chartjs-2";
 import axios from "axios";
-
-import { getToken } from "../../utils";
+import { getToken, getApiURL, getSubscriptionKey } from "../../utils";
 const DoughnutChart = () => {
   const [chartData, setChartData] = useState({});
 
@@ -15,7 +14,7 @@ const DoughnutChart = () => {
     let count_dailyEmotion = [0, 0, 0, 0, 0];
     let empAge = [];
     let token = getToken();
-    var key = "5d27293d79294a19a608781776244e97";
+    var key = getSubscriptionKey();
     let axiosConfig = {
       headers: {
         "x-access-token": token,
@@ -24,7 +23,7 @@ const DoughnutChart = () => {
     };
 
     axios
-      .get("https://pikaia-rest-apim.developer.azure-api.net/chart_days/1", axiosConfig)
+      .get(getApiURL()+"/chart_days/1", axiosConfig)
       .then((res) => {
         console.log(res);
         for (const dataObj of res.data.chart_daily) {

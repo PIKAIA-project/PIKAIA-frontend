@@ -3,7 +3,7 @@ import Library from "./Componants/Library";
 import Player from "./Componants/Player";
 import React, { useState, useRef } from "react";
 import data from "./Utils/utils";
-import { getToken } from "../utils";
+import { getToken, getApiURL ,getSubscriptionKey} from "../utils";
 import axios from "axios";
 import { IconButton } from "@material-ui/core";
 
@@ -84,7 +84,7 @@ function PrevMusic() {
 
   const addRec = async () => {
     let token = getToken();
-    var key = "1a55d8e0ffa94fc7988a1fc24deb69b0";
+    var key = getSubscriptionKey();
     let axiosConfig = {
       headers: {
         "x-access-token": token,
@@ -92,7 +92,7 @@ function PrevMusic() {
       },
     };
     const baka = await axios
-      .put("https://pikaia-rest.azurewebsites.net/recommend-music", axiosConfig)
+      .put(getApiURL()+"/recommend-music", axiosConfig)
       .then((res) => {
         console.log("dfsdfsd" + res.data);
       })

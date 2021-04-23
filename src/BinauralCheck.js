@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import QuotesSkeleton from "./prevChat/Componants/QuotesSkeleton";
-import { getToken } from "../src/utils";
+import { getToken, getApiURL, getSubscriptionKey } from "./utils";
 
 function BinauralCheck() {
   const [emotion, setLastEmotion] = useState("");
   const emotionAPI = async () => {
     let arrayOfQuotes = [];
-    var key = "5d27293d79294a19a608781776244e97";
+    var key = getSubscriptionKey();
     var token = getToken();
     try {
       let axiosConfig = {
@@ -17,10 +16,7 @@ function BinauralCheck() {
         },
       };
 
-      const data = await axios.get(
-        "https://pikaia-rest-apim.developer.azure-api.net/emotion_last",
-        axiosConfig
-      );
+      const data = await axios.get(getApiURL() + "/emotion_last", axiosConfig);
 
       arrayOfQuotes = data.data;
     } catch (error) {

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Bar } from "react-chartjs-2";
 import axios from "axios";
 
-import { getToken } from "../../utils";
+import { getToken, getApiURL, getSubscriptionKey } from "../../utils";
 
 const BarChart = () => {
   const [chartData, setChartData] = useState({});
@@ -11,7 +11,7 @@ const BarChart = () => {
     let count_dailyEmotion = [0, 0, 0, 0, 0];
     let count_lastweekTodayEmotion = [0, 0, 0, 0, 0];
     let token = getToken();
-    var key = "5d27293d79294a19a608781776244e97";
+    var key = getSubscriptionKey();
     var dayHolder = "";
     let axiosConfig = {
       headers: {
@@ -22,7 +22,7 @@ const BarChart = () => {
 
     axios
       .get(
-        "https://pikaia-rest-apim.developer.azure-api.net/chart_days/1",
+        getApiURL()+"/chart_days/1",
         axiosConfig
       )
       .then((res) => {
@@ -52,7 +52,7 @@ const BarChart = () => {
         console.log(err);
       });
     axios
-      .get("https://pikaia-rest.azurewebsites.net/chart_days/7", axiosConfig)
+      .get(getApiURL()+"/chart_days/7", axiosConfig)
       .then((res) => {
         console.log(res);
         var interCount = 0;

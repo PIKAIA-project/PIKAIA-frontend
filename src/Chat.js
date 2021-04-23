@@ -7,8 +7,8 @@ import "./Chat.css";
 import { makeStyles } from "@material-ui/core/styles";
 import SendIcon from "@material-ui/icons/Send";
 import MicIcon from "@material-ui/icons/Mic";
-import { getToken } from "./utils";
 import LoadSpinner from "./LoadSpinner";
+import { getToken, getApiURL, getSubscriptionKey } from "./utils";
 
 const useStyles = makeStyles((theme) => ({
   sizeAvatar: {
@@ -28,7 +28,7 @@ function ChatVeiw() {
   //
   const chatGetAPI = async () => {
     let arrayOfQuotes = [];
-    var key = "5d27293d79294a19a608781776244e97";
+    var key = getSubscriptionKey();
     try {
       // const data = await axios.get("https://api.quotable.io/random");
       // arrayOfQuotes = data.data;
@@ -42,7 +42,7 @@ function ChatVeiw() {
       };
 
       const data = await axios.get(
-        "https://pikaia-rest-apim.developer.azure-api.net/chat",
+        getApiURL()+"/chat",
         axiosConfig
       );
 
@@ -113,7 +113,7 @@ function ChatVeiw() {
       redirect: "follow",
     };
 
-    fetch("https://pikaia-rest-apim.developer.azure-api.net/chat", requestOptions)
+    fetch(getApiURL()+"/chat", requestOptions)
       .then((response) => response.text())
       .then((result) => {
         chatGetAPI();

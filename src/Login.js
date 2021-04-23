@@ -3,6 +3,7 @@ import Hi from "./Images/SignUp.png";
 import Sign from "./Images/SignIn.png";
 import { getCookie } from "./utils";
 import { useHistory } from "react-router-dom";
+import { getToken, getApiURL, getSubscriptionKey } from "./utils";
 
 import "./Login.css";
 import { Redirect } from "react-router";
@@ -53,10 +54,7 @@ const Login = () => {
     authorization = "Basic " + btoa(username + ":" + password);
 
     var myHeaders = new Headers();
-    myHeaders.append(
-      "Ocp-Apim-Subscription-Key",
-      "5d27293d79294a19a608781776244e97"
-    );
+    myHeaders.append("Ocp-Apim-Subscription-Key", getSubscriptionKey());
     myHeaders.append("Authorization", authorization);
     var requestOptions = {
       method: "GET",
@@ -64,10 +62,7 @@ const Login = () => {
       redirect: "follow",
     };
 
-    fetch(
-      "https://pikaia-rest-apim.developer.azure-api.net" + "/login",
-      requestOptions
-    )
+    fetch(getApiURL() + "/login", requestOptions)
       .then((response) => response.json())
       .then((data) => {
         if (data.user.isAdmin === false) {
@@ -227,9 +222,7 @@ const Login = () => {
           <div className="panel left-panel">
             <div className="content">
               <h3>New here ?</h3>
-              <p>
-                Well if you're, introduce yourself. Ill show you around!
-              </p>
+              <p>Well if you're, introduce yourself. Ill show you around!</p>
               <button
                 id="sign-up-btn"
                 className="btn transparent"
@@ -246,6 +239,7 @@ const Login = () => {
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
                 laboriosam ad deleniti.
+                <a href="https://project-pikaia.azurewebsites.net/about-us"></a>
               </p>
               <button
                 className="btn transparent"
