@@ -41,14 +41,14 @@
 
 /* for chrome scrollbar */
 *::-webkit-scrollbar {
-  width: 4px;
+  width: 5px;
   height: 100%;
 }
 *::-webkit-scrollbar-track {
   background: transparent;
 }
 *::-webkit-scrollbar-thumb {
-  background-color: var(--scroll-bar);
+  background-color: #1616167a;
   border-radius: 20px;
   border: transparent;
 }
