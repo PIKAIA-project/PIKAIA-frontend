@@ -21,7 +21,7 @@ const BarChart = () => {
     };
 
     axios
-      .get("https://pikaia-apim.azure-api.net/chart_days/1", axiosConfig)
+      .get("https://pikaia-rest.azurewebsites.net/chart_days/1", axiosConfig)
       .then((res) => {
         console.log(res);
         for (const dataObj of res.data.chart_daily) {
@@ -49,7 +49,7 @@ const BarChart = () => {
         console.log(err);
       });
     axios
-      .get("https://pikaia-apim.azure-api.net/chart_days/7", axiosConfig)
+      .get("https://pikaia-rest.azurewebsites.net/chart_days/7", axiosConfig)
       .then((res) => {
         console.log(res);
         var interCount = 0;

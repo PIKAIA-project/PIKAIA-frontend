@@ -19,7 +19,7 @@ import { logOutUser } from "./../utils";
 
 function Nav() {
   const [open, setOpen] = useState(false);
-  const [openBinaural, setOpenBinaural] = useState(false);
+  const [openBinaural, setOpenBinaural] = useState(true);
 
   const toggleMenu = () => {
     setOpen(!open);

@@ -22,7 +22,7 @@ const Dankmemes = () => {
     };
 
     axios
-      .get("https://pikaia-apim.azure-api.net/chart_days/7", axiosConfig)
+      .get("https://pikaia-rest.azurewebsites.net/chart_days/7", axiosConfig)
       .then((res) => {
         console.log(res);
         for (const dataObj of res.data.chart_daily) {
