@@ -15,6 +15,7 @@ import Health from "../Images/healthcare.svg";
 import Tooltip from "@material-ui/core/Tooltip";
 import ReactMusicPlayer from "../ReactMusicPlayer";
 import QueueMusicIcon from "@material-ui/icons/QueueMusic";
+import { logOutUser } from "./../utils";
 
 function Nav() {
   const [open, setOpen] = useState(false);
@@ -26,6 +27,11 @@ function Nav() {
 
   const togglebinaural = () => {
     setOpenBinaural(!openBinaural);
+  };
+
+  const onLogout = () => {
+    logOutUser();
+    window.location.href = "/login";
   };
 
   // const lightButton = document.getElementById('light');
@@ -169,7 +175,7 @@ function Nav() {
                 </Tooltip>
               </div>
             </div>
-            <button>Log Out</button>
+            <button onClick={onLogout}>Log Out</button>
           </div>
         </div>
       </ReactTouchEvents>
